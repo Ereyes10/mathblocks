@@ -10,6 +10,16 @@ const ACTIVIDADES_3_1 =  [
     ]
 },
 
+{
+    id: "3.1.1.2",
+    enunciado: "Traduce la frase: “Un número aumentado en 6”.",
+    pista: "Representa el número con una letra y súmale 6.",
+    validacion: [
+        ["variable", "plus", "6"],
+        ["variable", "plus", "numero"]
+    ]
+},
+
 ];
 
 const ACTIVIDADES_3_2 =  [
