@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathBlocks</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <!-- HEADER CENTRADO -->
+    <header class="app-header">
+        <div class="header-center">
+            <img src="img/Logo.svg" class="logo" alt="Logo">
+            <span class="titulo">MathBlocks</span>
+        </div>
+    </header>
+
+    <main class="menu-main">
+
+        <a class="menu-btn" href="aprender.html">
+            <img src="img/icon-aprender.svg" class="icono-menu" alt="Aprender">
+            <span>Aprender</span>
+        </a>
+
+        <a class="menu-btn" href="probar.html">
+            <img src="img/icon-probar.svg" class="icono-menu" alt="Probar">
+            <span>Probar</span>
+        </a>
+
+        <a class="menu-btn" href="explorar.html">
+            <img src="img/icon-explorar.svg" class="icono-menu" alt="Explorar">
+            <span>Explorar</span>
+        </a>
+
+    </main>
+
+    
+
+    <!-- Barra inferior de navegación MathBlocks -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="material-icons">home</span>
+            <p>Inicio</p>
+        </a>
+
+        <a href="aprender.html" class="nav-item">
+            <span class="material-icons">menu_book</span>
+            <p>Aprender</p>
+        </a>
+
+        <a href="probar.html" class="nav-item">
+            <span class="material-icons">psychology</span>
+            <p>Probar</p>
+        </a>
+
+        <a href="explorar.html" class="nav-item">
+            <span class="material-icons">travel_explore</span>
+            <p>Explorar</p>
+        </a>
+
+        <a href="programa.html" class="nav-item">
+            <span class="material-icons">event_note</span>
+            <p>Programa</p>
+        </a>
+
+        <a href="perfil.html" class="nav-item">
+            <span class="material-icons">person</span>
+            <p>Perfil</p>
+        </a>
+    </nav>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+
+        }
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const navItems = document.querySelectorAll(".bottom-nav .nav-item");
+        const path = window.location.pathname;
+
+        navItems.forEach(item => {
+            const href = item.getAttribute("href");
+
+            // Se marca active si coincide archivo (index.html, aprender.html, etc.)
+            if (path.includes(href)) {
+                item.classList.add("active");
+            } else {
+                item.classList.remove("active");
+            }
+        });
+    });
+    </script>
+
+<!-- ================================
+    MODAL UNIVERSAL DE INSTRUCCIONES
+================================ -->
+<!--<div id="modal-instrucciones" class="modal-instrucciones oculto">
+    <div class="modal-instrucciones-contenido">
+        
+        <h2 id="inst-title"></h2>
+        <div id="inst-text" class="inst-texto"></div>
+
+        <button id="btn-inst-ok" class="btn-inst-ok">Entendido</button>
+    </div>
+</div>
+
+<script type="module">
+  import { mostrarInstrucciones, mostrarSiPrimeraVez } from "./js/instrucciones.js";
+
+  if (mostrarSiPrimeraVez("inicio")) {
+      mostrarInstrucciones("inicio");
+  }
+</script>-->
+
+
+</body>
+</html>
+
+

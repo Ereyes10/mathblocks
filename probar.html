@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Probar - MathBlocks</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- ===========================
+          ENCABEZADO
+    ==============================-->
+    <header class="app-header">
+      <button class="btn-back-header" id="btn-header-back">
+        <span class="material-icons">arrow_back_ios_new</span>
+      </button>
+
+    <div class="header-center">
+        <img id="header-icon" class="header-icon" alt="icon">
+        <span class="titulo" id="header-title">Probar</span>
+    </div>
+
+      <div class="header-spacer"></div>
+    </header>
+    <!-- ===========================
+          CONTENIDO PRINCIPAL
+    ==============================-->
+    <main class="content">
+
+      <!-- ===== VISTA 1: Temas ===== -->
+      <section id="view-temas" class="view active">
+        <div class="section-title">Contenidos formativos</div>
+            
+        <div id="temas-acordeon" class="acordeon-lista"></div>
+      </section>
+
+      
+      <!-- ===== VISTA 2: Actividad ===== -->
+      <section id="view-actividad" class="view">
+        <div class="ribbon-subtema" id="subtema-title"></div>
+        <div id="subsubtema-tabs-probar" class="subsubtema-tabs" style="display:none;"></div>
+
+    
+
+        <!-- Enunciado -->
+        <div class="enunciado-card">
+
+      <!-- Header de la tarjeta -->
+      <div class="enunciado-header" id="actividad-badge">
+       Actividad 1
+      </div>
+
+      <!-- Contenido del enunciado -->
+      <div id="enunciado-probar" class="probar-enunciado"></div>
+
+    </div>
+
+
+        <!-- Asistente -->
+        <div class="aprendizaje-card" id="asistente-box">
+            <div class="aprendizaje-titulo">
+                <span class="icono-aprendizaje">💡</span> Asistente
+            </div>
+            <p class="aprendizaje-descripcion" id="asistente-contenido">
+                Construye la expresión usando tus conocimientos.
+            </p>
+        </div>
+
+        <!-- Caja de Expresión -->
+        <div class="expr-box" id="expr-probar">
+          Aquí aparecerán las expresiones que el alumno construya para resolver la actividad.
+        </div>
+
+        <!-- Botones -->
+        <div class="btn-row">
+          <button class="btn btn-primary" id="btn-comprobar">Comprobar</button>
+          <button class="btn btn-secondary" id="btn-borrar">Borrar</button>         
+          <button class="btn btn-primary" id="btn-siguiente">Siguiente actividad</button>
+          <button class="btn btn-secondary" id="btn-nuevo-intento" style="display:none;">
+            Nuevo intento
+          </button>
+        </div>
+
+        <!-- Barra de actividades -->
+        <div class="activity-nav" id="activity-nav"></div>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+          <span id="breadcrumb-probar-temas">Temas</span> &gt; 
+          <span id="breadcrumb-probar-tema"></span> &gt; 
+          <span id="breadcrumb-probar-subtema"></span>
+        </div>
+
+      </section>
+      
+
+    </main>
+    
+    <!-- ===========================
+          SCRIPT LÓGICO
+    ==============================-->
+    <script type="module">
+
+    // ========================
+    // ESTADOS
+    // ========================
+    let actividadesSubtema = [];
+    let actividadActual = 0;
+
+    let expresionConstruidaSimbolos = [];
+    let expresionConstruidaTipos = [];
+    let expresionConstruidaKeys = [];
+
+    // ========================
+    // IMPORTS
+    // ========================
+    import { TEMAS_PM2 } from "./js/temas_pm2.js";
+    import { ACTIVIDADES_PROBAR } from "./js/actividadesProbar.js";
+    import { iniciarLecturaNFC } from "./js/nfc.js";
+
+
+    // ========================
+    // REFERENCIAS DOM
+    // ========================
+    const viewTemas = document.getElementById("view-temas");
+    const viewActividad = document.getElementById("view-actividad");
+    const subtemaTitle = document.getElementById("subtema-title");
+
+    const tabsProbar = document.getElementById("subsubtema-tabs-probar");
+
+
+    const temasAcordeon = document.getElementById("temas-acordeon");
+
+    const bcTemasRoot2 = document.getElementById("breadcrumb-probar-temas");
+    const bcTema = document.getElementById("breadcrumb-probar-tema");
+    const bcSubtema = document.getElementById("breadcrumb-probar-subtema");
+
+    
+    const actividadBadge = document.getElementById("actividad-badge");
+
+    const asistenteContenido = document.getElementById("asistente-contenido");
+    const enunciadoProbar = document.getElementById("enunciado-probar");
+    const exprBox = document.getElementById("expr-probar");
+
+    
+
+
+    // ========================
+    // POPUP PREMIUM
+    // ========================
+    const popupProbar = document.getElementById("popup-probar");
+    const popupProbarTitulo = document.getElementById("popup-probar-titulo");
+    const popupProbarMensaje = document.getElementById("popup-probar-mensaje");
+    const popupProbarExtra = document.getElementById("popup-probar-extra");
+    const popupProbarCerrar = document.getElementById("popup-probar-cerrar");
+
+    popupProbarCerrar.addEventListener("click", () => {
+        popupProbar.style.display = "none";
+    });
+
+    // ======================================
+// BOTÓN BORRAR (backspace de la expresión)
+// ======================================
+const btnBorrar = document.getElementById("btn-borrar");
+
+    btnBorrar.addEventListener("click", () => {
+
+        // Si no hay nada, no hacemos nada
+        if (expresionConstruidaSimbolos.length === 0) return;
+
+        // Quitar el último elemento (backspace)
+        expresionConstruidaSimbolos.pop();
+        expresionConstruidaTipos.pop();
+        expresionConstruidaKeys.pop();
+
+        // Regenerar la expresión visual
+        if (expresionConstruidaSimbolos.length === 0) {
+            exprBox.classList.add("empty-text");
+            exprBox.textContent = "Escanea los bloques para generar la expresión.";
+        } else {
+            exprBox.classList.remove("empty-text");
+            exprBox.textContent = expresionConstruidaSimbolos.join("");
+        }
+    });
+
+
+
+    // ========================
+    // CAMBIO DE VISTA
+    // ========================
+    function showView(view) {
+      [viewTemas, viewActividad].forEach(v => v.classList.remove("active"));
+      view.classList.add("active");
+    }
+
+    // BOTÓN REGRESAR DEL HEADER
+    document.getElementById("btn-header-back").addEventListener("click", () => {
+
+        // Si estoy dentro de un ejercicio → regresar a lista de temas
+        if (viewActividad.classList.contains("active")) {
+            showView(viewTemas);
+            return;
+        }
+
+        // Si ya estoy en lista de temas → regresar al inicio
+        window.location.href = "index.html";
+    });
+
+
+    // ========================
+    // ARMAR TEMAS
+    // ========================
+function renderTemas() {
+  temasAcordeon.innerHTML = "";
+
+  TEMAS_PM2.forEach(tema => {
+    const item = document.createElement("div");
+    item.className = "acordeon-item";
+
+    let subtemasHTML = "";
+
+    tema.subtemas.forEach((st, index) => {
+      const claveSubtema = `${tema.id}.${index + 1}`; // ej "3.1"
+
+      // 1) Subtema normal (string) => clic directo
+      if (typeof st === "string") {
+        subtemasHTML += `
+          <div class="subtema-opcion leaf"
+               data-temaid="${tema.id}"
+               data-clavefinal="${claveSubtema}"
+               data-titulo-tema="${tema.titulo}">
+            ${claveSubtema} ${st}
+          </div>`;
+        return;
+      }
+
+      // 2) Subtema con hijos (object) => desplegable
+      let hijosHTML = "";
+      (st.subsubtemas || []).forEach((hijo, j) => {
+        const claveHijo = `${claveSubtema}.${j + 1}`; // ej "3.1.2"
+        hijosHTML += `
+          <div class="subsubtema-opcion"
+               data-temaid="${tema.id}"
+               data-clavefinal="${claveHijo}"
+               data-titulo-tema="${tema.titulo}">
+            ${claveHijo} ${hijo}
+          </div>`;
+      });
+
+      subtemasHTML += `
+        <div class="subtema-grupo">
+          <div class="subtema-opcion has-children"
+               data-temaid="${tema.id}">
+            ${claveSubtema} ${st.titulo}
+            <span class="material-icons subtema-flecha">chevron_right</span>
+          </div>
+
+          <div class="subtema-children">
+            ${hijosHTML}
+          </div>
+        </div>`;
+    });
+
+    item.innerHTML = `
+      <button class="acordeon-titulo">
+        ${tema.id}. ${tema.titulo}
+        <span class="material-icons acordeon-flecha">expand_more</span>
+      </button>
+
+      <div class="acordeon-contenido">
+        ${subtemasHTML}
+      </div>
+    `;
+
+    temasAcordeon.appendChild(item);
+  });
+
+  activarAcordeon();
+}
+
+
+
+    // ========================
+    // ACORDEÓN
+    // ========================
+    function activarAcordeon() {
+  const items = document.querySelectorAll(".acordeon-item");
+
+  // acordeón principal
+  items.forEach(item => {
+    const btn = item.querySelector(".acordeon-titulo");
+    const cont = item.querySelector(".acordeon-contenido");
+
+    btn.addEventListener("click", () => {
+      items.forEach(i => {
+        if (i !== item) {
+          i.classList.remove("activo");
+          const c = i.querySelector(".acordeon-contenido");
+          if (c) c.style.maxHeight = null;
+        }
+      });
+
+      item.classList.toggle("activo");
+      cont.style.maxHeight =
+        item.classList.contains("activo") ? cont.scrollHeight + "px" : null;
+    });
+  });
+
+  // clicks internos (delegación)
+  temasAcordeon.addEventListener("click", (e) => {
+
+    // A) desplegar submenú
+const padre = e.target.closest(".subtema-opcion.has-children");
+  if (padre) {
+    const grupo = padre.closest(".subtema-grupo");
+    grupo.classList.toggle("abierto");
+    // recalcular maxHeight...
+    return;
+  }
+
+    // B) leaf (sin hijos) => abrir por clave "3.4"
+    const leaf = e.target.closest(".subtema-opcion.leaf");
+    if (leaf) {
+      const temaId = parseInt(leaf.dataset.temaid, 10);
+      const claveFinal = leaf.dataset.clavefinal; // "3.4"
+      const tituloTema = leaf.dataset.tituloTema;
+
+      temaSeleccionado = TEMAS_PM2.find(t => t.id === temaId);
+      abrirPorClave(claveFinal, tituloTema);
+      return;
+    }
+
+    // C) subsubtema => abrir por clave "3.1.2"
+    const hijo = e.target.closest(".subsubtema-opcion");
+    if (hijo) {
+      abrirPorClave(hijo.dataset.clavefinal, hijo.textContent.trim());
+      return;
+    }
+  });
+}
+
+
+
+    // ========================
+    // ABRIR SUBTEMA
+    // ========================
+    let temaSeleccionado = null;
+    let subtemaSeleccionado = null;
+
+    function abrirSubtema(i, titulo) {
+      console.log("Ribbon:", subtemaTitle.textContent);
+
+      iniciarLecturaNFC(info => procesarLectura(info)); // Activar NFC
+
+      subtemaSeleccionado = {
+        index: i,
+        text: temaSeleccionado.subtemas[i]
+      };
+
+      actividadActual = 0;
+
+      bcTema.textContent = titulo;
+      bcSubtema.textContent = `${temaSeleccionado.id}.${i + 1} ${subtemaSeleccionado.text}`;
+
+      // Actualiza automáticamente el texto del ribbon
+      subtemaTitle.textContent = `${temaSeleccionado.id}.${i + 1} ${subtemaSeleccionado.text}`;
+
+
+      const subtemaId = `${temaSeleccionado.id}.${i + 1}`;
+
+      actividadesSubtema = ACTIVIDADES_PROBAR[subtemaId] || [];
+
+      cargarActividad();
+      cargarBarraActividades();
+
+      showView(viewActividad);
+    }
+
+    function obtenerTextoSubtemaPadre(claveFinal) {
+  const partes = String(claveFinal).split(".");
+  if (partes.length < 2) return "";
+
+  const temaId = parseInt(partes[0], 10);
+  const idxSubtema = parseInt(partes[1], 10) - 1;
+
+  const tema = TEMAS_PM2.find(t => t.id === temaId);
+  if (!tema) return "";
+
+  const st = tema.subtemas[idxSubtema];
+  const clavePadre = `${temaId}.${idxSubtema + 1}`;
+  const tituloPadre = (typeof st === "string") ? st : st.titulo;
+
+  return `${clavePadre} ${tituloPadre}`;
+}
+
+let claveVistaActual = null;
+
+function abrirPorClave(claveFinal, tituloTema) {
+  iniciarLecturaNFC(info => procesarLectura(info)); // Activar NFC
+
+  claveVistaActual = claveFinal;
+
+  // Ribbon: solo padre (igual que aprender)
+  subtemaTitle.textContent = obtenerTextoSubtemaPadre(claveFinal);
+
+  // Breadcrumb
+  bcTema.textContent = tituloTema;
+  bcSubtema.textContent = claveFinal;
+
+  actividadActual = 0;
+
+  // Cargar actividades del subtema/subsubtema
+  actividadesSubtema = ACTIVIDADES_PROBAR[claveFinal] || [];
+
+  cargarActividad();
+  cargarBarraActividades();
+  showView(viewActividad);
+  actualizarTabsProbar(claveFinal);
+
+}
+
+
+function actualizarTabsProbar(claveFinal){
+  const partes = String(claveFinal).split(".");
+
+  // Solo mostrar tabs si es sub-subtema: "3.1.1"
+  if (partes.length !== 3){
+    tabsProbar.style.display = "none";
+    tabsProbar.innerHTML = "";
+    return;
+  }
+
+  const temaId = parseInt(partes[0], 10);
+  const idxSubtema = parseInt(partes[1], 10) - 1;
+  const idxActual = parseInt(partes[2], 10) - 1;
+
+  const tema = TEMAS_PM2.find(t => t.id === temaId);
+  if (!tema) return;
+
+  const st = tema.subtemas[idxSubtema];
+  if (!st || typeof st === "string" || !Array.isArray(st.subsubtemas)){
+    tabsProbar.style.display = "none";
+    tabsProbar.innerHTML = "";
+    return;
+  }
+
+  tabsProbar.innerHTML = "";
+
+  st.subsubtemas.forEach((titulo, j) => {
+    const claveHermano = `${temaId}.${idxSubtema + 1}.${j + 1}`; // 3.1.2
+
+    const btn = document.createElement("button");
+    btn.className = "subsubtema-tab" + (j === idxActual ? " active" : "");
+    btn.textContent = titulo; // ✅ solo texto
+
+    btn.addEventListener("click", () => {
+      abrirPorClave(claveHermano, titulo); // abre sin número
+    });
+
+    tabsProbar.appendChild(btn);
+  });
+
+  tabsProbar.style.display = "flex";
+}
+
+
+
+    // ========================
+    // CARGAR ACTIVIDAD
+    // ========================
+    function cargarActividad() {
+
+      const actividad = actividadesSubtema[actividadActual];
+
+      expresionConstruidaSimbolos = [];
+      expresionConstruidaTipos = [];
+      exprBox.classList.add("empty-text");
+      expresionConstruidaKeys = [];
+
+    exprBox.textContent = "Escanea los bloques para generar la expresión.";
+
+
+      if (!actividad) {
+        enunciadoProbar.textContent = "No hay actividades registradas para este subtema.";
+        return;
+      }
+
+      enunciadoProbar.textContent = actividad.enunciado;
+
+      //  AQUÍ va el texto personalizado de la actividad
+      asistenteContenido.style.color = "#000";
+      asistenteContenido.textContent =
+        actividad.pista || "Escanea los bloques indicados en el enunciado.";
+
+      actividadBadge.textContent = `Actividad ${actividadActual + 1}`;
+    }
+
+
+
+    // ========================
+    // BARRA DE ACTIVIDADES
+    // ========================
+    function cargarBarraActividades() {
+      const nav = document.getElementById("activity-nav");
+      nav.innerHTML = "";
+
+      actividadesSubtema.forEach((ac, index) => {
+        const dot = document.createElement("div");
+        dot.className = "activity-dot" + (index === actividadActual ? " active" : "");
+        dot.textContent = index + 1;
+        nav.appendChild(dot);
+      });
+    }
+
+
+    // ========================
+    // LECTURA NFC
+    // ========================
+    function procesarLectura(info) {
+
+      // Si estás usando la clase empty-text, la quitamos
+      exprBox.classList.remove("empty-text");
+
+      // 1) Símbolo para mostrar en pantalla (x, +, 3, etc.)
+      expresionConstruidaSimbolos.push(info.datos.simbolo);
+
+      // 2) Tipo genérico: variable, numero, operador...
+      expresionConstruidaTipos.push(info.datos.tipo);   // "variable", "numero", "operador"
+
+      // 3) Clave real del bloque: "x", "y", "plus", "2"...
+      expresionConstruidaKeys.push(info.key);
+
+      // Mostrar bonitos los símbolos
+      exprBox.innerHTML = expresionConstruidaSimbolos
+        .map(s => `<span>${s}</span>`)
+        .join("");
+    }
+
+    function coincideSecuencia(objetivo, tipos, keys) {
+
+      if (objetivo.length !== tipos.length) return false;
+
+      return objetivo.every((esperado, i) => {
+
+        const tipo = tipos[i];   // "variable", "numero", "operador"
+        const key  = keys[i];    // "x", "plus", "2", etc.
+
+        // Si esperamos un genérico:
+        if (esperado === "variable" || esperado === "numero" || esperado === "operador") {
+          return tipo === esperado;
+        }
+
+        // Si esperamos algo específico ("x", "plus", "2", "mul"...)
+        return key === esperado;
+      });
+    }
+
+
+
+
+    // ========================
+    // COMPROBAR RESPUESTA
+    // ========================
+    document.getElementById("btn-comprobar").addEventListener("click", () => {
+
+      const actividad = actividadesSubtema[actividadActual];
+      const objetivo = actividad.validacion;
+
+    let correcto = false;
+
+    if (Array.isArray(objetivo[0])) {
+        // Caso: varias secuencias válidas
+        correcto = objetivo.some(opcion =>
+            coincideSecuencia(opcion, expresionConstruidaTipos, expresionConstruidaKeys)
+        );
+    } else {
+        // Caso: una sola secuencia válida
+        correcto = coincideSecuencia(objetivo, expresionConstruidaTipos, expresionConstruidaKeys);
+    }
+
+
+
+      if (correcto) {
+
+        asistenteContenido.textContent = "¡Correcto! Muy bien.";
+        asistenteContenido.style.color = "#0a7f28";
+
+        document.getElementById("btn-nuevo-intento").style.display = "none";
+
+        // POPUP PREMIUM
+        popupProbarTitulo.textContent = "¡Excelente!";
+        popupProbarMensaje.textContent = "Has resuelto correctamente la actividad.";
+        popupProbarExtra.innerHTML = `
+          <strong>Expresión formada:</strong><br>
+          ${expresionConstruidaSimbolos.join("")}
+        `;
+        popupProbar.style.display = "flex";
+
+        return;
+      }
+
+      // Incorrecto
+      asistenteContenido.textContent =
+        "La expresión no coincide. Presiona 'Nuevo intento' para volver a intentar.";
+      asistenteContenido.style.color = "#b30000";
+
+      document.getElementById("btn-nuevo-intento").style.display = "block";
+    });
+
+
+    // ========================
+    // NUEVO INTENTO
+    // ========================
+    document.getElementById("btn-nuevo-intento").addEventListener("click", () => {
+
+      expresionConstruidaSimbolos = [];
+      expresionConstruidaTipos = [];
+      exprBox.classList.add("empty-text");  
+      expresionConstruidaKeys = [];
+      exprBox.textContent = "Escanea los bloques para generar la expresión."; 
+      const actividad = actividadesSubtema[actividadActual];
+
+      asistenteContenido.style.color = "#000";
+      asistenteContenido.textContent = actividad.pista || "Construye la expresión usando tus conocimientos.";
+
+      document.getElementById("btn-nuevo-intento").style.display = "none";
+    });
+
+
+    // ========================
+    // SIGUIENTE ACTIVIDAD
+    // ========================
+    document.getElementById("btn-siguiente").addEventListener("click", () => {
+
+      actividadActual++;
+
+      if (actividadActual >= actividadesSubtema.length) {
+        asistenteContenido.textContent = "Has completado todas las actividades del subtema.";
+        return;
+      }
+
+      cargarActividad();
+      cargarBarraActividades();
+    });
+
+
+    // ========================
+    // INICIAR
+    // ========================
+    renderTemas();
+
+    </script>
+
+    <script>
+      const headerIcon = document.getElementById("header-icon");
+      headerIcon.src = "img/icon-probar.svg"; // icono del lápiz
+  </script>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("constructor-overlay");
+  const titleEl = document.getElementById("constructor-title");
+  const msgEl   = document.getElementById("constructor-message");
+  const prevEl  = document.getElementById("constructor-preview");
+
+  // Si el popup no está en esta página, no hacemos nada (evita crash)
+  if (!overlay || !titleEl || !msgEl || !prevEl) {
+    console.warn("Popup constructor no encontrado en el DOM. Revisa el HTML (ids) o la posición del script.");
+    return;
+  }
+
+  window.addEventListener("mb:constructor", (e) => {
+    const d = e.detail || {};
+
+    if (d.action === "open" || d.action === "update") {
+      overlay.style.display = "flex";
+      titleEl.textContent = d.title || "Constructor";
+      msgEl.textContent   = d.message || "";
+      prevEl.innerHTML    = d.previewHTML || "";
+      return;
+    }
+
+    if (d.action === "close") {
+      overlay.style.display = "none";
+      return;
+    }
+  });
+});
+</script>
+
+
+    <!-- ===========================
+          BARRA DE NAVEGACIÓN
+    ==============================-->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="material-icons">home</span>
+            <p>Inicio</p>
+        </a>
+
+        <a href="aprender.html" class="nav-item">
+            <span class="material-icons">menu_book</span>
+            <p>Aprender</p>
+        </a>
+
+        <a href="probar.html" class="nav-item active">
+            <span class="material-icons">psychology</span>
+            <p>Probar</p>
+        </a>
+
+        <a href="explorar.html" class="nav-item">
+            <span class="material-icons">travel_explore</span>
+            <p>Explorar</p>
+        </a>
+
+        <a href="programa.html" class="nav-item">
+            <span class="material-icons">event_note</span>
+            <p>Programa</p>
+        </a>
+
+        <a href="perfil.html" class="nav-item">
+            <span class="material-icons">person</span>
+            <p>Perfil</p>
+        </a>
+    </nav>
+    <!-- ===========================
+          POPUP PREMIUM
+    ==============================-->
+    <div id="popup-probar" class="popup-overlay">
+      <div class="popup-box">
+
+        <div id="popup-probar-icono" class="popup-check"></div>
+
+        <h3 id="popup-probar-titulo">¡Correcto!</h3>
+
+        <p id="popup-probar-mensaje">Has completado la actividad correctamente.</p>
+
+        <div id="popup-probar-extra"></div>
+
+        <button id="popup-probar-cerrar" class="btn btn-primary">Continuar</button>
+
+      </div>
+    </div>
+
+    <!-- ======================================
+     POPUP CONSTRUCTOR
+======================================= -->
+<div id="constructor-overlay" class="constructor-overlay" style="display:none;">
+  <div class="constructor-box">
+    <div class="constructor-title" id="constructor-title">Constructor</div>
+    <div class="constructor-message" id="constructor-message">...</div>
+
+    <div class="constructor-preview">
+      <div class="constructor-preview-label">Vista previa</div>
+      <div class="constructor-preview-block" id="constructor-preview"></div>
+    </div>
+
+    <div class="constructor-hint">
+      Acerca el bloque al lector NFC para continuar…
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+

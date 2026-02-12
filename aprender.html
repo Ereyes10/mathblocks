@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprender - MathBlocks</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <audio id="sound-scan" src="sounds/scan.wav" preload="auto"></audio>
+  <audio id="sound-success" src="sounds/success.wav" preload="auto"></audio>
+
+</head>
+
+<body>
+  
+<header class="app-header">
+    <button class="btn-back-header" id="btn-header-back">
+    <span class="material-icons">arrow_back_ios_new</span>
+
+    </button>
+
+
+
+    <div class="header-center">
+        <img id="header-icon" class="header-icon" alt="icon">
+        <span class="titulo" id="header-title">Aprender</span>
+    </div>
+
+    <div class="header-spacer"></div>
+</header>
+
+
+<main class="content">
+
+  <!-- VISTA 1: Lista de temas -->
+  <section id="view-temas" class="view active">
+    <div class="section-title">Contenidos formativos</div>
+  
+    <div id="temas-acordeon" class="acordeon-lista"></div>
+
+  </section>
+
+
+
+  <!-- VISTA 2: Actividad -->
+  <section id="view-actividad" class="view">
+
+  <!-- Título del Subtema -->
+   
+    <div class="ribbon-subtema" id="subtema-title"></div>
+    <div id="subsubtema-tabs" class="subsubtema-tabs" style="display:none;"></div>
+
+
+   <div id="actividad-info">
+
+  <!-- TARJETA COMPLETA DE ACTIVIDAD + APRENDIZAJE -->
+  <div class="card-aprender">
+
+      <!-- ENCABEZADO VERDE (Actividad 1) -->
+      <div class="card-aprender-header" >
+          🧠 Aprendizaje
+      </div>
+
+      <!-- CUERPO DE APRENDIZAJE -->
+      <div class="card-aprender-body">
+
+      <div class="aprendizaje-descripcion carrusel-aprender" id="aprendizaje-descripcion">
+        <div class="carrusel-track" id="aprendizaje-track">
+          <!-- tarjetas dinámicas -->
+        </div>
+      </div>
+      <div class="carrusel-hint" id="carrusel-hint">
+        Desliza → para continuar
+      </div>
+
+      <div class="carrusel-indicadores" id="aprendizaje-indicadores"></div>
+
+      
+
+
+      </div>
+
+  </div>
+
+  <!-- ENUNCIADO -->
+  <div id="enunciado" class="enunciado-actividad"></div>
+
+</div>
+
+
+    
+
+    <p class="instructions">Aquí se mostrarán las actividades guiadas para este subtema en modo <strong>Aprender</strong>.</p>
+
+    <div class="expr-box empty-text" id="expr-aprender">
+    Esperando escaneo de bloque…
+    </div>
+
+
+    <div class="btn-row">
+      
+      <button class="btn btn-primary" id="btn-siguiente-actividad">Siguiente actividad</button>
+    </div>
+
+    <div class="activity-nav" id="activity-nav"></div>
+
+    <div class="breadcrumb">
+      <span id="breadcrumb-aprender-temas">Temas</span> &gt; 
+      <span id="breadcrumb-aprender-tema"></span> &gt; 
+      <span id="breadcrumb-aprender-subtema"></span>
+    </div>
+  </section>
+
+</main>
+
+<!-- POPUP DE ÉXITO -->
+<div id="popup-correcto" class="popup-overlay">
+  <div class="popup-box">
+
+    <!-- ICONO -->
+    <div id="popup-icono" class="popup-check"></div>
+
+    <!-- TÍTULO -->
+    <h3 id="popup-titulo">¡Correcto!</h3>
+
+    <!-- MENSAJE PRINCIPAL -->
+    <p id="popup-mensaje">Has completado la actividad.</p>
+
+    <!-- TEXTO EDUCATIVO EXTRA -->
+    <div id="popup-extra"></div>
+
+    <!-- BOTÓN -->
+    <button id="popup-cerrar" class="btn btn-primary">Continuar</button>
+
+  </div>
+</div>
+
+<!-- POPUP DE ERROR -->
+<div id="popup-error" class="popup-overlay" style="display:none;">
+  <div class="popup-box popup-error-box">
+      <h3 style="color:#e74c3c;">¡Ups! 😢</h3>
+      <p>Ese bloque no corresponde. Intenta de nuevo.</p>
+      <button id="popup-error-cerrar" class="btn btn-primary">Cerrar</button>
+  </div>
+</div>
+
+<!-- POPUP EJEMPLOS DE 2.2.1 -->
+<div id="popup-ejemplos" class="popup-overlay" style="display:none;">
+  <div class="popup-box popup-ejemplo-box">
+
+      <h3 id="popup-ejemplo-titulo" class="popup-ejemplo-titulo"></h3>
+
+      <div id="popup-ejemplo-visual" class="ejemplo-visual"></div>
+
+      <button id="popup-ejemplo-cerrar" class="btn btn-primary">Cerrar</button>
+
+  </div>
+</div>
+
+
+<script type="module">
+
+/* IMPORTS */
+import { TEMAS_PM2 } from "./js/temas_pm2.js";
+import { ACTIVIDADES } from "./js/actividadesAprender.js";
+import { iniciarLecturaNFC } from "./js/nfc.js";
+import { TEXTOS_APRENDIZAJE } from "./js/aprender/textosAprendizaje.js";
+import { POPUP_DATOS } from "./js/aprender/popupsAprender.js";
+
+const popupError = document.getElementById("popup-error");
+const popupErrorCerrar = document.getElementById("popup-error-cerrar");
+
+popupErrorCerrar.addEventListener("click", () => {
+    popupError.style.display = "none";
+});
+
+
+
+
+
+
+/* ELEMENTOS */
+const popup = document.getElementById("popup-correcto");
+const popupCerrar = document.getElementById("popup-cerrar");
+
+popupCerrar.addEventListener("click", () => popup.style.display = "none");
+
+const viewTemas = document.getElementById("view-temas");
+const viewActividad = document.getElementById("view-actividad");
+const subtemaTitle = document.getElementById("subtema-title");
+
+const tabsSubsubtema = document.getElementById("subsubtema-tabs");
+
+
+
+const bcTemasRoot2 = document.getElementById("breadcrumb-aprender-temas");
+const bcTema = document.getElementById("breadcrumb-aprender-tema");
+const bcSubtema = document.getElementById("breadcrumb-aprender-subtema");
+
+
+let temaSeleccionado = null;
+let subtemaSeleccionado = null;
+let claveVistaActual = null;
+
+
+/* VARIABLES DE ACTIVIDAD */
+let actividadesSubtema = [];
+let actividadActualIndex = 0;
+let pasoActualIndex = 0;
+let pasosActuales = [];
+let expresionConstruida = [];
+let escaneoHabilitado = false;
+
+function playSound(id) {
+  const audio = document.getElementById(id);
+  if (!audio) return;
+
+  audio.currentTime = 0; // reinicia para permitir repeticiones rápidas
+  audio.play().catch(() => {
+    // Silencio si el navegador bloquea autoplay
+  });
+}
+
+
+function manejarHintCarrusel(track) {
+  const hint = document.getElementById("carrusel-hint");
+
+  if (localStorage.getItem("hintCarruselVisto")) {
+    hint.style.display = "none";
+    return;
+  }
+
+  const ocultarHint = () => {
+    hint.style.display = "none";
+    localStorage.setItem("hintCarruselVisto", "true");
+    track.removeEventListener("scroll", ocultarHint);
+  };
+
+  track.addEventListener("scroll", ocultarHint);
+}
+
+
+function renderCarruselAprendizaje(textos) {
+  const track = document.getElementById("aprendizaje-track");
+  const indicadores = document.getElementById("aprendizaje-indicadores");
+
+  track.innerHTML = "";
+  indicadores.innerHTML = "";
+
+  if (!Array.isArray(textos)) return;
+
+  textos.forEach((texto, index) => {
+    // Tarjeta
+    const item = document.createElement("div");
+    item.className = "carrusel-item";
+    item.innerHTML = texto;
+    track.appendChild(item);
+
+    // Indicador
+    const dot = document.createElement("div");
+    dot.className = "carrusel-dot" + (index === 0 ? " active" : "");
+    indicadores.appendChild(dot);
+  });
+
+  track.scrollLeft = 0;
+  activarIndicadores(track, indicadores);
+  manejarHintCarrusel(track);
+
+}
+function obtenerTextoSubtemaPadre(claveFinal) {
+  const partes = String(claveFinal).split(".");
+  if (partes.length < 2) return "";
+
+  const temaId = parseInt(partes[0], 10);
+  const idxSubtema = parseInt(partes[1], 10) - 1;
+
+  const tema = TEMAS_PM2.find(t => t.id === temaId);
+  if (!tema) return "";
+
+  const st = tema.subtemas[idxSubtema];
+  const clavePadre = `${temaId}.${idxSubtema + 1}`;
+  const tituloPadre = (typeof st === "string") ? st : st.titulo;
+
+  return `${clavePadre} ${tituloPadre}`;
+}
+
+
+function actualizarTabsDeHermanos(claveFinal) {
+  // claveFinal: "3.3.1" o "3.4" o "5.2" etc.
+  const partes = String(claveFinal).split(".");
+
+  // Solo mostramos tabs si estamos en un sub-subtema (tres partes: 3.3.1)
+  if (partes.length !== 3) {
+    tabsSubsubtema.style.display = "none";
+    tabsSubsubtema.innerHTML = "";
+    return;
+  }
+
+  const temaId = parseInt(partes[0], 10);          // 3
+  const idxSubtema = parseInt(partes[1], 10) - 1;  // 3.3 -> 2
+  const idxActual = parseInt(partes[2], 10) - 1;   // 3.3.1 -> 0
+
+  const tema = TEMAS_PM2.find(t => t.id === temaId);
+  if (!tema) return;
+
+  const st = tema.subtemas[idxSubtema];
+
+  // Debe ser objeto con subsubtemas
+  if (!st || typeof st === "string" || !Array.isArray(st.subsubtemas)) {
+    tabsSubsubtema.style.display = "none";
+    tabsSubsubtema.innerHTML = "";
+    return;
+  }
+
+  tabsSubsubtema.innerHTML = "";
+
+  st.subsubtemas.forEach((titulo, j) => {
+    const claveHermano = `${temaId}.${idxSubtema + 1}.${j + 1}`; // 3.3.2
+
+    const btn = document.createElement("button");
+    btn.className = "subsubtema-tab" + (j === idxActual ? " active" : "");
+    btn.textContent = `${claveHermano} ${titulo}`; // o claveHermano
+
+    btn.addEventListener("click", () => {
+      abrirPorClave(tema, claveHermano, `${claveHermano} ${titulo}`);
+    });
+
+    tabsSubsubtema.appendChild(btn);
+  });
+
+  tabsSubsubtema.style.display = "flex";
+}
+
+
+function activarIndicadores(track, indicadores) {
+  track.addEventListener("scroll", () => {
+    const index = Math.round(track.scrollLeft / track.offsetWidth);
+    [...indicadores.children].forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
+  });
+}
+
+
+
+
+/* CAMBIO DE VISTA */
+function showView(view) {
+  [viewTemas, viewActividad].forEach(v => v.classList.remove("active"));
+  view.classList.add("active");
+  window.scrollTo(0, 0);
+}
+
+document.getElementById("btn-header-back").addEventListener("click", () => {
+
+    if (viewActividad.classList.contains("active")) {
+        showView(viewSubtemas);
+        return;
+    }
+
+    if (viewSubtemas.classList.contains("active")) {
+        showView(viewTemas);
+        return;
+    }
+
+    window.location.href = "index.html";
+});
+
+
+
+/* TEMAS */
+function renderTemas() {
+  const cont = document.getElementById("temas-acordeon");
+  cont.innerHTML = "";
+
+  TEMAS_PM2.forEach(tema => {
+    const item = document.createElement("div");
+    item.className = "acordeon-item";
+
+    let subtemasHTML = "";
+
+    tema.subtemas.forEach((st, index) => {
+      const claveSubtema = `${tema.id}.${index + 1}`; // ej "3.1"
+
+      // 1) Subtema normal (string) => clic directo
+      if (typeof st === "string") {
+        subtemasHTML += `
+          <div class="subtema-opcion leaf"
+               data-temaid="${tema.id}"
+               data-clavefinal="${claveSubtema}">
+            ${claveSubtema} ${st}
+          </div>`;
+        return;
+      }
+
+      // 2) Subtema con hijos (object) => desplegable
+      let hijosHTML = "";
+      (st.subsubtemas || []).forEach((hijo, j) => {
+        const claveHijo = `${claveSubtema}.${j + 1}`; // ej "3.1.2"
+        hijosHTML += `
+          <div class="subsubtema-opcion"
+               data-temaid="${tema.id}"
+               data-clavefinal="${claveHijo}">
+            ${claveHijo} ${hijo}
+          </div>`;
+      });
+
+      subtemasHTML += `
+        <div class="subtema-grupo">
+          <div class="subtema-opcion has-children"
+               data-temaid="${tema.id}">
+            ${claveSubtema} ${st.titulo}
+            <span class="material-icons subtema-flecha">chevron_right</span>
+          </div>
+
+          <div class="subtema-children">
+            ${hijosHTML}
+          </div>
+        </div>`;
+    });
+
+    item.innerHTML = `
+      <button class="acordeon-titulo">
+        ${tema.id}. ${tema.titulo}
+        <span class="material-icons acordeon-flecha">expand_more</span>
+      </button>
+
+      <div class="acordeon-contenido">
+        ${subtemasHTML}
+      </div>
+    `;
+
+    cont.appendChild(item);
+  });
+
+  activarAcordeonAprender();
+}
+
+
+function activarAcordeonAprender() {
+  const items = document.querySelectorAll(".acordeon-item");
+
+  // ===== 1) Acordeón principal (igual que el tuyo) =====
+  items.forEach(item => {
+    const btn = item.querySelector(".acordeon-titulo");
+    const contenido = item.querySelector(".acordeon-contenido");
+
+    btn.addEventListener("click", () => {
+
+      (items).forEach(i => {
+        if (i !== item) {
+          i.classList.remove("activo");
+          const c = i.querySelector(".acordeon-contenido");
+          if (c) c.style.maxHeight = null;
+        }
+      });
+
+      item.classList.toggle("activo");
+
+      if (item.classList.contains("activo")) {
+        contenido.style.maxHeight = contenido.scrollHeight + "px";
+      } else {
+        contenido.style.maxHeight = null;
+      }
+    });
+  });
+
+  // ===== 2) Clics dentro del acordeón (subtema / subsubtema / toggle) =====
+  const cont = document.getElementById("temas-acordeon");
+
+  cont.addEventListener("click", (e) => {
+
+    // A) Subtema con hijos: solo desplegar/colapsar su submenú
+    const padre = e.target.closest(".subtema-opcion.has-children");
+    if (padre) {
+      const grupo = padre.closest(".subtema-grupo");
+      if (!grupo) return;
+
+      grupo.classList.toggle("abierto");
+
+      // recalcular altura del acordeón padre (para que el maxHeight no corte)
+      const acordeonItem = padre.closest(".acordeon-item");
+      const contenido = acordeonItem?.querySelector(".acordeon-contenido");
+      if (contenido && acordeonItem.classList.contains("activo")) {
+        contenido.style.maxHeight = contenido.scrollHeight + "px";
+      }
+      return;
+    }
+
+    // B) Subtema sin hijos (leaf): abre por clave "3.4", "2.1", etc.
+    const leaf = e.target.closest(".subtema-opcion.leaf");
+    if (leaf) {
+      const temaId = parseInt(leaf.dataset.temaid);
+      const claveFinal = leaf.dataset.clavefinal; // ej "3.4"
+      const tituloMostrado = leaf.textContent.trim();
+
+      temaSeleccionado = TEMAS_PM2.find(t => t.id === temaId);
+      abrirPorClave(temaSeleccionado, claveFinal, tituloMostrado);
+      return;
+    }
+
+    // C) Sub-subtema: abre por clave "3.1.2"
+    const hijo = e.target.closest(".subsubtema-opcion");
+    if (hijo) {
+      const temaId = parseInt(hijo.dataset.temaid);
+      const claveFinal = hijo.dataset.clavefinal; // ej "3.1.2"
+      const tituloMostrado = hijo.textContent.trim();
+
+      temaSeleccionado = TEMAS_PM2.find(t => t.id === temaId);
+      abrirPorClave(temaSeleccionado, claveFinal, tituloMostrado);
+      return;
+    }
+  });
+}
+
+
+
+
+
+/* ABRIR SUBTEMA */
+function abrirSubtema(i) {
+  subtemaSeleccionado = {
+    index: i,
+    nombre: temaSeleccionado.subtemas[i]
+  };
+
+  bcTema.textContent = temaSeleccionado.titulo;
+  bcSubtema.textContent = `${temaSeleccionado.id}.${i + 1} ${subtemaSeleccionado.nombre}`;
+  subtemaTitle.textContent = `${temaSeleccionado.id}.${i + 1} ${subtemaSeleccionado.nombre}`;
+
+  // Obtener clave del subtema
+const claveSubtema = `${temaSeleccionado.id}.${i + 1}`;
+
+// Cambiar dinámicamente el texto del aprendizaje
+if (TEXTOS_APRENDIZAJE[claveSubtema]) {
+  renderCarruselAprendizaje(TEXTOS_APRENDIZAJE[claveSubtema]);
+}
+
+
+
+  const clave = `${temaSeleccionado.id}.${i + 1}`;
+  actividadesSubtema = ACTIVIDADES[clave] || [];
+
+  actividadActualIndex = 0;
+  cargarActividad(actividadActualIndex);
+
+  showView(viewActividad);
+}
+function abrirPorClave(temaObj, claveFinal, tituloMostrado) {
+  // Guarda tema seleccionado si lo usas global
+  temaSeleccionado = temaObj;
+  claveVistaActual = claveFinal;
+
+  
+
+
+
+  // Breadcrumb / títulos
+bcTema.textContent = temaSeleccionado.titulo;
+
+// ✅ breadcrumb puede seguir mostrando el hijo (opcional)
+bcSubtema.textContent = tituloMostrado;
+
+subtemaTitle.textContent = obtenerTextoSubtemaPadre(claveFinal);
+
+
+
+
+  // Textos aprendizaje
+  if (TEXTOS_APRENDIZAJE[claveFinal]) {
+    renderCarruselAprendizaje(TEXTOS_APRENDIZAJE[claveFinal]);
+  } else {
+    renderCarruselAprendizaje([]);
+  }
+
+  // Actividades
+  actividadesSubtema = ACTIVIDADES[claveFinal] || [];
+  actividadActualIndex = 0;
+  cargarActividad(actividadActualIndex);
+
+  actualizarTabsDeHermanos(claveFinal);
+
+
+  showView(viewActividad);
+}
+
+
+/* CARGAR ACTIVIDAD */
+function cargarActividad(i) {
+  const actividad = actividadesSubtema[i];
+  if (!actividad) return;
+
+  // Reiniciar estado interno
+  pasoActualIndex = 0;
+  pasosActuales = actividad.pasos;
+  expresionConstruida = [];
+
+  // Mostrar tarjeta Aprendizaje al entrar a la actividad
+  document.querySelector(".card-aprender").style.display = "block";
+
+  // Actualizar datos visibles de la actividad
+  
+  document.getElementById("enunciado").innerHTML = `
+  <div class="enunciado-header">
+    <strong>Actividad ${i + 1}</strong>
+  </div>
+  <div class="enunciado-texto">
+    ${actividad.titulo}
+  </div>`;
+
+
+  // Mostrar la PRIMER instrucción de inmediato
+  document.querySelector(".instructions").textContent =
+    pasosActuales.length > 0
+      ? pasosActuales[0].descripcion
+      : "Escanea el primer bloque.";
+
+  // Preparar el área de expresión
+  const exprBox = document.getElementById("expr-aprender");
+  exprBox.textContent = "Esperando escaneo de bloque…";
+  exprBox.classList.add("empty-text");
+  exprBox.classList.remove("expr-filled");
+  exprBox.style.visibility = "visible";
+
+  // Habilitar escaneo desde el inicio
+  escaneoHabilitado = true;
+
+  // Iniciar lectura NFC (sin botón)
+  iniciarLecturaNFC(info => manejarEscaneo(info));
+
+  // Actualizar barra de navegación de actividades
+  actualizarBarraActividades();
+}
+
+
+
+/* BARRA ACTIVIDADES */
+function actualizarBarraActividades() {
+  const nav = document.getElementById("activity-nav");
+  nav.innerHTML = "<span>Actividad:</span>";
+
+  actividadesSubtema.forEach((act, i) => {
+    const dot = document.createElement("div");
+    dot.className = "activity-dot" + (i === actividadActualIndex ? " active" : "");
+    dot.textContent = i + 1;
+
+    dot.addEventListener("click", () => {
+      actividadActualIndex = i;
+      cargarActividad(i);
+    });
+
+    nav.appendChild(dot);
+  });
+}
+
+/* COMPLETAR ACTIVIDAD */
+function actividadCompletada() {
+   playSound("success");
+
+  escaneoHabilitado = false;
+
+  // Identificar clave del subtema actual y la actividad actual
+const claveActividad = `${claveVistaActual}.${actividadActualIndex + 1}`; // ej "3.1.1.1"
+const claveSubtema   = `${claveVistaActual}`;                            // ej "3.1.1"
+
+// 1) intenta por actividad, 2) si no existe usa el del subtema
+const datos = POPUP_DATOS[claveActividad] || POPUP_DATOS[claveSubtema];
+
+
+  if (datos) {
+    document.getElementById("popup-titulo").textContent = datos.titulo;
+    document.getElementById("popup-mensaje").innerHTML = datos.mensaje;
+    document.getElementById("popup-extra").innerHTML = datos.extra;
+  } else {
+    // Por si no hay datos definidos para alguna actividad
+    document.getElementById("popup-titulo").textContent = "¡Correcto!";
+    document.getElementById("popup-mensaje").innerHTML = "Has completado la actividad.";
+    document.getElementById("popup-extra").innerHTML = "";
+  }
+
+  // Cambiar texto de instrucciones al terminar la actividad
+document.querySelector(".instructions").textContent =
+  "Actividad terminada, pasa a la siguiente.";
+
+
+  popup.style.display = "flex";
+
+  const btnNext = document.getElementById("btn-siguiente-actividad");
+  btnNext.disabled = false;
+  btnNext.textContent = "Siguiente actividad";
+
+  btnNext.onclick = () => {
+    actividadActualIndex++;
+    if (actividadActualIndex < actividadesSubtema.length) {
+      cargarActividad(actividadActualIndex);
+    } else {
+      document.querySelector(".instructions").textContent =
+        "¡Excelente! Has terminado todas las actividades.";
+      btnNext.disabled = true;
+    }
+  };
+}
+
+
+/* ESCANEO NFC */
+export function manejarEscaneo(info) {
+
+  // 1. Filtros de seguridad
+  if (!escaneoHabilitado) return;
+  if (!info || !info.key || info.key.trim() === "") return;
+  if (!pasosActuales || pasosActuales.length === 0) return;
+  if (pasoActualIndex >= pasosActuales.length) return;
+
+  // 2. Datos del bloque leído
+  const bloqueKey     = info.key;                           // clave NFC (ej. "mul", "plus", "a", "4")
+  const bloqueTipo    = info.datos.tipo || info.tipo;       // "operador", "numero", "variable"
+  const bloqueSimbolo = info.datos.simbolo || info.datos.symbol || bloqueKey;  
+  // lo que se mostrará en la expresión (×, *, ·, x, 4, etc.)
+
+  const valorParaValidar = bloqueKey; // usamos SIEMPRE la clave para validar (ej. "mul")
+
+  // 3. Paso actual de la actividad
+  const paso = pasosActuales[pasoActualIndex];
+
+  const coincideTipo  = (paso.tipo === bloqueTipo);
+  const coincideValor = (!paso.valor || paso.valor === valorParaValidar);
+  const coincide      = coincideTipo && coincideValor;
+
+  // 4. Si NO coincide → mensaje de error y salimos
+  if (!coincide) {
+    // Mostrar popup sin modificar las instrucciones
+    popupError.style.display = "flex";
+    playSound("scan");
+    return;
+    
+  }
+
+
+  // Si es el primer paso correcto, ocultamos la tarjeta de Aprendizaje
+if (pasoActualIndex === 0) {
+  document.querySelector(".card-aprender").style.display = "none";
+  // y mostramos el área de expresión
+  document.getElementById("expr-aprender").style.visibility = "visible";
+ 
+
+
+}
+
+
+const exprBox = document.getElementById("expr-aprender");
+
+// CAMBIO DE ESTADO VISUAL
+exprBox.classList.remove("empty-text");
+exprBox.classList.add("expr-filled");
+
+// Construir expresión
+expresionConstruida.push(bloqueSimbolo);
+exprBox.innerHTML = expresionConstruida.join("");
+
+
+  // 6. Avanzar al siguiente paso
+  pasoActualIndex++;
+
+  // 7. Si ya no hay más pasos → actividad completada
+  if (pasoActualIndex >= pasosActuales.length) {
+    actividadCompletada();
+    return;
+  }
+
+  // 8. Actualizar SIEMPRE el texto de instrucciones al siguiente paso
+  document.querySelector(".instructions").textContent =
+    pasosActuales[pasoActualIndex].descripcion || "Sigue con el siguiente paso.";
+}
+
+
+/* EVENTOS DE REGRESO */
+
+bcTemasRoot2.addEventListener("click", () => showView(viewTemas));
+bcTema.addEventListener("click", () => showView(viewTemas));
+
+
+document.getElementById("btn-header-back").addEventListener("click", () => {
+
+  // Si estoy en actividad → regresar al acordeón de temas
+  if (viewActividad.classList.contains("active")) {
+    showView(viewTemas);
+    return;
+  }
+
+  // Si estoy en la vista principal de temas → regresar al inicio
+  if (viewTemas.classList.contains("active")) {
+    window.location.href = "index.html";
+    return;
+  }
+});
+
+
+
+
+
+
+
+/* INICIALIZAR */
+renderTemas();
+
+
+
+
+
+</script>
+
+
+<!-- Barra inferior de navegación MathBlocks -->
+<nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+        <span class="material-icons">home</span>
+        <p>Inicio</p>
+    </a>
+
+    <a href="aprender.html" class="nav-item">
+        <span class="material-icons">menu_book</span>
+        <p>Aprender</p>
+    </a>
+
+    <a href="probar.html" class="nav-item">
+        <span class="material-icons">psychology</span>
+        <p>Probar</p>
+    </a>
+
+    <a href="explorar.html" class="nav-item">
+        <span class="material-icons">travel_explore</span>
+        <p>Explorar</p>
+    </a>
+
+    <a href="programa.html" class="nav-item">
+        <span class="material-icons">event_note</span>
+        <p>Programa</p>
+    </a>
+
+    <a href="perfil.html" class="nav-item">
+        <span class="material-icons">person</span>
+        <p>Perfil</p>
+    </a>
+</nav>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const navItems = document.querySelectorAll(".bottom-nav .nav-item");
+    const path = window.location.pathname;
+
+    navItems.forEach(item => {
+        const href = item.getAttribute("href");
+
+        // Se marca active si coincide archivo (index.html, aprender.html, etc.)
+        if (path.includes(href)) {
+            item.classList.add("active");
+        } else {
+            item.classList.remove("active");
+        }
+    });
+});
+</script>
+<script>
+    const headerIcon = document.getElementById("header-icon");
+    headerIcon.src = "img/icon-aprender.svg"; // usa la ruta del ícono verde del estudiante
+</script>
+
+<script>
+// ===============================
+// POPUP EJEMPLOS: CONTENIDO
+// ===============================
+const popupEj = document.getElementById("popup-ejemplos");
+const popupEjTitulo = document.getElementById("popup-ejemplo-titulo");
+const popupEjVisual = document.getElementById("popup-ejemplo-visual");
+const popupEjCerrar = document.getElementById("popup-ejemplo-cerrar");
+
+const EJEMPLOS_CLASIFICACION = {
+    monomio: {
+        titulo: "Monomio",
+        estructura: `
+            <div class="ejemplo-row">
+                <div class="ejemplo-bloque bloque-verde">Término</div>
+            </div>
+            <div class="ejemplo-etiqueta">Ejemplo:</div>
+            <div class="ejemplo-row ejemplo-final-bloque">
+                <div class="ejemplo-bloque bloque-verde">5x</div>
+            </div>
+        `
+    },
+binomio: {
+    titulo: "Binomio",
+    estructura: `
+        <div class="ejemplo-row">
+            <div class="ejemplo-bloque bloque-verde">
+                <span class="ejemplo-termino-text">Primer<br>término</span>
+            </div>
+
+            <span class="ejemplo-simbolo">±</span>
+
+            <div class="ejemplo-bloque bloque-azul">
+                <span class="ejemplo-termino-text">Segundo<br>término</span>
+            </div>
+        </div>
+
+        <div class="ejemplo-etiqueta">Ejemplo:</div>
+
+        <div class="ejemplo-row">
+            <div class="ejemplo-bloque bloque-verde">
+                <span class="ejemplo-final-text">3x</span>
+            </div>
+
+            <span class="ejemplo-simbolo">+</span>
+
+            <div class="ejemplo-bloque bloque-azul">
+                <span class="ejemplo-final-text">2</span>
+            </div>
+        </div>
+    `
+},
+    trinomio: {
+        titulo: "Trinomio",
+        estructura: `
+            <div class="ejemplo-row">
+                <div class="ejemplo-bloque bloque-verde">T1</div>
+                <span class="simbolo">±</span>
+                <div class="ejemplo-bloque bloque-azul">T2</div>
+                <span class="simbolo">±</span>
+                <div class="ejemplo-bloque bloque-verde">T3</div>
+            </div>
+            <div class="ejemplo-etiqueta">Ejemplo:</div>
+            <div class="ejemplo-row ejemplo-final-bloque">
+                <div class="ejemplo-bloque bloque-verde">2x</div>
+                <span class="simbolo">-</span>
+                <div class="ejemplo-bloque bloque-azul">3y</div>
+                <span class="simbolo">+</span>
+                <div class="ejemplo-bloque bloque-verde">5</div>
+            </div>
+        `
+    },
+    polinomio: {
+        titulo: "Polinomio",
+        estructura: `
+            <div class="ejemplo-row">
+                <div class="ejemplo-bloque bloque-verde">T1</div>
+                <span class="simbolo">±</span>
+                <div class="ejemplo-bloque bloque-azul">T2</div>
+                <span class="simbolo">±</span>
+                <div class="ejemplo-bloque bloque-verde">T3</div>
+                <span class="simbolo">±</span>
+                <div class="ejemplo-bloque bloque-azul">T4</div>
+            </div>
+            <div class="ejemplo-etiqueta">Ejemplo:</div>
+            <div class="ejemplo-row ejemplo-final-bloque">
+                <div class="ejemplo-bloque bloque-verde">x</div>
+                <span class="simbolo">-</span>
+                <div class="ejemplo-bloque bloque-azul">2y</div>
+                <span class="simbolo">+</span>
+                <div class="ejemplo-bloque bloque-verde">3z</div>
+                <span class="simbolo">+</span>
+                <div class="ejemplo-bloque bloque-azul">4</div>
+            </div>
+        `
+    }
+};
+
+// Evento para abrir popup al hacer clic
+document.body.addEventListener("click", e => {
+    if (e.target.classList.contains("ejemplo-popup")) {
+        const tipo = e.target.dataset.tipo;
+        const datos = EJEMPLOS_CLASIFICACION[tipo];
+
+        popupEjTitulo.textContent = datos.titulo;
+        popupEjVisual.innerHTML = datos.estructura;
+
+        popupEj.style.display = "flex";
+    }
+});
+
+// Cerrar popup
+popupEjCerrar.addEventListener("click", () => {
+    popupEj.style.display = "none";
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("constructor-overlay");
+  const titleEl = document.getElementById("constructor-title");
+  const msgEl   = document.getElementById("constructor-message");
+  const prevEl  = document.getElementById("constructor-preview");
+
+  // Si el popup no está en esta página, no hacemos nada (evita crash)
+  if (!overlay || !titleEl || !msgEl || !prevEl) {
+    console.warn("Popup constructor no encontrado en el DOM. Revisa el HTML (ids) o la posición del script.");
+    return;
+  }
+
+  window.addEventListener("mb:constructor", (e) => {
+    const d = e.detail || {};
+
+    if (d.action === "open" || d.action === "update") {
+      overlay.style.display = "flex";
+      titleEl.textContent = d.title || "Constructor";
+      msgEl.textContent   = d.message || "";
+      prevEl.innerHTML    = d.previewHTML || "";
+      return;
+    }
+
+    if (d.action === "close") {
+      overlay.style.display = "none";
+      return;
+    }
+  });
+});
+</script>
+
+<!-- ======================================
+     POPUP CONSTRUCTOR
+======================================= -->
+<div id="constructor-overlay" class="constructor-overlay" style="display:none;">
+  <div class="constructor-box">
+    <div class="constructor-title" id="constructor-title">Constructor</div>
+    <div class="constructor-message" id="constructor-message">...</div>
+
+    <div class="constructor-preview">
+      <div class="constructor-preview-label">Vista previa</div>
+      <div class="constructor-preview-block" id="constructor-preview"></div>
+    </div>
+
+    <div class="constructor-hint">
+      Acerca el bloque al lector NFC para continuar…
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
+
+

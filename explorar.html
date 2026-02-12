@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar - MathBlocks</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ======================================
+     HEADER (Idéntico al de Aprender)
+======================================= -->
+<header class="app-header">
+
+    <!-- Botón regresar -->
+    <button class="btn-back-header" id="btn-header-back">
+        <span class="material-icons">arrow_back_ios_new</span>
+    </button>
+
+    <!-- Centro: Logo + Texto -->
+    <div class="header-center">
+        <img id="header-icon" class="header-icon" alt="icon">
+        <span class="titulo" id="header-title">Explorar</span>
+    </div>
+    <!-- Espaciador a la derecha -->
+    <div class="header-spacer"></div>
+</header>
+
+<!-- ======================================
+     CONTENIDO
+======================================= -->
+<main class="content">
+    <div class="explorar-titulo"> Explora libremente los bloques NFC</div>
+        <div id="resultado" class="resultado-box">
+        Escanea cualquier bloque…
+    </div>
+
+
+<div class="carrusel-categoria">
+    <div class="carrusel-titulo">Variables</div>
+
+    <div class="carrusel">
+        <div class="tarjeta-bloque tarjeta-variable"><div class="simbolo">a</div></div>
+        <div class="tarjeta-bloque tarjeta-variable"><div class="simbolo">b</div></div>
+        <div class="tarjeta-bloque tarjeta-variable"><div class="simbolo">c</div></div>
+        <div class="tarjeta-bloque tarjeta-variable"><div class="simbolo">x</div></div>
+        <div class="tarjeta-bloque tarjeta-variable"><div class="simbolo">y</div></div>
+        <div class="tarjeta-bloque tarjeta-variable"><div class="simbolo">z</div></div>
+        <div class="tarjeta-bloque tarjeta-variable"><div class="simbolo">n</div></div>
+
+        <div class="tarjeta-bloque tarjeta-variable"><div class="simbolo">x²</div></div>
+        <div class="tarjeta-bloque tarjeta-variable"><div class="simbolo">x³</div></div>
+        <div class="tarjeta-bloque tarjeta-variable"><div class="simbolo">a²</div></div>
+        <div class="tarjeta-bloque tarjeta-variable"><div class="simbolo">b²</div></div>
+    </div>
+</div>
+<div class="carrusel-categoria">
+    <div class="carrusel-titulo">Números</div>
+
+    <div class="carrusel">
+        <div class="tarjeta-bloque tarjeta-numero"><div class="simbolo">0</div></div>
+        <div class="tarjeta-bloque tarjeta-numero"><div class="simbolo">1</div></div>
+        <div class="tarjeta-bloque tarjeta-numero"><div class="simbolo">2</div></div>
+        <div class="tarjeta-bloque tarjeta-numero"><div class="simbolo">3</div></div>
+        <div class="tarjeta-bloque tarjeta-numero"><div class="simbolo">4</div></div>
+        <div class="tarjeta-bloque tarjeta-numero"><div class="simbolo">5</div></div>
+        <div class="tarjeta-bloque tarjeta-numero"><div class="simbolo">6</div></div>
+        <div class="tarjeta-bloque tarjeta-numero"><div class="simbolo">7</div></div>
+        <div class="tarjeta-bloque tarjeta-numero"><div class="simbolo">8</div></div>
+        <div class="tarjeta-bloque tarjeta-numero"><div class="simbolo">9</div></div>
+
+        <div class="tarjeta-bloque tarjeta-numero"><div class="simbolo">½</div></div>
+        <div class="tarjeta-bloque tarjeta-numero"><div class="simbolo">⅓</div></div>
+        <div class="tarjeta-bloque tarjeta-numero"><div class="simbolo">¼</div></div>
+        <div class="tarjeta-bloque tarjeta-numero"><div class="simbolo">⅕</div></div>
+    </div>
+</div>
+
+<div class="carrusel-categoria">
+    <div class="carrusel-titulo">Operadores</div>
+
+    <div class="carrusel">
+        <div class="tarjeta-bloque tarjeta-operador" data-key="plus">
+            <div class="simbolo">+</div>
+        </div>
+
+        <div class="tarjeta-bloque tarjeta-operador" data-key="minus">
+            <div class="simbolo">−</div>
+        </div>
+
+        <div class="tarjeta-bloque tarjeta-operador" data-key="mul">
+            <div class="simbolo">·</div>
+        </div>
+
+        <div class="tarjeta-bloque tarjeta-operador" data-key="div">
+            <div class="simbolo">÷</div>
+        </div>
+
+        <div class="tarjeta-bloque tarjeta-operador" data-key="eq">
+            <div class="simbolo">=</div>
+        </div>
+
+        <div class="tarjeta-bloque tarjeta-operador" data-key="lt">
+            <div class="simbolo">&lt;</div>
+        </div>
+
+        <div class="tarjeta-bloque tarjeta-operador" data-key="gt">
+            <div class="simbolo">&gt;</div>
+        </div>
+
+        <div class="tarjeta-bloque tarjeta-operador" data-key="neq">
+            <div class="simbolo">≠</div>
+        </div>
+
+        <div class="tarjeta-bloque tarjeta-operador" data-key="parIzq">
+            <div class="simbolo">(</div>
+        </div>
+
+        <div class="tarjeta-bloque tarjeta-operador" data-key="parDer">
+            <div class="simbolo">)</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="carrusel-categoria">
+    <div class="carrusel-titulo">Constructores</div>
+
+    <div class="carrusel">
+
+        <!-- FRAC -->
+        <div class="tarjeta-bloque tarjeta-constructor" data-key="frac">
+            <div class="simbolo frac-preview">
+                <span class="slot"></span>
+                <span class="linea"></span>
+                <span class="slot"></span>
+            </div>
+        </div>
+
+        <!-- EXP -->
+        <div class="tarjeta-bloque tarjeta-constructor" data-key="exp">
+            <div class="simbolo exp-preview">
+                <span class="base-slot"></span>
+                <span class="exp-slot"></span>
+            </div>
+        </div>
+
+        <!-- RAÍZ -->
+        <div class="tarjeta-bloque tarjeta-constructor" data-key="raiz">
+            <div class="simbolo raiz-preview">
+                √<span class="slot"></span>
+            </div>
+        </div>
+
+        <!-- DOBLE -->
+        <div class="tarjeta-bloque tarjeta-constructor" data-key="doble">
+            <div class="simbolo doble-preview">
+                <span class="slot"></span>
+                <span class="slot"></span>
+            </div>
+        </div>
+
+        <!-- NEG -->
+        <div class="tarjeta-bloque tarjeta-constructor" data-key="neg">
+            <div class="simbolo neg-preview">
+                − <span class="slot"></span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+</main>
+
+<!-- ======================================
+     NFC
+======================================= -->
+<script type="module">
+import { iniciarLecturaNFC } from "./js/nfc.js";
+
+iniciarLecturaNFC(info => {
+
+    const datos = info.datos || {};
+    const simbolo = datos.simbolo || datos.symbol || info.key;
+    const descripcion = datos.descripcion || "Sin descripción disponible.";
+    const tipo = datos.tipo || info.tipo || "Desconocido";
+    const categoria = datos.categoria ? datos.categoria : "—";
+    const valor = datos.valor ? datos.valor : "—";
+
+    // Construir lista de propiedades adicionales
+    let extrasHTML = "";
+    for (const propiedad in datos) {
+        if (!["simbolo", "symbol", "description", "tipo", "categoria", "valor"].includes(propiedad)) {
+            extrasHTML += `
+                <li><strong>${propiedad}:</strong> ${datos[propiedad]}</li>
+            `;
+        }
+    }
+
+document.getElementById("resultado").innerHTML = `
+    <div class="resultado-flex">
+
+        <!-- TARJETA DEL BLOQUE ESCANEADO -->
+        <div class="tarjeta-bloque tarjeta-${tipo}">
+            <div class="simbolo">${simbolo}</div>
+        </div>
+
+        <!-- INFORMACIÓN DEL BLOQUE -->
+        <div class="resultado-info">
+            <p><strong>Tipo:</strong> ${tipo}</p>
+            <p><strong>Descripción:</strong><br>${descripcion}</p>
+        </div>
+
+    </div>
+`;
+
+});
+</script>
+
+
+
+<!-- ======================================
+     BARRA INFERIOR DE NAVEGACIÓN
+======================================= -->
+<nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+        <span class="material-icons">home</span>
+        <p>Inicio</p>
+    </a>
+
+    <a href="aprender.html" class="nav-item">
+        <span class="material-icons">menu_book</span>
+        <p>Aprender</p>
+    </a>
+
+    <a href="probar.html" class="nav-item">
+        <span class="material-icons">psychology</span>
+        <p>Probar</p>
+    </a>
+
+    <a href="explorar.html" class="nav-item active">
+        <span class="material-icons">travel_explore</span>
+        <p>Explorar</p>
+    </a>
+
+    <a href="programa.html" class="nav-item">
+        <span class="material-icons">event_note</span>
+        <p>Programa</p>
+    </a>
+
+    <a href="perfil.html" class="nav-item">
+        <span class="material-icons">person</span>
+        <p>Perfil</p>
+    </a>
+</nav>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const navItems = document.querySelectorAll(".bottom-nav .nav-item");
+    const path = window.location.pathname;
+
+    navItems.forEach(item => {
+        const href = item.getAttribute("href");
+        if (path.includes(href)) {
+            item.classList.add("active");
+        }
+    });
+});
+</script>
+
+<!-- ======================================
+     EVENTO DEL BOTÓN REGRESAR
+======================================= -->
+<script>
+document.getElementById("btn-header-back").addEventListener("click", () => {
+    window.location.href = "index.html";
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("constructor-overlay");
+  const titleEl = document.getElementById("constructor-title");
+  const msgEl   = document.getElementById("constructor-message");
+  const prevEl  = document.getElementById("constructor-preview");
+
+  // Si el popup no está en esta página, no hacemos nada (evita crash)
+  if (!overlay || !titleEl || !msgEl || !prevEl) {
+    console.warn("Popup constructor no encontrado en el DOM. Revisa el HTML (ids) o la posición del script.");
+    return;
+  }
+
+  window.addEventListener("mb:constructor", (e) => {
+    const d = e.detail || {};
+
+    if (d.action === "open" || d.action === "update") {
+      overlay.style.display = "flex";
+      titleEl.textContent = d.title || "Constructor";
+      msgEl.textContent   = d.message || "";
+      prevEl.innerHTML    = d.previewHTML || "";
+      return;
+    }
+
+    if (d.action === "close") {
+      overlay.style.display = "none";
+      return;
+    }
+  });
+});
+</script>
+
+
+
+<!-- ======================================
+     POPUP CONSTRUCTOR
+======================================= -->
+<div id="constructor-overlay" class="constructor-overlay" style="display:none;">
+  <div class="constructor-box">
+    <div class="constructor-title" id="constructor-title">Constructor</div>
+    <div class="constructor-message" id="constructor-message">...</div>
+
+    <div class="constructor-preview">
+      <div class="constructor-preview-label">Vista previa</div>
+      <div class="constructor-preview-block" id="constructor-preview"></div>
+    </div>
+
+    <div class="constructor-hint">
+      Acerca el bloque al lector NFC para continuar…
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
