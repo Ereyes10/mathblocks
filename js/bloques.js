@@ -90,6 +90,6 @@ export const bloquesConstructores = {
     "doble": {
         tipo: "constructor",
         categoria: "doble",
-        descripcion: "Duplica el valor del bloque escaneado."
+        descripcion: "Crea un número de doble digito."
     }
 };

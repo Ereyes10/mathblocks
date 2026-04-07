@@ -115,7 +115,7 @@ main, .content, .view {
 }
 
 .content {
-    padding: 1px 20px 20px 20px;
+    padding: 1px 10px 10px 10px;
     margin-top: 50px;
     margin-bottom: 10px;
     min-height: calc(100vh - 70px - 65px);
@@ -186,16 +186,34 @@ main, .content, .view {
 }
 
 /* Migas de pan (breadcrumb) */
-.breadcrumb {
-  font-size: 13px;
-  color: #666;
+.breadcrumb-compact{
+  display: grid;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
   margin-bottom: 10px;
+  padding: 6px;
 }
 
-.breadcrumb span {
+
+.breadcrumb-item {
+  color: #6b7280; /* gris */
+  font-weight: 400;
   cursor: pointer;
-  text-decoration: underline;
 }
+
+.breadcrumb-item.activo {
+  font-size: 16px;
+  color: #8a6e4b;
+  font-weight: 400;
+  
+}
+
+.separator {
+  color: #9ca3af;
+}
+
+
 
 /* Título de pantalla */
 .section-title {
@@ -218,28 +236,31 @@ main, .content, .view {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px solid #333;
+  border: 1px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background: white;
+  color: #0F5A4A;
 }
 
 .activity-dot.active {
-  background: #333;
+  background: #0F5A4A;
   color: #fff;
 }
 
 /* Caja de expresión (placeholder por ahora) */
 .expr-box {
-  font-size: 26px;
- /* margin: 10px 0 15px;*/
-  padding: 12px;
-  background: #fff;
-  border-radius: 6px;
-  min-height: 50px;
-  box-shadow: 0 3px 8px rgba(198, 40, 40, 0.30);
-  /*box-shadow: 0 2px 6px #0003;*/
+    font-size: 26px;
+    /* margin: 10px 0 15px;*/
+    padding: 10px 0px 0px;
+    background: white;
+    border-radius: 4px 4px 4px 4px;
+    min-height: 50px;
+    margin: 6px;
+    /*box-shadow: 0 3px 8px rgba(198, 40, 40, 0.30);*/
+    /*box-shadow: 0 2px 6px #0003;*/
 }
 /* Estilo cuando la caja aún está vacía */
 .expr-box.empty-text {
@@ -247,6 +268,13 @@ main, .content, .view {
     color: #777 !important;         
     font-style: italic !important;  
     line-height: 2.5;
+}
+.caja-instructions{
+    background: white;
+    border-radius: 6px;
+    border-bottom: 10px solid #0F5A4A;
+    padding: 4px;
+
 }
 
 
@@ -261,7 +289,7 @@ main, .content, .view {
     display: grid;
     grid-template-columns: 1fr 1fr;   /* 2 columnas */
     gap: 10px;                        /* separación uniforme */
-   margin-top: 10px;
+    margin: 10px 0px 10px;
     width: 100%;
 }
 .btn-row .btn {
@@ -280,7 +308,7 @@ main, .content, .view {
 }
 
 .btn-primary {
-  background: #8a6e4b  ;
+  background: #0F5A4A;/*#8a6e4b  ;*/
   color: #fff;
 }
 
@@ -345,7 +373,7 @@ main, .content, .view {
 }
 .probar-enunciado {
     line-height: 1.5;
-    padding: 15px;
+    padding: 8px;
     color: #333;
     font-size: 17px;
 }
@@ -393,7 +421,7 @@ main, .content, .view {
     color: #000;
     font-style: normal;
     letter-spacing: 0.4px;
-    box-shadow: 0 3px 8px rgba(26, 127, 74, 0.30);
+    box-shadow: 0 0px 8px rgba(26, 127, 74, 0.30);
 }
 
 
@@ -529,7 +557,7 @@ main, .content, .view {
     background: white;
     border-radius: 6px;
     border: 1px solid #e0e0e0;
-    padding: 15px;
+    padding: 10px;
     box-shadow: 0 2px 8px #0001;
     display: flex;
     flex-direction: column;
@@ -543,7 +571,7 @@ main, .content, .view {
     gap: 8px;
     font-weight: 500;
     color: #b0253c;/*#7a0c24*/
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .icono-aprendizaje {
@@ -553,26 +581,27 @@ main, .content, .view {
 .aprendizaje-descripcion {
     margin: 0;
     line-height: 1.5;
-    font-size: 17px;
+    font-size: 16px;
     color: #333;
 }
 
 .instructions {
-    background: #b0253c; /*#ffffff*/
+    background: white; /*#b0253c o #ffffff*/
    /* border: 2px solid #b0253c; /*#e0e0e0*/
-    padding: 15px;
-    border-radius: 4px;
-    font-size: 18px;
+    padding: 10px 10px 4px;
+    border-radius: 6px 6px 0px 0px;
+    font-size: 16px;
     line-height: 1.5;
-    color: whitesmoke;
-    box-shadow: 0 2px 8px #0001;
+    color: black;
+    /*box-shadow: 0 2px 8px #0001;*/
 
     display: flex;
     align-items: center;
     gap: 10px;
     /*border-left: 12px solid #7A001F;*/
 
-    /*margin-top: 15px;*/
+    /*margin-top: 15px;
+    margin-bottom: 0px;*/
 }
 
 .instructions strong {
@@ -773,22 +802,6 @@ main, .content, .view {
     color: #333;      /* puedes cambiar a #7A001F si quieres la flecha guinda */
 }
 
-/* Ribbon del subtema en PROBAR */
-.ribbon-subtema {
-    position: relative;
-    background: #f2f2f2;       /* #0f5a4a*/
-    color: #8a6e4b; /*#8d3a52 #b0253C #7A001F */ 
-    /*font-weight: bold;*/
-    font-size: 18px;
-    width: auto;
-    padding: 6px;
-    border-radius: 0px 0px 6px 6px;
-    margin: 0px 0 10px;
-    text-align: left;
-    font-weight: 500;
-   /* box-shadow: 0 2px 6px #0003;*/
-    
-}
 
 /* ======== EXPRESIONES ALGEBRAICAS — PROBAR ======== */
 
@@ -803,6 +816,7 @@ main, .content, .view {
     justify-content: center;     /* centrar horizontal */
     align-items: center;         /* centrar vertical */
     min-height: 60px;
+    box-shadow: 0 0px 8px rgba(198, 40, 40, 0.30);
 }
 
 /* Para asegurar que cada símbolo tenga buen espacio */
@@ -835,9 +849,9 @@ main, .content, .view {
 
 /* Tarjeta sin borde, con sombra */
 .tarjeta-bloque {
-    min-width: 55px;      /* antes 110px */
+    min-width: 60px;      /* antes 110px */
     height: 70px;         /* antes 140px */
-    border-radius: 12px;  /* ajustado proporcionalmente */
+    border-radius: 6px;  /* ajustado proporcionalmente */
     background: white;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     display: flex;
@@ -866,6 +880,10 @@ main, .content, .view {
 
 .tarjeta-operador {
    box-shadow: 0 3px 8px rgba(198, 40, 40, 0.30);
+}
+
+.tarjeta-constructor{
+    box-shadow: 0 3px 8px rgba(198, 40, 40, 0.30);
 }
 
 /* Ocultar barra de desplazamiento */
@@ -974,17 +992,17 @@ main, .content, .view {
 
 /* Encabezado verde (Actividad 1) */
 .card-aprender-header {
-    background: #0F5A4A;       /* tu verde institucional */
-    color: white;
-    font-weight: 400;
+    background: white;       /* tu verde institucional */
+    color: #0F5A4A;
+    font-weight: 500;
     padding: 8px;
-    text-align: center;
-    font-size: 17px;
+    text-align: left;
+    font-size: 18px;
 }
 
 /* Cuerpo interior */
 .card-aprender-body {
-    padding: 15px;
+    padding: 6px 6px;
     background: white;
 }
 
@@ -1075,7 +1093,7 @@ main, .content, .view {
 .tarjeta-constructor .simbolo {
     font-size: 25px;
     position: relative;
-    width: 100%;
+    /*width: 100%;*/
     /*height: 100%;*/
 }
 
@@ -1252,19 +1270,19 @@ main, .content, .view {
 
 .enunciado-header {
   font-size: 18px;
-  text-align: center;
-  background: #b0253c;
-  font-weight: 200;
-  padding: 8px;
+  text-align: left;
+  background: white;/*#b0253c;*/
+  font-weight: 500;
+  padding: 8px 8px 0px 8px;
   
-  color: whitesmoke; 
+  color:#b0253c;/* #0F5A4A;*/
 }
 
 .enunciado-texto {
 line-height: 1.5;
-padding: 15px;
+padding: 10px;
 color: #333;
-font-size: 18px;
+font-size: 16px;
 }
 
 
@@ -1306,7 +1324,7 @@ font-size: 18px;
 
 .carrusel-item {
   min-width: 100%;
-  padding: 4px 2px;
+  padding: 4px 4px;
   line-height: 1.6;
   scroll-snap-align: start;
 }
@@ -1316,6 +1334,7 @@ font-size: 18px;
   justify-content: center;
   gap: 6px;
   margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .carrusel-dot {

@@ -44,7 +44,7 @@ const ACTIVIDADES_1_1 = [
         id: "1.1.5",
         enunciado: "Escribe la expresión: “Un número dividido entre 8”.",
         pista: "Me suena a cociente",
-        validacion: ["variable", "eq", "8"]
+        validacion: ["variable", "div", "8"]
     },
 
     {

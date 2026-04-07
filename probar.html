@@ -45,7 +45,11 @@
       
       <!-- ===== VISTA 2: Actividad ===== -->
       <section id="view-actividad" class="view">
-        <div class="ribbon-subtema" id="subtema-title"></div>
+      <div class="breadcrumb-compact">
+        <span id="breadcrumb-probar-tema" class="breadcrumb-item"></span>        
+        <span id="breadcrumb-probar-subtema" class="breadcrumb-item activo"></span>
+      </div>
+        
         <div id="subsubtema-tabs-probar" class="subsubtema-tabs" style="display:none;"></div>
 
     
@@ -55,7 +59,7 @@
 
       <!-- Header de la tarjeta -->
       <div class="enunciado-header" id="actividad-badge">
-       Actividad 1
+        Actividad 1
       </div>
 
       <!-- Contenido del enunciado -->
@@ -93,11 +97,7 @@
         <div class="activity-nav" id="activity-nav"></div>
 
         <!-- Breadcrumb -->
-        <div class="breadcrumb">
-          <span id="breadcrumb-probar-temas">Temas</span> &gt; 
-          <span id="breadcrumb-probar-tema"></span> &gt; 
-          <span id="breadcrumb-probar-subtema"></span>
-        </div>
+
 
       </section>
       
@@ -132,14 +132,14 @@
     // ========================
     const viewTemas = document.getElementById("view-temas");
     const viewActividad = document.getElementById("view-actividad");
-    const subtemaTitle = document.getElementById("subtema-title");
+    
 
     const tabsProbar = document.getElementById("subsubtema-tabs-probar");
 
 
     const temasAcordeon = document.getElementById("temas-acordeon");
 
-    const bcTemasRoot2 = document.getElementById("breadcrumb-probar-temas");
+    
     const bcTema = document.getElementById("breadcrumb-probar-tema");
     const bcSubtema = document.getElementById("breadcrumb-probar-subtema");
 
@@ -331,19 +331,23 @@ const padre = e.target.closest(".subtema-opcion.has-children");
     if (leaf) {
       const temaId = parseInt(leaf.dataset.temaid, 10);
       const claveFinal = leaf.dataset.clavefinal; // "3.4"
-      const tituloTema = leaf.dataset.tituloTema;
-
+      const tituloMostrado = leaf.textContent.trim();
       temaSeleccionado = TEMAS_PM2.find(t => t.id === temaId);
-      abrirPorClave(claveFinal, tituloTema);
+      abrirPorClave(temaSeleccionado, claveFinal, tituloMostrado);
       return;
     }
 
     // C) subsubtema => abrir por clave "3.1.2"
-    const hijo = e.target.closest(".subsubtema-opcion");
-    if (hijo) {
-      abrirPorClave(hijo.dataset.clavefinal, hijo.textContent.trim());
-      return;
-    }
+  const hijo = e.target.closest(".subsubtema-opcion");
+  if (hijo) {
+    const temaId = parseInt(hijo.dataset.temaid, 10);
+    const claveFinal = hijo.dataset.clavefinal;
+    const tituloMostrado = hijo.textContent.trim();
+
+    temaSeleccionado = TEMAS_PM2.find(t => t.id === temaId);
+    abrirPorClave(temaSeleccionado, claveFinal, tituloMostrado);
+    return;
+}
   });
 }
 
@@ -353,36 +357,9 @@ const padre = e.target.closest(".subtema-opcion.has-children");
     // ABRIR SUBTEMA
     // ========================
     let temaSeleccionado = null;
-    let subtemaSeleccionado = null;
+    
 
-    function abrirSubtema(i, titulo) {
-      console.log("Ribbon:", subtemaTitle.textContent);
-
-      iniciarLecturaNFC(info => procesarLectura(info)); // Activar NFC
-
-      subtemaSeleccionado = {
-        index: i,
-        text: temaSeleccionado.subtemas[i]
-      };
-
-      actividadActual = 0;
-
-      bcTema.textContent = titulo;
-      bcSubtema.textContent = `${temaSeleccionado.id}.${i + 1} ${subtemaSeleccionado.text}`;
-
-      // Actualiza automáticamente el texto del ribbon
-      subtemaTitle.textContent = `${temaSeleccionado.id}.${i + 1} ${subtemaSeleccionado.text}`;
-
-
-      const subtemaId = `${temaSeleccionado.id}.${i + 1}`;
-
-      actividadesSubtema = ACTIVIDADES_PROBAR[subtemaId] || [];
-
-      cargarActividad();
-      cargarBarraActividades();
-
-      showView(viewActividad);
-    }
+    
 
     function obtenerTextoSubtemaPadre(claveFinal) {
   const partes = String(claveFinal).split(".");
@@ -403,28 +380,22 @@ const padre = e.target.closest(".subtema-opcion.has-children");
 
 let claveVistaActual = null;
 
-function abrirPorClave(claveFinal, tituloTema) {
-  iniciarLecturaNFC(info => procesarLectura(info)); // Activar NFC
+function abrirPorClave(temaObj, claveFinal, tituloMostrado) {
+  iniciarLecturaNFC(info => procesarLectura(info));
 
+  temaSeleccionado = temaObj;
   claveVistaActual = claveFinal;
 
-  // Ribbon: solo padre (igual que aprender)
-  subtemaTitle.textContent = obtenerTextoSubtemaPadre(claveFinal);
-
-  // Breadcrumb
-  bcTema.textContent = tituloTema;
-  bcSubtema.textContent = claveFinal;
+  bcTema.textContent = temaObj.titulo;
+  bcSubtema.textContent = tituloMostrado;
 
   actividadActual = 0;
-
-  // Cargar actividades del subtema/subsubtema
   actividadesSubtema = ACTIVIDADES_PROBAR[claveFinal] || [];
 
   cargarActividad();
   cargarBarraActividades();
   showView(viewActividad);
   actualizarTabsProbar(claveFinal);
-
 }
 
 
@@ -462,7 +433,7 @@ function actualizarTabsProbar(claveFinal){
     btn.textContent = titulo; // ✅ solo texto
 
     btn.addEventListener("click", () => {
-      abrirPorClave(claveHermano, titulo); // abre sin número
+      abrirPorClave(tema, claveHermano, `${claveHermano} ${titulo}`);
     });
 
     tabsProbar.appendChild(btn);
@@ -500,7 +471,7 @@ function actualizarTabsProbar(claveFinal){
       asistenteContenido.textContent =
         actividad.pista || "Escanea los bloques indicados en el enunciado.";
 
-      actividadBadge.textContent = `Actividad ${actividadActual + 1}`;
+      actividadBadge.textContent = "📕 " + `Actividad ${actividadActual + 1}`;
     }
 
 
@@ -510,11 +481,11 @@ function actualizarTabsProbar(claveFinal){
     // ========================
     function cargarBarraActividades() {
       const nav = document.getElementById("activity-nav");
-      nav.innerHTML = "";
+      nav.innerHTML = "<span>Actividad:</span>";
 
       actividadesSubtema.forEach((ac, index) => {
         const dot = document.createElement("div");
-        dot.className = "activity-dot" + (index === actividadActual ? " active" : "");
+        dot.className =  "activity-dot" + (index === actividadActual ? " active" : "");
         dot.textContent = index + 1;
         nav.appendChild(dot);
       });

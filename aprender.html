@@ -47,11 +47,14 @@
   <!-- VISTA 2: Actividad -->
   <section id="view-actividad" class="view">
 
-  <!-- Título del Subtema -->
-   
-    <div class="ribbon-subtema" id="subtema-title"></div>
-    <div id="subsubtema-tabs" class="subsubtema-tabs" style="display:none;"></div>
 
+    <div class="breadcrumb-compact">
+      <span id="breadcrumb-aprender-tema" class="breadcrumb-item"></span>
+      
+      <span id="breadcrumb-aprender-subtema" class="breadcrumb-item activo"></span>
+    </div>
+
+    <div id="subsubtema-tabs" class="subsubtema-tabs" style="display:none;"></div>
 
    <div id="actividad-info">
 
@@ -90,27 +93,36 @@
 </div>
 
 
+    <div class="btn-row"> 
+      
+      <button class="btn btn-primary" id="btn-comenzar-actividad">Comenzar actividad</button>
+      <button class="btn btn-secondary" id="btn-ver-aprendizaje">Ver aprendizaje</button>
+    </div>
+
+    <div class="caja-instructions">
     
+      <div class="instructions">Aquí se mostrarán las actividades guiadas para este subtema en modo <strong>Aprender</strong>.</div>
 
-    <p class="instructions">Aquí se mostrarán las actividades guiadas para este subtema en modo <strong>Aprender</strong>.</p>
-
-    <div class="expr-box empty-text" id="expr-aprender">
-    Esperando escaneo de bloque…
+      <div class="expr-box empty-text" id="expr-aprender">
+      Esperando escaneo de bloque…
+      </div>
     </div>
 
 
     <div class="btn-row">
+      <button class="btn btn-secondary" id="btn-regresar-actividad">
+        <span class="material-icons subtema-flecha">chevron_left</span>
+        </button>
+
+      <button class="btn btn-primary" id="btn-siguiente-actividad"> 
+        <span class="material-icons subtema-flecha">chevron_right</span>
+        </button>
       
-      <button class="btn btn-primary" id="btn-siguiente-actividad">Siguiente actividad</button>
     </div>
 
     <div class="activity-nav" id="activity-nav"></div>
 
-    <div class="breadcrumb">
-      <span id="breadcrumb-aprender-temas">Temas</span> &gt; 
-      <span id="breadcrumb-aprender-tema"></span> &gt; 
-      <span id="breadcrumb-aprender-subtema"></span>
-    </div>
+
   </section>
 
 </main>
@@ -189,13 +201,19 @@ popupCerrar.addEventListener("click", () => popup.style.display = "none");
 
 const viewTemas = document.getElementById("view-temas");
 const viewActividad = document.getElementById("view-actividad");
-const subtemaTitle = document.getElementById("subtema-title");
+
 
 const tabsSubsubtema = document.getElementById("subsubtema-tabs");
 
+const btnComenzarActividad = document.getElementById("btn-comenzar-actividad");
+const btnVerAprendizaje = document.getElementById("btn-ver-aprendizaje");
+const btnRegresarActividad = document.getElementById("btn-regresar-actividad");
+const btnSiguienteActividad = document.getElementById("btn-siguiente-actividad");
+const cajaInstructions = document.querySelector(".caja-instructions");
+const cardAprender = document.querySelector(".card-aprender");
 
 
-const bcTemasRoot2 = document.getElementById("breadcrumb-aprender-temas");
+
 const bcTema = document.getElementById("breadcrumb-aprender-tema");
 const bcSubtema = document.getElementById("breadcrumb-aprender-subtema");
 
@@ -212,6 +230,38 @@ let pasoActualIndex = 0;
 let pasosActuales = [];
 let expresionConstruida = [];
 let escaneoHabilitado = false;
+let actividadIniciada = false;
+
+
+
+function bloquearInterfazInicialActividad() {
+  btnVerAprendizaje.disabled = !actividadIniciada;
+  btnRegresarActividad.disabled = (actividadActualIndex === 0);
+  btnSiguienteActividad.disabled = (actividadActualIndex === actividadesSubtema.length - 1);
+
+  cajaInstructions.style.pointerEvents = "none";
+  cajaInstructions.style.display = "none";
+  //cajaInstructions.style.opacity = "0.5";
+
+  if (!actividadIniciada) {
+  cardAprender.style.display = "block";
+} else {
+  cardAprender.style.display = "none";
+}
+  
+}
+
+function habilitarInterfazActividad() {
+  btnVerAprendizaje.disabled = false;
+  btnRegresarActividad.disabled = (actividadActualIndex === 0);
+  btnSiguienteActividad.disabled = (actividadActualIndex === actividadesSubtema.length - 1);
+
+  cajaInstructions.style.pointerEvents = "auto";
+  //cajaInstructions.style.opacity = "1";
+  cajaInstructions.style.display = "block";
+
+  cardAprender.style.display = "none";
+}
 
 function playSound(id) {
   const audio = document.getElementById(id);
@@ -528,7 +578,7 @@ function abrirSubtema(i) {
 
   bcTema.textContent = temaSeleccionado.titulo;
   bcSubtema.textContent = `${temaSeleccionado.id}.${i + 1} ${subtemaSeleccionado.nombre}`;
-  subtemaTitle.textContent = `${temaSeleccionado.id}.${i + 1} ${subtemaSeleccionado.nombre}`;
+  
 
   // Obtener clave del subtema
 const claveSubtema = `${temaSeleccionado.id}.${i + 1}`;
@@ -563,7 +613,7 @@ bcTema.textContent = temaSeleccionado.titulo;
 // ✅ breadcrumb puede seguir mostrando el hijo (opcional)
 bcSubtema.textContent = tituloMostrado;
 
-subtemaTitle.textContent = obtenerTextoSubtemaPadre(claveFinal);
+
 
 
 
@@ -598,13 +648,13 @@ function cargarActividad(i) {
   expresionConstruida = [];
 
   // Mostrar tarjeta Aprendizaje al entrar a la actividad
-  document.querySelector(".card-aprender").style.display = "block";
+  bloquearInterfazInicialActividad();
 
   // Actualizar datos visibles de la actividad
-  
+
   document.getElementById("enunciado").innerHTML = `
   <div class="enunciado-header">
-    <strong>Actividad ${i + 1}</strong>
+    📕 Actividad ${i + 1}
   </div>
   <div class="enunciado-texto">
     ${actividad.titulo}
@@ -624,15 +674,45 @@ function cargarActividad(i) {
   exprBox.classList.remove("expr-filled");
   exprBox.style.visibility = "visible";
 
-  // Habilitar escaneo desde el inicio
-  escaneoHabilitado = true;
-
-  // Iniciar lectura NFC (sin botón)
-  iniciarLecturaNFC(info => manejarEscaneo(info));
+  // El escaneo no inicia hasta presionar "Comenzar actividad"
+  escaneoHabilitado = false;
 
   // Actualizar barra de navegación de actividades
   actualizarBarraActividades();
 }
+
+btnComenzarActividad.addEventListener("click", () => {
+  actividadIniciada = true; 
+
+  habilitarInterfazActividad();
+
+  escaneoHabilitado = true;
+  iniciarLecturaNFC(info => manejarEscaneo(info));
+});
+
+btnVerAprendizaje.addEventListener("click", () => {
+  cardAprender.style.display = "block";
+});
+
+btnRegresarActividad.addEventListener("click", () => {
+  escaneoHabilitado = false;
+
+  if (actividadActualIndex > 0) {
+    actividadActualIndex--;
+    cargarActividad(actividadActualIndex);
+  }
+});
+
+btnSiguienteActividad.addEventListener("click", () => {
+  escaneoHabilitado = false;
+
+  if (actividadActualIndex < actividadesSubtema.length - 1) {
+    actividadActualIndex++;
+    cargarActividad(actividadActualIndex);
+  }
+});
+
+
 
 
 
@@ -687,20 +767,7 @@ document.querySelector(".instructions").textContent =
 
   popup.style.display = "flex";
 
-  const btnNext = document.getElementById("btn-siguiente-actividad");
-  btnNext.disabled = false;
-  btnNext.textContent = "Siguiente actividad";
-
-  btnNext.onclick = () => {
-    actividadActualIndex++;
-    if (actividadActualIndex < actividadesSubtema.length) {
-      cargarActividad(actividadActualIndex);
-    } else {
-      document.querySelector(".instructions").textContent =
-        "¡Excelente! Has terminado todas las actividades.";
-      btnNext.disabled = true;
-    }
-  };
+btnSiguienteActividad.disabled = (actividadActualIndex === actividadesSubtema.length - 1);
 }
 
 
@@ -738,17 +805,6 @@ export function manejarEscaneo(info) {
   }
 
 
-  // Si es el primer paso correcto, ocultamos la tarjeta de Aprendizaje
-if (pasoActualIndex === 0) {
-  document.querySelector(".card-aprender").style.display = "none";
-  // y mostramos el área de expresión
-  document.getElementById("expr-aprender").style.visibility = "visible";
- 
-
-
-}
-
-
 const exprBox = document.getElementById("expr-aprender");
 
 // CAMBIO DE ESTADO VISUAL
@@ -777,31 +833,22 @@ exprBox.innerHTML = expresionConstruida.join("");
 
 /* EVENTOS DE REGRESO */
 
-bcTemasRoot2.addEventListener("click", () => showView(viewTemas));
+
 bcTema.addEventListener("click", () => showView(viewTemas));
 
 
 document.getElementById("btn-header-back").addEventListener("click", () => {
 
-  // Si estoy en actividad → regresar al acordeón de temas
   if (viewActividad.classList.contains("active")) {
     showView(viewTemas);
     return;
   }
 
-  // Si estoy en la vista principal de temas → regresar al inicio
   if (viewTemas.classList.contains("active")) {
     window.location.href = "index.html";
     return;
   }
 });
-
-
-
-
-
-
-
 /* INICIALIZAR */
 renderTemas();
 
