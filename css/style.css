@@ -191,7 +191,7 @@ main, .content, .view {
   align-items: center;
   gap: 6px;
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   padding: 6px;
 }
 
@@ -228,25 +228,26 @@ main, .content, .view {
   display: flex;
   gap: 8px;
   margin: 10px 0 15px;
-  font-size: 14px;
+  font-size: 16px;
   align-items: center;
+  color: #8a6e4b;
 }
 
 .activity-dot {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  border: 1px solid white;
+  /*border: 1px solid white;*/
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   background: white;
-  color: #0F5A4A;
+  color: grey;
 }
 
 .activity-dot.active {
-  background: #0F5A4A;
+  background: #8a6e4b;
   color: #fff;
 }
 
@@ -314,16 +315,17 @@ main, .content, .view {
 
 .btn-secondary {
   background: #e0e0e0;
+  color: black;
 }
 
 
 /* Botón de regresar */
 .btn-back-header {
-  background: none;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-  margin-left: 10px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 10px;
 }
 
 .header-center {
@@ -333,6 +335,33 @@ main, .content, .view {
     display: flex;
     align-items: center;
 }
+.btn-navegacion-actividades{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 10px 0px 10px;
+    width: 100%;
+    
+}
+
+.btn-aprender-regresar {
+    background: #e0e0e0;
+    border-radius: 5px;
+    border: none;
+    padding: 5px
+    
+    
+}
+
+.btn-aprender-siguiente {
+    background: #8a6e4b;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    
+}
+
+
 
 
 
@@ -1383,14 +1412,12 @@ font-size: 16px;
 }*/
 
 .subsubtema-tabs{
-  display:flex;
-  gap:8px;
-  padding: 8px 14px 0 14px;
-  margin-top: 6px;
-
-  overflow-x: auto;                 /* scroll horizontal */
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;            /* Firefox */
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    margin: 6px 0 6px 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 .subsubtema-tabs::-webkit-scrollbar{
   display:none;                     /* Chrome/Android */
@@ -1398,19 +1425,40 @@ font-size: 16px;
 
 
 .subsubtema-tab{
-  flex:1;
-  border:none;
-  padding:6px 8px;
-  border-radius: 6px 6px 0 0;
-  font-weight:400;
-  cursor:pointer;
-  background:#e9ecef;
-  color:#333;
+    width: 100%;
+    min-height: 42px;
+    border: none;
+    border-radius: 6px;
+    padding: 4px;
+    cursor: pointer;
+
+    background: white;
+    color: gray;
+
+    font-family: Fredoka, "League Spartan", Arial, sans-serif;
+    line-height: 1.25;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+
+    /*word-break: break-word;
+    hyphens: auto;*/
+}
+
+.subsubtema-tab:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.14);
 }
 
 .subsubtema-tab.active{
-  background:#0f5b4d; /* tu verde de Aprendizaje */
-  color:#fff;
+  background: #8a6e4b;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.16);
 }
 
 .constructor-overlay{

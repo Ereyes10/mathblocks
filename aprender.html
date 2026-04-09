@@ -54,7 +54,7 @@
       <span id="breadcrumb-aprender-subtema" class="breadcrumb-item activo"></span>
     </div>
 
-    <div id="subsubtema-tabs" class="subsubtema-tabs" style="display:none;"></div>
+    <div id="subsubtema-tabs" class="subsubtema-tabs"></div>
 
    <div id="actividad-info">
 
@@ -109,12 +109,12 @@
     </div>
 
 
-    <div class="btn-row">
-      <button class="btn btn-secondary" id="btn-regresar-actividad">
+    <div class="btn-navegacion-actividades">
+      <button class="btn-aprender-regresar" id="btn-regresar-actividad">
         <span class="material-icons subtema-flecha">chevron_left</span>
         </button>
 
-      <button class="btn btn-primary" id="btn-siguiente-actividad"> 
+      <button class="btn-aprender-siguiente" id="btn-siguiente-actividad"> 
         <span class="material-icons subtema-flecha">chevron_right</span>
         </button>
       
@@ -380,7 +380,7 @@ function actualizarTabsDeHermanos(claveFinal) {
     tabsSubsubtema.appendChild(btn);
   });
 
-  tabsSubsubtema.style.display = "flex";
+  tabsSubsubtema.style.display = "";
 }
 
 
@@ -603,20 +603,17 @@ function abrirPorClave(temaObj, claveFinal, tituloMostrado) {
   temaSeleccionado = temaObj;
   claveVistaActual = claveFinal;
 
-  
-
-
-
   // Breadcrumb / títulos
 bcTema.textContent = temaSeleccionado.titulo;
 
-// ✅ breadcrumb puede seguir mostrando el hijo (opcional)
-bcSubtema.textContent = tituloMostrado;
+// breadcrumb puede seguir mostrando el hijo (opcional)
+const partes = String(claveFinal).split(".");
 
-
-
-
-
+if (partes.length === 3) {
+  bcSubtema.textContent = obtenerTextoSubtemaPadre(claveFinal);
+} else {
+  bcSubtema.textContent = tituloMostrado;
+}
 
   // Textos aprendizaje
   if (TEXTOS_APRENDIZAJE[claveFinal]) {
