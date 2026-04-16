@@ -502,6 +502,7 @@ main,
   justify-content: space-between;
   align-items: center;
   color: white;
+  min-height: 76px;
 }
 
 .acordeon-flecha {
@@ -515,15 +516,16 @@ main,
 .acordeon-contenido {
   max-height: 0;
   overflow: hidden;
-  background: #d9dad8; /*#f7f7f7; #adbac0;*/
+  background: white; /*#f7f7f7; #adbac0;*/
   transition: max-height 0.25s ease;
 }
 
 .subtema-opcion {
   padding: 15px 20px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #d9dad8;
   font-size: 16px;
   cursor: pointer;
+  color: #161616;
 }
 
 .subtema-opcion:hover {

@@ -446,7 +446,7 @@ function renderTemas() {
       }
 
       // 2) Subtema con hijos (object) => desplegable
-      let hijosHTML = "";
+      /*let hijosHTML = "";
       (st.subsubtemas || []).forEach((hijo, j) => {
         const claveHijo = `${claveSubtema}.${j + 1}`; // ej "3.1.2"
         hijosHTML += `
@@ -468,6 +468,14 @@ function renderTemas() {
           <div class="subtema-children">
             ${hijosHTML}
           </div>
+        </div>`;*/
+        // 2) Subtema con hijos (object) => ahora abre directo la vista actividad
+      subtemasHTML += `
+        <div class="subtema-opcion leaf has-tabs"
+            data-temaid="${tema.id}"
+            data-clavefinal="${claveSubtema}">
+          ${claveSubtema} ${st.titulo}
+          
         </div>`;
     });
 
@@ -523,7 +531,7 @@ function activarAcordeonAprender() {
   cont.addEventListener("click", (e) => {
 
     // A) Subtema con hijos: solo desplegar/colapsar su submenú
-    const padre = e.target.closest(".subtema-opcion.has-children");
+    /*const padre = e.target.closest(".subtema-opcion.has-children");
     if (padre) {
       const grupo = padre.closest(".subtema-grupo");
       if (!grupo) return;
@@ -537,7 +545,7 @@ function activarAcordeonAprender() {
         contenido.style.maxHeight = contenido.scrollHeight + "px";
       }
       return;
-    }
+    }*/
 
     // B) Subtema sin hijos (leaf): abre por clave "3.4", "2.1", etc.
     const leaf = e.target.closest(".subtema-opcion.leaf");
@@ -552,7 +560,7 @@ function activarAcordeonAprender() {
     }
 
     // C) Sub-subtema: abre por clave "3.1.2"
-    const hijo = e.target.closest(".subsubtema-opcion");
+    /*const hijo = e.target.closest(".subsubtema-opcion");
     if (hijo) {
       const temaId = parseInt(hijo.dataset.temaid);
       const claveFinal = hijo.dataset.clavefinal; // ej "3.1.2"
@@ -561,7 +569,7 @@ function activarAcordeonAprender() {
       temaSeleccionado = TEMAS_PM2.find(t => t.id === temaId);
       abrirPorClave(temaSeleccionado, claveFinal, tituloMostrado);
       return;
-    }
+    }*/
   });
 }
 
@@ -598,37 +606,45 @@ if (TEXTOS_APRENDIZAJE[claveSubtema]) {
 
   showView(viewActividad);
 }
+
 function abrirPorClave(temaObj, claveFinal, tituloMostrado) {
-  // Guarda tema seleccionado si lo usas global
   temaSeleccionado = temaObj;
-  claveVistaActual = claveFinal;
 
-  // Breadcrumb / títulos
-bcTema.textContent = temaSeleccionado.titulo;
+  let claveAabrir = claveFinal;
+  let tituloBase = tituloMostrado;
 
-// breadcrumb puede seguir mostrando el hijo (opcional)
-const partes = String(claveFinal).split(".");
+  const partes = String(claveFinal).split(".");
 
-if (partes.length === 3) {
-  bcSubtema.textContent = obtenerTextoSubtemaPadre(claveFinal);
-} else {
-  bcSubtema.textContent = tituloMostrado;
-}
+  // Si entra a un subtema tipo 3.1 y ese subtema tiene subsubtemas,
+  // abrir automáticamente el primero: 3.1.1
+  if (partes.length === 2) {
+    const temaId = parseInt(partes[0], 10);
+    const idxSubtema = parseInt(partes[1], 10) - 1;
 
-  // Textos aprendizaje
-  if (TEXTOS_APRENDIZAJE[claveFinal]) {
-    renderCarruselAprendizaje(TEXTOS_APRENDIZAJE[claveFinal]);
+    const tema = TEMAS_PM2.find(t => t.id === temaId);
+    const st = tema?.subtemas?.[idxSubtema];
+
+    if (st && typeof st !== "string" && Array.isArray(st.subsubtemas) && st.subsubtemas.length > 0) {
+      claveAabrir = `${claveFinal}.1`;
+    }
+  }
+
+  claveVistaActual = claveAabrir;
+
+  bcTema.textContent = temaSeleccionado.titulo;
+  bcSubtema.textContent = obtenerTextoSubtemaPadre(claveAabrir);
+
+  if (TEXTOS_APRENDIZAJE[claveAabrir]) {
+    renderCarruselAprendizaje(TEXTOS_APRENDIZAJE[claveAabrir]);
   } else {
     renderCarruselAprendizaje([]);
   }
 
-  // Actividades
-  actividadesSubtema = ACTIVIDADES[claveFinal] || [];
+  actividadesSubtema = ACTIVIDADES[claveAabrir] || [];
   actividadActualIndex = 0;
   cargarActividad(actividadActualIndex);
 
-  actualizarTabsDeHermanos(claveFinal);
-
+  actualizarTabsDeHermanos(claveAabrir);
 
   showView(viewActividad);
 }
