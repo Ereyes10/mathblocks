@@ -46,7 +46,7 @@ export const bloquesNormales = {
     "plus":  { tipo: "operador", simbolo: "+", descripcion: "Operador de suma." },
     "minus": { tipo: "operador", simbolo: "-", descripcion: "Operador de resta." },
     "mul":   { tipo: "operador", simbolo: "·", descripcion: "Operador de multiplicación." },
-    "div":   { tipo: "operador", simbolo: "÷", descripcion: "Operador de división." },
+    "div":   { tipo: "operador", simbolo: "/", descripcion: "Operador de división." },
     "eq":    { tipo: "operador", simbolo: "=", descripcion: "Indica igualdad entre expresiones." },
     "lt":    { tipo: "operador", simbolo: "<", descripcion: "Operador menor que." },
     "gt":    { tipo: "operador", simbolo: ">", descripcion: "Operador mayor que." },

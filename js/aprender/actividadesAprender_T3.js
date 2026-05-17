@@ -4,7 +4,7 @@
 // =====================================================
 
 const actividad_3_1_1_1 = {
-  titulo: "¿Cuál es el resultado de la siguiente operación: <strong>(x³)(x⁴)</strong>?",
+  titulo: "¿Cuál es el resultado de la siguiente multiplicación: <strong>(x³)(x⁴)</strong>?",
   pasos: [
     { tipo: "variable", valor: "x7", descripcion: "Debemos sumar el valor de los exponentes para encontrar el resultado (2+4), por ello escanea el bloque x⁷." },
 
@@ -17,7 +17,7 @@ const actividad_3_1_1_2 = {
   pasos: [
     { tipo: "variable", valor: "x9", descripcion: "Para encontrar el resultado debemos sumar los exponentes (4+5), ahora escanea el bloque x⁹." },
   ],
-  validacionFinal: ["x9"]
+  validacionFinal: ["x9",]
 };
 
 const actividad_3_1_1_3 = {
@@ -504,7 +504,7 @@ const actividad_3_3_1_1 = {
     {
       tipo: "numero",
       valor: "9",
-      descripcion: "Suma los coeficientes de los monomios semejantes: 1 + 8 = 27. Escanea el bloque 8."
+      descripcion: "Suma los coeficientes de los monomios semejantes: 1 + 8 = 9. Escanea el bloque 9."
     },
     {
       tipo: "variable",
@@ -759,7 +759,331 @@ const actividad_3_3_3_5 = {
   validacionFinal: ["5"]
 };
 
+const actividad_3_4_1_1 = {
+  titulo: "Identifica el factor común de la expresión: <strong>12x + 8x</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "4",
+      descripcion: "Busca el mayor número que divide a ambos coeficientes (12 y 8). Escanea el bloque 4."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Ambos términos tienen la variable x. Escanea el bloque x."
+    }
+  ],
+  validacionFinal: ["4", "x"]
+};
 
+const actividad_3_4_1_2 = {
+  titulo: "Encuentra el factor común de: <strong>18x + 27x</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "9",
+      descripcion: "Determina el máximo común divisor de 18 y 27. Escanea el bloque 9."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Ambos términos tienen la misma variable. Escanea x."
+    }
+  ],
+  validacionFinal: ["9", "x"]
+};
+
+const actividad_3_4_1_3 = {
+  titulo: "Determina el factor común de: <strong>20x² + 12x</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "4",
+      descripcion: "Busca el número mayor que divide a ambos coeficientes (20 y 12). Escanea 4."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "El menor exponente común es x¹. Escanea el bloque x."
+    }
+  ],
+  validacionFinal: ["4", "x"]
+};
+
+const actividad_3_4_1_4 = {
+  titulo: "Identifica el factor común de la expresión: <strong>16x + 24x + 8x</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "8",
+      descripcion: "Busca el mayor número que divide a 16, 24 y 8. Escanea el bloque 8."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Todos los términos contienen la variable x. Escanea x."
+    }
+  ],
+  validacionFinal: ["8", "x"]
+};
+
+const actividad_3_4_1_5 = {
+  titulo: "Determina el factor común de: <strong>−15x − 25x</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "5",
+      descripcion: "Busca el mayor número que divide a 15 y 25. Escanea el bloque 5."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Ambos términos contienen la variable x. Escanea el bloque x."
+    }
+  ],
+  validacionFinal: ["5", "x"]
+};
+
+const actividad_3_4_2_1 = {
+  titulo: "Factoriza la expresión: <strong>12x + 8x</strong>",
+  pasos: [
+    { tipo: "numero", valor: "4", descripcion: "Escanea el factor común numérico. (Escanea número 4)" },
+    { tipo: "variable", valor: "x", descripcion: "Escanea la variable común. (Escanea x)" },
+    { tipo: "operador", valor: "parIzq", descripcion: "Abre el paréntesis." },
+    { tipo: "numero", valor: "3", descripcion: "Divide 12 entre 4. Escanea 3." },
+    { tipo: "operador", valor: "plus", descripcion: "Escanea el operador suma." },
+    { tipo: "numero", valor: "2", descripcion: "Divide 8 entre 4. Escanea 2." },
+    { tipo: "operador", valor: "parDer", descripcion: "Cierra el paréntesis."
+    }
+  ],
+  validacionFinal: ["4", "x", "parIzq", "3", "plus", "2", "parDer"]
+};
+
+const actividad_3_4_2_2 = {
+  titulo: "Factoriza: <strong>18x + 27x</strong>",
+  pasos: [
+    { tipo: "numero", valor: "9", descripcion: "Escanea el factor común. Escanea número 9" },
+    { tipo: "variable", valor: "x", descripcion: "Escanea la variable común. (Escanea x)" },
+    { tipo: "operador", valor: "parIzq", descripcion: "Abre el paréntesis." },
+    { tipo: "numero", valor: "2", descripcion: "Divide 18 entre 9. Escanea número 2" },
+    { tipo: "operador", valor: "plus", descripcion: "Escanea el operador suma." },
+    { tipo: "numero", valor: "3", descripcion: "Divide 27 entre 9. Escanea número 3" },
+    { tipo: "operador", valor: "parDer", descripcion: "Cierra el paréntesis." }
+  ],
+  validacionFinal: ["9", "x", "parIzq", "2", "plus", "3", "parDer"]
+};
+
+const actividad_3_4_2_3 = {
+  titulo: "Factoriza la expresión: <strong>20x² + 12x</strong>",
+  pasos: [
+    { tipo: "numero", valor: "4", descripcion: "Escanea el factor común numérico. Escanea número 3" },
+    { tipo: "variable", valor: "x", descripcion: "Escanea la variable común (Escanea x)." },
+    { tipo: "operador", valor: "parIzq", descripcion: "Abre paréntesis." },
+    { tipo: "numero", valor: "5", descripcion: "Divide 20 entre 4. Escanea número 5" },
+    { tipo: "variable", valor: "x", descripcion: "x² ÷ x = x. Escanea x." },
+    { tipo: "operador", valor: "plus", descripcion: "Escanea el operador suma." },
+    { tipo: "numero", valor: "3", descripcion: "Divide 12 entre 4. Escanea número 3" },
+    { tipo: "operador", valor: "parDer", descripcion: "Cierra paréntesis." }
+  ],
+  validacionFinal: ["4", "x", "parIzq", "5", "x", "plus", "3", "parDer"]
+};
+
+const actividad_3_4_2_4 = {
+  titulo: "Factoriza: <strong>16x + 24x + 8x</strong>",
+  pasos: [
+    { tipo: "numero", valor: "8", descripcion: "Escanea el factor común. Escanea número 8" },
+    { tipo: "variable", valor: "x", descripcion: "Escanea la variable común. Escanea x" },
+    { tipo: "operador", valor: "parIzq", descripcion: "Abre paréntesis." },
+
+    { tipo: "numero", valor: "2", descripcion: "Divide 16 entre 8. Escanea número 2" },
+    { tipo: "operador", valor: "plus", descripcion: "Escanea +." },
+
+    { tipo: "numero", valor: "3", descripcion: "Divide 24 entre 8. Escanea número 3" },
+    { tipo: "operador", valor: "plus", descripcion: "Escanea +." },
+
+    { tipo: "numero", valor: "1", descripcion: "Divide 8 entre 8. Escanea número 1" },
+    { tipo: "operador", valor: "parDer", descripcion: "Cierra paréntesis." }
+  ],
+  validacionFinal: ["8", "x", "parIzq", "2", "plus", "3", "plus", "1", "parDer"]
+};
+
+const actividad_3_4_2_5 = {
+  titulo: "Factoriza la expresión: <strong>−15x − 25x</strong>",
+  pasos: [
+    { tipo: "numero", valor: "5", descripcion: "Escanea el factor común. Escanea número 5" },
+    { tipo: "variable", valor: "x", descripcion: "Escanea la variable común. Escanea x" },
+    { tipo: "operador", valor: "parIzq", descripcion: "Abre paréntesis." },
+
+    { tipo: "numero", valor: "3", descripcion: "Divide 15 entre 5. Escanea número 3" },
+    { tipo: "operador", valor: "plus", descripcion: "Escanea el operador suma (se conserva estructura)." },
+
+    { tipo: "numero", valor: "5", descripcion: "Divide 25 entre 5. Escanea número 5" },
+    { tipo: "operador", valor: "parDer", descripcion: "Cierra paréntesis." }
+  ],
+  validacionFinal: ["5", "x", "parIzq", "3", "plus", "5", "parDer"]
+};
+
+const actividad_3_5_1_1 = {
+  titulo: "Resuelve la suma de fracciones algebraicas: <strong>2x/5 + 3x/5</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "5",
+      descripcion: "Suma los numeradores: 2x + 3x = 5x. Escanea el coeficiente 5."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Ahora escanea x (para completa el termino 5x)."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división. (para formar la fracción)"
+    },
+    {
+      tipo: "numero",
+      valor: "5",
+      descripcion: "El denominador permanece igual. Escanea 5."
+    }
+  ],
+  validacionFinal: ["5", "x", "div","5"]
+};
+
+const actividad_3_5_1_2 = {
+  titulo: "Simplifica la operación: <strong>4x/7 + 6x/7</strong>",
+  pasos: [
+    {
+      tipo: "constructor",
+      valor: "doble(1,0)",
+      descripcion: "Suma los coeficientes de los numeradores: 4 + 6 = 10. Escanea el bloque constructor doble dígito para formar el 10."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Ahora escanea x (para completar el término 10x)."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división. (para formar la fracción)"
+    },
+    {
+      tipo: "numero",
+      valor: "7",
+      descripcion: "El denominador permanece igual. Escanea 7."
+    }
+  ],
+  validacionFinal: ["10", "x", "div", "7"]
+};
+
+const actividad_3_5_1_3 = {
+  titulo: "Resuelve la suma: <strong>8x/9 + 5x/9</strong>",
+  pasos: [
+    {
+      tipo: "constructor",
+      valor: "doble(1,3)",
+      descripcion: "Suma los numeradores: 8x + 5x = 13x. Escanea bloque constructor doble dígito para formar el 13."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Ahora escanea x (para completar el término 13x)."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división. (para formar la fracción)"
+    },
+    {
+      tipo: "numero",
+      valor: "9",
+      descripcion: "El denominador permanece igual. Escanea 9."
+    }
+  ],
+  validacionFinal: ["13", "x", "div", "9"]
+};
+
+const actividad_3_5_1_4 = {
+  titulo: "Resuelve la resta de fracciones algebraicas: <strong>9x/4 − 2x/4</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "7",
+      descripcion: "Resta los numeradores: 9x − 2x = 7x. Escanea 7."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Ahora escanea x (para completar el término 7x)."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división. (para formar la fracción)"
+    },
+    {
+      tipo: "numero",
+      valor: "4",
+      descripcion: "El denominador permanece igual. Escanea 4."
+    }
+  ],
+  validacionFinal: ["7", "x", "div", "4"]
+};
+
+const actividad_3_5_1_5 = {
+  titulo: "Simplifica la operación: <strong>12x/8 − 3x/8</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "9",
+      descripcion: "Resta los coeficientes de los numeradores: 12 − 3 = 9. Escanea 9."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Ahora escanea x (para completar el término 9x)."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división. (para formar la fracción)"
+    },
+    {
+      tipo: "numero",
+      valor: "8",
+      descripcion: "El denominador permanece igual. Escanea 8."
+    }
+  ],
+  validacionFinal: ["9", "x", "div", "8"]
+};
+
+const actividad_3_5_1_6 = {
+  titulo: "Resuelve la resta: <strong>20x/11 − 6x/11</strong>",
+  pasos: [
+    {
+      tipo: "constructor",
+      valor: "doble(1,4)",
+      descripcion: "Resta los numeradores: 20x − 6x = 14x. Escanea el bloque doble dígito para formar el 14."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Ahora escanea x (para completar el término 14x)."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división. (para formar la fracción)"
+    },
+    {
+      tipo: "constructor",
+      valor: "doble(1,1)",
+      descripcion: "El denominador permanece igual. Escanea el bloque doble dígito para formar el 11."
+    }
+  ],
+  validacionFinal: ["14", "x", "div", "11"]
+};
 
 
 
@@ -842,6 +1166,28 @@ export const ACTIVIDADES_T3 = {
     actividad_3_3_3_3,
     actividad_3_3_3_4,
     actividad_3_3_3_5,
+  ],
+    "3.4.1": [
+    actividad_3_4_1_1,
+    actividad_3_4_1_2,
+    actividad_3_4_1_3,
+    actividad_3_4_1_4,
+    actividad_3_4_1_5,
+  ],
+    "3.4.2": [
+    actividad_3_4_2_1,
+    actividad_3_4_2_2,
+    actividad_3_4_2_3,
+    actividad_3_4_2_4,
+    actividad_3_4_2_5,
+  ],
+    "3.5.1": [
+    actividad_3_5_1_1,
+    actividad_3_5_1_2,
+    actividad_3_5_1_3,
+    actividad_3_5_1_4,
+    actividad_3_5_1_5,
+    actividad_3_5_1_6,
   ]
 
 

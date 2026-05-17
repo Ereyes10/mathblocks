@@ -389,7 +389,7 @@ Al dividir monomios, los exponentes de la misma variable se <em>restan</em>.`,
 `<strong>Indicación:</strong> representa la división con los bloques y simplifica el resultado...`
 ],
 
-"3.4": [`
+"3.4.1": [`
 El <strong>factor común</strong> es la parte que se repite en todos los términos
 de una expresión.`,
 
@@ -404,7 +404,40 @@ de una expresión.`,
 `<strong>🔑 Idea clave:</strong><br>
 El factor común debe aparecer en <em>todos</em> los términos.`,
 
-`<strong>Indicación:</strong> identifica qué parte se repite en cada monomio...`
+`<strong>Indicación:</strong> identifica los factores comunes en los siguientes ejercicios...`
+],
+
+"3.4.2": [`
+La <strong>factorización por factor común</strong> consiste en 
+<strong>expresar una suma o resta como un producto</strong>.
+
+Es el proceso inverso de la multiplicación de monomios.`,
+
+`<strong>¿Cómo se hace?</strong><br>
+1. Identifica el <strong>factor común</strong> en todos los términos.<br>
+2. Divide cada término entre ese factor común.<br>
+3. Escribe el resultado como:<br>
+<strong>factor común × (lo que queda en cada término)</strong>.`,
+
+`<strong>Ejemplo:</strong><br>
+● 3x + 6x = 3x(1 + 2)<br><br>
+Se identifica que <strong>3x</strong> es el factor común y se divide cada término:
+<br>3x ÷ 3x = 1
+<br>6x ÷ 3x = 2`,
+
+`<strong>Otro ejemplo:</strong><br>
+● 4x² + 8x = 4x(x + 2)<br><br>
+El factor común es <strong>4x</strong>
+<br>4x² ÷ 4x = x
+<br>8x ÷ 4x = 2`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Factorizar es <strong>"sacar lo que se repite"</strong> y dejar dentro del paréntesis lo que sobra.`,
+
+`<strong>Error común:</strong><br>
+Olvidar dividir correctamente cada término o no incluir todos los términos dentro del paréntesis.`,
+
+`<strong>Indicación:</strong> factoriza las siguientes expresiones utilizando el factor común...`
 ],
 
 "3.5.1": [`

@@ -60,7 +60,7 @@ main,
 }
 
 .menu-main {
-  padding: 10px 20px;
+  padding: 5px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1539,16 +1539,16 @@ main,
 
 .welcome-box{
     text-align:center;
-    margin-top:65px;
+    margin-top:60px;
     margin-bottom:5px;
 }
 
 .welcome-box h1{
-    font-size:34px;
+    font-size:30px;
     font-family:'League Spartan', sans-serif;
     color:#0d6654;
     margin:0;
-    font-weight:700;
+    font-weight:600;
 }
 
 .welcome-box p{

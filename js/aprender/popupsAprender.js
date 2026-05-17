@@ -1555,6 +1555,178 @@ export const POPUP_DATOS = {
   `
 },
 
+"3.4.1.1": {
+  titulo: "¡Excelente!",
+  mensaje: "Identificaste correctamente el factor común.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Coeficientes: MCD(12, 8) = 4<br>
+    • Variable: x está en ambos términos<br><br>
+
+    <strong>Factor común:</strong><br>
+    4x<br><br>
+
+    <strong>Idea clave:</strong><br>
+    El factor común es el mayor número y las variables que se repiten en todos los términos.
+  `
+},
+
+"3.4.1.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Determinaste correctamente el factor común.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Coeficientes: MCD(18, 27) = 9<br>
+    • Variable: x se repite en ambos términos<br><br>
+
+    <strong>Factor común:</strong><br>
+    9x<br><br>
+
+    <strong>Idea clave:</strong><br>
+    Siempre busca el <em>máximo común divisor</em> entre los coeficientes.
+  `
+},
+
+"3.4.1.3": {
+  titulo: "¡Correcto!",
+  mensaje: "Identificaste correctamente el factor común con diferentes exponentes.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Coeficientes: MCD(20, 12) = 4<br>
+    • Variables: x² y x → menor exponente = x¹<br><br>
+
+    <strong>Factor común:</strong><br>
+    4x<br><br>
+
+    <strong>Idea clave:</strong><br>
+    Cuando los exponentes son diferentes, se toma el <em>menor exponente común</em>.
+  `
+},
+
+"3.4.1.4": {
+  titulo: "¡Excelente!",
+  mensaje: "Encontraste correctamente el factor común en varios términos.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Coeficientes: MCD(16, 24, 8) = 8<br>
+    • Variable: x está en todos los términos<br><br>
+
+    <strong>Factor común:</strong><br>
+    8x<br><br>
+
+    <strong>Idea clave:</strong><br>
+    El factor común debe estar presente en <em>todos</em> los términos.
+  `
+},
+
+"3.4.1.5": {
+  titulo: "¡Muy bien!",
+  mensaje: "Identificaste correctamente el factor común en una expresión con signos negativos.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Coeficientes: MCD(15, 25) = 5<br>
+    • Variable: x está en ambos términos<br><br>
+
+    <strong>Factor común:</strong><br>
+    5x<br><br>
+
+    <strong>Observación:</strong><br>
+    El signo negativo puede factorizarse después si se desea.<br><br>
+
+    <strong>Idea clave:</strong><br>
+    El factor común se obtiene ignorando temporalmente los signos.
+  `
+},
+
+"3.4.2.1": {
+  titulo: "¡Excelente!",
+  mensaje: "Factorizaste correctamente la expresión.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Factor común: 4x<br>
+    • 12x ÷ 4x = 3<br>
+    • 8x ÷ 4x = 2<br><br>
+
+    <strong>Resultado:</strong><br>
+    4x(3 + 2)<br><br>
+
+    <strong>Idea clave:</strong><br>
+    Factorizar significa escribir una expresión como el producto de un factor común y un paréntesis.
+  `
+},
+
+"3.4.2.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Aplicaste correctamente el factor común.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Factor común: 9x<br>
+    • 18x ÷ 9x = 2<br>
+    • 27x ÷ 9x = 3<br><br>
+
+    <strong>Resultado:</strong><br>
+    9x(2 + 3)<br><br>
+
+    <strong>Idea clave:</strong><br>
+    Después de extraer el factor común, cada término debe dividirse correctamente.
+  `
+},
+
+"3.4.2.3": {
+  titulo: "¡Correcto!",
+  mensaje: "Factorizaste correctamente una expresión con exponentes diferentes.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Factor común: 4x<br>
+    • 20x² ÷ 4x = 5x<br>
+    • 12x ÷ 4x = 3<br><br>
+
+    <strong>Resultado:</strong><br>
+    4x(5x + 3)<br><br>
+
+    <strong>Idea clave:</strong><br>
+    Al dividir potencias con la misma base, se restan exponentes.
+  `
+},
+
+"3.4.2.4": {
+  titulo: "¡Excelente!",
+  mensaje: "Factorizaste correctamente una expresión con tres términos.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Factor común: 8x<br>
+    • 16x ÷ 8x = 2<br>
+    • 24x ÷ 8x = 3<br>
+    • 8x ÷ 8x = 1<br><br>
+
+    <strong>Resultado:</strong><br>
+    8x(2 + 3 + 1)<br><br>
+
+    <strong>Idea clave:</strong><br>
+    El factor común debe dividir exactamente a todos los términos.
+  `
+},
+
+"3.4.2.5": {
+  titulo: "¡Muy bien!",
+  mensaje: "Aplicaste correctamente la factorización por factor común.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Factor común: 5x<br>
+    • 15x ÷ 5x = 3<br>
+    • 25x ÷ 5x = 5<br><br>
+
+    <strong>Resultado:</strong><br>
+    5x(3 + 5)<br><br>
+
+    <strong>Observación:</strong><br>
+    También podría factorizarse usando −5x para conservar signos negativos.<br><br>
+
+    <strong>Idea clave:</strong><br>
+    Factorizar permite simplificar y reorganizar expresiones algebraicas.
+  `
+},
+
 
 
 

@@ -53,7 +53,15 @@ export const TEMAS_PM2 = [
           "División de monomios"        // 3.3.3
         ]
       },
-      "Factorización de monomios (factor común)", // 3.4 
+      {
+        titulo: "Factorización de monomios (factor común)",// 3.4
+        subsubtemas: [
+          "factor común",  
+          "Factorización de monomios", 
+
+        ]
+      },
+
       {
         titulo: "Operaciones con fracciones algebraicas",
         subsubtemas: [

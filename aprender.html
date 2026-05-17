@@ -231,6 +231,7 @@ let pasosActuales = [];
 let expresionConstruida = [];
 let escaneoHabilitado = false;
 let actividadIniciada = false;
+let claveAnteriorVista = null;
 
 
 
@@ -373,9 +374,14 @@ function actualizarTabsDeHermanos(claveFinal) {
     btn.className = "subsubtema-tab" + (j === idxActual ? " active" : "");
     btn.textContent = `${claveHermano} ${titulo}`; // o claveHermano
 
-    btn.addEventListener("click", () => {
-      abrirPorClave(tema, claveHermano, `${claveHermano} ${titulo}`);
-    });
+btn.addEventListener("click", () => {
+  if (claveHermano === claveVistaActual) return;
+
+  actividadIniciada = false;
+  escaneoHabilitado = false;
+
+  abrirPorClave(tema, claveHermano, `${claveHermano} ${titulo}`);
+});
 
     tabsSubsubtema.appendChild(btn);
   });
@@ -629,10 +635,18 @@ function abrirPorClave(temaObj, claveFinal, tituloMostrado) {
     }
   }
 
-  claveVistaActual = claveAabrir;
+const cambioDeSubtema = claveAnteriorVista !== claveAabrir;
 
-  bcTema.textContent = temaSeleccionado.titulo;
-  bcSubtema.textContent = obtenerTextoSubtemaPadre(claveAabrir);
+claveVistaActual = claveAabrir;
+claveAnteriorVista = claveAabrir;
+
+if (cambioDeSubtema) {
+  actividadIniciada = false;
+  escaneoHabilitado = false;
+}
+
+bcTema.textContent = temaSeleccionado.titulo;
+bcSubtema.textContent = obtenerTextoSubtemaPadre(claveAabrir);
 
   if (TEXTOS_APRENDIZAJE[claveAabrir]) {
     renderCarruselAprendizaje(TEXTOS_APRENDIZAJE[claveAabrir]);
@@ -642,6 +656,9 @@ function abrirPorClave(temaObj, claveFinal, tituloMostrado) {
 
   actividadesSubtema = ACTIVIDADES[claveAabrir] || [];
   actividadActualIndex = 0;
+
+
+
   cargarActividad(actividadActualIndex);
 
   actualizarTabsDeHermanos(claveAabrir);
