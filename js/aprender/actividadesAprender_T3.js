@@ -1369,6 +1369,506 @@ const actividad_3_5_3_5 = {
 };
 
 
+const actividad_3_6_1_1 = {
+  titulo: "Resuelve la suma de binomios: <strong>(3x + 2) + (5x + 1)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "8",
+      descripcion: "Suma los términos semejantes: 3x + 5x = 8x. Escanea 8."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x para completar el término 8x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea el operador suma."
+    },
+    {
+      tipo: "numero",
+      valor: "3",
+      descripcion: "Suma los términos constantes: 2 + 1 = 3. Escanea 3."
+    }
+  ],
+  validacionFinal: ["8", "x", "plus", "3"]
+};
+
+
+const actividad_3_6_1_2 = {
+  titulo: "Simplifica la expresión: <strong>(4x + 6) + (2x + 5)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "6",
+      descripcion: "Suma los términos semejantes: 4x + 2x = 6x. Escanea 6."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x para completar el término 6x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea el operador suma."
+    },
+    {
+      tipo: "constructor",
+      valor: "doble(1,1)",
+      descripcion: "Suma las constantes: 6 + 5 = 11. Escanea 11."
+    }
+  ],
+  validacionFinal: ["6", "x", "plus", "11"]
+};
+
+
+
+const actividad_3_6_1_3 = {
+  titulo: "Resuelve la operación: <strong>(7x + 3) + (2x + 4)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "9",
+      descripcion: "Suma los términos semejantes: 7x + 2x = 9x. Escanea 9."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x para completar el término 9x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea el operador suma."
+    },
+    {
+      tipo: "numero",
+      valor: "7",
+      descripcion: "Suma las constantes: 3 + 4 = 7. Escanea 7."
+    }
+  ],
+  validacionFinal: ["9", "x", "plus", "7"]
+};
+
+
+const actividad_3_6_1_4 = {
+  titulo: "Simplifica la suma: <strong>(5x + 8) + (6x + 2)</strong>",
+  pasos: [
+    {
+      tipo: "constructor",
+      valor: "doble(1,1)",
+      descripcion: "Suma los términos semejantes: 5x + 6x = 11x. Escanea 11."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x para completar el término 11x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea el operador suma."
+    },
+    {
+      tipo: "constructor",
+      valor: "doble(1,0)",
+      descripcion: "Suma las constantes: 8 + 2 = 10. Escanea 10."
+    }
+  ],
+  validacionFinal: ["11", "x", "plus", "10"]
+};
+
+
+
+const actividad_3_6_1_5 = {
+  titulo: "Resuelve la operación: <strong>(8x + 1) + (4x + 9)</strong>",
+  pasos: [
+    {
+      tipo: "constructor",
+      valor: "doble(1,2)",
+      descripcion: "Suma los términos semejantes: 8x + 4x = 12x. Escanea 12."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x para completar el término 12x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea el operador suma."
+    },
+    {
+      tipo: "constructor",
+      valor: "doble(1,0)",
+      descripcion: "Suma las constantes: 1 + 9 = 10. Escanea 10."
+    }
+  ],
+  validacionFinal: ["12", "x", "plus", "10"]
+};
+
+
+const actividad_3_6_2_1 = {
+  titulo: "Resuelve la resta de binomios: <strong>(4x − 3) − (2x + 1)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "2",
+      descripcion: "Resta los términos semejantes: 4x − 2x = 2x. Escanea 2."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x para completar el término 2x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "Escanea el operador resta."
+    },
+    {
+      tipo: "numero",
+      valor: "4",
+      descripcion: "Resta las constantes: −3 − 1 = −4. Escanea 4."
+    }
+  ],
+  validacionFinal: ["2", "x", "minus", "4"]
+};
+
+
+
+const actividad_3_6_2_2 = {
+  titulo: "Simplifica la expresión: <strong>(7x − 5) − (3x + 2)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "4",
+      descripcion: "Resta los términos semejantes: 7x − 3x = 4x. Escanea 4."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x para completar el término 4x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "Escanea el operador resta."
+    },
+    {
+      tipo: "numero",
+      valor: "7",
+      descripcion: "Resta las constantes: −5 − 2 = −7. Escanea 7."
+    }
+  ],
+  validacionFinal: ["4", "x", "minus", "7"]
+};
+
+
+const actividad_3_6_2_3 = {
+  titulo: "Resuelve la operación: <strong>(9x − 4) − (5x + 3)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "4",
+      descripcion: "Resta los términos semejantes: 9x − 5x = 4x. Escanea 4."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x para completar el término 4x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "Escanea el operador resta."
+    },
+    {
+      tipo: "numero",
+      valor: "7",
+      descripcion: "Resta las constantes: −4 − 3 = −7. Escanea 7."
+    }
+  ],
+  validacionFinal: ["4", "x", "minus", "7"]
+};
+
+
+const actividad_3_6_2_4 = {
+  titulo: "Simplifica la resta: <strong>(8x − 6) − (2x + 5)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "6",
+      descripcion: "Resta los términos semejantes: 8x − 2x = 6x. Escanea 6."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x para completar el término 6x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "Escanea el operador resta."
+    },
+    {
+      tipo: "constructor",
+      valor: "doble(1,1)",
+      descripcion: "Resta las constantes: −6 − 5 = −11. Escanea 11."
+    }
+  ],
+  validacionFinal: ["6", "x", "minus", "11"]
+};
+
+
+const actividad_3_6_2_5 = {
+  titulo: "Resuelve la operación: <strong>(10x − 8) − (4x + 1)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "6",
+      descripcion: "Resta los términos semejantes: 10x − 4x = 6x. Escanea 6."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x para completar el término 6x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "Escanea el operador resta."
+    },
+    {
+      tipo: "numero",
+      valor: "9",
+      descripcion: "Resta las constantes: −8 − 1 = −9. Escanea 9."
+    }
+  ],
+  validacionFinal: ["6", "x", "minus", "9"]
+};
+
+
+
+
+const actividad_3_6_3_1 = {
+  titulo: "Resuelve la multiplicación de binomios: <strong>(2x + 3)(x + 1)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "2",
+      descripcion: "Multiplica 2x · x = 2x². Escanea el coeficiente 2."
+    },
+    {
+      tipo: "variable",
+      valor: "x2",
+      descripcion: "Escanea x² para completar el término 2x²."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea el operador suma."
+    },
+    {
+      tipo: "numero",
+      valor: "5",
+      descripcion: "Suma los términos semejantes: 2x + 3x = 5x. Escanea 5."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x para completar el término 5x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea nuevamente el operador suma."
+    },
+    {
+      tipo: "numero",
+      valor: "3",
+      descripcion: "Multiplica 3 · 1 = 3. Escanea 3."
+    }
+  ],
+  validacionFinal: ["2", "x2", "plus", "5", "x", "plus", "3"]
+};
+
+
+const actividad_3_6_3_2 = {
+  titulo: "Simplifica la multiplicación: <strong>(x + 2)(x + 3)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "1",
+      descripcion: "Multiplica x · x = x². Escanea el coeficiente 1."
+    },
+    {
+      tipo: "variable",
+      valor: "x2",
+      descripcion: "Escanea x²."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea el operador suma."
+    },
+    {
+      tipo: "numero",
+      valor: "5",
+      descripcion: "Suma los términos semejantes: 2x + 3x = 5x. Escanea 5."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea nuevamente suma."
+    },
+    {
+      tipo: "numero",
+      valor: "6",
+      descripcion: "Multiplica 2 · 3 = 6. Escanea 6."
+    }
+  ],
+  validacionFinal: ["1", "x2", "plus", "5", "x", "plus", "6"]
+};
+
+
+const actividad_3_6_3_3 = {
+  titulo: "Resuelve la operación: <strong>(3x + 1)(x + 2)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "3",
+      descripcion: "Multiplica 3x · x = 3x². Escanea 3."
+    },
+    {
+      tipo: "variable",
+      valor: "x2",
+      descripcion: "Escanea x²."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "7",
+      descripcion: "Suma los términos semejantes: 6x + x = 7x. Escanea 7."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea nuevamente suma."
+    },
+    {
+      tipo: "numero",
+      valor: "2",
+      descripcion: "Multiplica 1 · 2 = 2. Escanea 2."
+    }
+  ],
+  validacionFinal: ["3", "x2", "plus", "7", "x", "plus", "2"]
+};
+
+
+const actividad_3_6_3_4 = {
+  titulo: "Simplifica la multiplicación: <strong>(2x + 4)(x + 2)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "2",
+      descripcion: "Multiplica 2x · x = 2x². Escanea 2."
+    },
+    {
+      tipo: "variable",
+      valor: "x2",
+      descripcion: "Escanea x²."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "8",
+      descripcion: "Suma los términos semejantes: 4x + 4x = 8x. Escanea 8."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea nuevamente suma."
+    },
+    {
+      tipo: "numero",
+      valor: "8",
+      descripcion: "Multiplica 4 · 2 = 8. Escanea 8."
+    }
+  ],
+  validacionFinal: ["2", "x2", "plus", "8", "x", "plus", "8"]
+};
+
+
+const actividad_3_6_3_5 = {
+  titulo: "Resuelve la multiplicación: <strong>(4x + 1)(x + 3)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "4",
+      descripcion: "Multiplica 4x · x = 4x². Escanea 4."
+    },
+    {
+      tipo: "variable",
+      valor: "x2",
+      descripcion: "Escanea x²."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea suma."
+    },
+    {
+      tipo: "constructor",
+      valor: "doble(1,3)",
+      descripcion: "Suma los términos semejantes: 12x + x = 13x. Escanea 13."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea nuevamente suma."
+    },
+    {
+      tipo: "numero",
+      valor: "3",
+      descripcion: "Multiplica 1 · 3 = 3. Escanea 3."
+    }
+  ],
+  validacionFinal: ["4", "x2", "plus", "13", "x", "plus", "3"]
+};
+
+
 
 
 
@@ -1488,6 +1988,30 @@ export const ACTIVIDADES_T3 = {
     actividad_3_5_3_3,
     actividad_3_5_3_4,
     actividad_3_5_3_5,
+  ],
+
+      "3.6.1": [
+    actividad_3_6_1_1,
+    actividad_3_6_1_2,
+    actividad_3_6_1_3,
+    actividad_3_6_1_4,
+    actividad_3_6_1_5,
+  ],
+
+      "3.6.2": [
+    actividad_3_6_2_1,
+    actividad_3_6_2_2,
+    actividad_3_6_2_3,
+    actividad_3_6_2_4,
+    actividad_3_6_2_5,
+  ],
+
+      "3.6.3": [
+    actividad_3_6_3_1,
+    actividad_3_6_3_2,
+    actividad_3_6_3_3,
+    actividad_3_6_3_4,
+    actividad_3_6_3_5,
   ],
 
 

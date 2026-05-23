@@ -2031,6 +2031,314 @@ export const POPUP_DATOS = {
   `
 },
 
+"3.6.1.1": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la suma de binomios.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Sumamos los términos semejantes:<br>
+    • 3x + 5x = 8x<br><br>
+
+    <strong>Después:</strong><br>
+    • Sumamos los términos independientes:<br>
+    • 2 + 1 = 3<br><br>
+
+    <strong>Resultado final:</strong><br>
+    8x + 3<br><br>
+
+    <strong>Recuerda:</strong><br>
+    Solo los términos semejantes pueden sumarse entre sí.
+  `
+},
+
+"3.6.1.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Simplificaste correctamente la expresión algebraica.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Sumamos los términos semejantes:<br>
+    • 4x + 2x = 6x<br><br>
+
+    <strong>Después:</strong><br>
+    • Sumamos las constantes:<br>
+    • 6 + 5 = 11<br><br>
+
+    <strong>Resultado final:</strong><br>
+    6x + 11<br><br>
+
+    <strong>Importante:</strong><br>
+    La variable x permanece porque ambos términos son semejantes.
+  `
+},
+
+"3.6.1.3": {
+  titulo: "¡Correcto!",
+  mensaje: "Combinaste correctamente los términos del binomio.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Sumamos los términos algebraicos:<br>
+    • 7x + 2x = 9x<br><br>
+
+    <strong>Después:</strong><br>
+    • Sumamos las constantes:<br>
+    • 3 + 4 = 7<br><br>
+
+    <strong>Resultado final:</strong><br>
+    9x + 7<br><br>
+
+    <strong>Recuerda:</strong><br>
+    Los términos con la misma variable y exponente se pueden combinar.
+  `
+},
+
+"3.6.1.4": {
+  titulo: "¡Excelente!",
+  mensaje: "Resolvista correctamente la suma de binomios.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Sumamos términos semejantes:<br>
+    • 5x + 6x = 11x<br><br>
+
+    <strong>Después:</strong><br>
+    • Sumamos las constantes:<br>
+    • 8 + 2 = 10<br><br>
+
+    <strong>Resultado final:</strong><br>
+    11x + 10<br><br>
+
+    <strong>Importante:</strong><br>
+    Primero se agrupan los términos semejantes y después las constantes.
+  `
+},
+
+"3.6.1.5": {
+  titulo: "¡Fantástico!",
+  mensaje: "Has resuelto correctamente la operación.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Sumamos los términos semejantes:<br>
+    • 8x + 4x = 12x<br><br>
+
+    <strong>Después:</strong><br>
+    • Sumamos las constantes:<br>
+    • 1 + 9 = 10<br><br>
+
+    <strong>Resultado final:</strong><br>
+    12x + 10<br><br>
+
+    <strong>Recuerda:</strong><br>
+    Las expresiones algebraicas se simplifican agrupando términos semejantes.
+  `
+},
+
+
+"3.6.2.1": {
+  titulo: "¡Muy bien!",
+  mensaje: "Resolviste correctamente la resta de binomios.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Restamos los términos semejantes:<br>
+    • 4x − 2x = 2x<br><br>
+
+    <strong>Después:</strong><br>
+    • Restamos las constantes:<br>
+    • −3 − 1 = −4<br><br>
+
+    <strong>Resultado final:</strong><br>
+    2x − 4<br><br>
+
+    <strong>Recuerda:</strong><br>
+    Al restar binomios también cambian los signos del segundo paréntesis.
+  `
+},
+
+"3.6.2.2": {
+  titulo: "¡Excelente!",
+  mensaje: "Simplificaste correctamente la expresión algebraica.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Restamos términos semejantes:<br>
+    • 7x − 3x = 4x<br><br>
+
+    <strong>Después:</strong><br>
+    • Restamos las constantes:<br>
+    • −5 − 2 = −7<br><br>
+
+    <strong>Resultado final:</strong><br>
+    4x − 7<br><br>
+
+    <strong>Importante:</strong><br>
+    Las constantes negativas conservan su signo al operar.
+  `
+},
+
+"3.6.2.3": {
+  titulo: "¡Correcto!",
+  mensaje: "Has resuelto correctamente la operación.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Restamos los términos semejantes:<br>
+    • 9x − 5x = 4x<br><br>
+
+    <strong>Después:</strong><br>
+    • Restamos las constantes:<br>
+    • −4 − 3 = −7<br><br>
+
+    <strong>Resultado final:</strong><br>
+    4x − 7<br><br>
+
+    <strong>Recuerda:</strong><br>
+    Solo los términos semejantes pueden combinarse entre sí.
+  `
+},
+
+"3.6.2.4": {
+  titulo: "¡Fantástico!",
+  mensaje: "Resolvista correctamente la resta de binomios.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Restamos los términos semejantes:<br>
+    • 8x − 2x = 6x<br><br>
+
+    <strong>Después:</strong><br>
+    • Restamos las constantes:<br>
+    • −6 − 5 = −11<br><br>
+
+    <strong>Resultado final:</strong><br>
+    6x − 11<br><br>
+
+    <strong>Importante:</strong><br>
+    Los signos negativos afectan el resultado de las constantes.
+  `
+},
+
+"3.6.2.5": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Completaste correctamente la simplificación.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Restamos los términos semejantes:<br>
+    • 10x − 4x = 6x<br><br>
+
+    <strong>Después:</strong><br>
+    • Restamos las constantes:<br>
+    • −8 − 1 = −9<br><br>
+
+    <strong>Resultado final:</strong><br>
+    6x − 9<br><br>
+
+    <strong>Recuerda:</strong><br>
+    Al eliminar paréntesis en una resta, los signos deben cuidarse correctamente.
+  `
+},
+
+"3.6.3.1": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la multiplicación de binomios.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la propiedad distributiva:<br><br>
+
+    • 2x · x = 2x²<br>
+    • 2x · 1 = 2x<br>
+    • 3 · x = 3x<br>
+    • 3 · 1 = 3<br><br>
+
+    <strong>Después:</strong><br>
+    • Sumamos términos semejantes:<br>
+    • 2x + 3x = 5x<br><br>
+
+    <strong>Resultado final:</strong><br>
+    2x² + 5x + 3
+  `
+},
+
+"3.6.3.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Simplificaste correctamente la multiplicación.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Multiplicamos cada término:<br><br>
+
+    • x · x = x²<br>
+    • x · 3 = 3x<br>
+    • 2 · x = 2x<br>
+    • 2 · 3 = 6<br><br>
+
+    <strong>Después:</strong><br>
+    • Sumamos términos semejantes:<br>
+    • 3x + 2x = 5x<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x² + 5x + 6
+  `
+},
+
+"3.6.3.3": {
+  titulo: "¡Correcto!",
+  mensaje: "Has resuelto correctamente la operación.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la multiplicación distributiva:<br><br>
+
+    • 3x · x = 3x²<br>
+    • 3x · 2 = 6x<br>
+    • 1 · x = x<br>
+    • 1 · 2 = 2<br><br>
+
+    <strong>Después:</strong><br>
+    • Sumamos términos semejantes:<br>
+    • 6x + x = 7x<br><br>
+
+    <strong>Resultado final:</strong><br>
+    3x² + 7x + 2
+  `
+},
+
+"3.6.3.4": {
+  titulo: "¡Fantástico!",
+  mensaje: "Resolvista correctamente la multiplicación de binomios.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Multiplicamos término por término:<br><br>
+
+    • 2x · x = 2x²<br>
+    • 2x · 2 = 4x<br>
+    • 4 · x = 4x<br>
+    • 4 · 2 = 8<br><br>
+
+    <strong>Después:</strong><br>
+    • Sumamos términos semejantes:<br>
+    • 4x + 4x = 8x<br><br>
+
+    <strong>Resultado final:</strong><br>
+    2x² + 8x + 8
+  `
+},
+
+"3.6.3.5": {
+  titulo: "¡Excelente!",
+  mensaje: "Completaste correctamente la multiplicación algebraica.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la propiedad distributiva:<br><br>
+
+    • 4x · x = 4x²<br>
+    • 4x · 3 = 12x<br>
+    • 1 · x = x<br>
+    • 1 · 3 = 3<br><br>
+
+    <strong>Después:</strong><br>
+    • Sumamos términos semejantes:<br>
+    • 12x + x = 13x<br><br>
+
+    <strong>Resultado final:</strong><br>
+    4x² + 13x + 3
+  `
+},
+
+
+
 
 
 

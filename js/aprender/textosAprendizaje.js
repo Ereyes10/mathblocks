@@ -541,6 +541,7 @@ Simplifica x y calcula:<br>
 Resultado: <strong>15/8</strong>`,
 `<strong>Indicación:</strong> usando los bloques representa lo que se pide en las actividades de abajo...
 `],
+
 "3.6.1": [`
 En este tema aprenderás a realizar <strong>operaciones con binomios y trinomios simples</strong>,
 aplicando las reglas vistas en temas anteriores.`,
@@ -570,6 +571,7 @@ Solo los términos semejantes pueden sumarse.`,
 
 `<strong>Indicación:</strong> usa los bloques para agrupar y sumar los términos correctos...`
 ],
+
 "3.6.2": [`
 Para <strong>restar binomios</strong>, se suma el <strong>opuesto</strong>
 del segundo binomio.`,
@@ -589,6 +591,7 @@ Cambiar los signos del segundo binomio facilita la resta.`,
 
 `<strong>Indicación:</strong> representa la resta con bloques y observa el cambio de signos...`
 ],
+
 "3.6.3": [`
 Para <strong>multiplicar binomios y trinomios simples</strong>,
 cada término de una expresión se multiplica por
