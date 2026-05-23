@@ -75,12 +75,6 @@ export const bloquesConstructores = {
         descripcion: "Aplica un exponente al bloque previamente escaneado."
     },
 
-    "neg": {
-        tipo: "constructor",
-        categoria: "negacion",
-        descripcion: "Crea una versión negativa del siguiente bloque."
-    },
-
     "frac": {
         tipo: "constructor",
         categoria: "fraccion",

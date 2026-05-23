@@ -467,16 +467,66 @@ Se conserva el denominador y se operan los numeradores.<br>
 ● <strong>7m/5 - 2m/5 = 5m/5 = m</strong>`
 ],
 "3.5.2": [`
-  <strong>✖️ Multiplicación de fracciones algebraicas</strong><br>
-Es directa: se multiplica numerador con numerador y denominador con denominador.<br><br>
-<strong>Regla:</strong><br>
-<strong>(a/b) · (c/d) = (ac)/(bd)</strong>`,
-`<strong>💡 Tip:</strong> Antes de multiplicar, busca si puedes <strong>simplificar cruzado</strong>.<br><br>
+<strong>✖️ Multiplicación de fracciones algebraicas</strong><br>
+Para multiplicar fracciones algebraicas se multiplica el numerador por el numerador y el denominador por el denominador.`,
 
-<strong>Ejemplo:</strong><br>
-● <strong>(4x/3) · (6/(2x))</strong><br>
-Simplifica: 4x con 2x y 6 con 3<br>
-Resultado: <strong>4</strong>`
+`<strong>Regla:</strong><br>
+<strong>(a/b) · (c/d) = (ac)/(bd)</strong><br><br>
+Esto significa que:
+<br>● Los términos de arriba se multiplican entre sí.
+<br>● Los términos de abajo también se multiplican entre sí.`,
+
+`<strong>Ejemplo:</strong><br>
+● <strong>(2x/5) · (3/4)</strong><br><br>
+Multiplica numeradores:
+<br>2x · 3 = 6x
+<br><br>
+Multiplica denominadores:
+<br>5 · 4 = 20
+<br><br>
+Resultado:
+<br><strong>6x/20</strong>`,
+
+`<strong>🔍 Simplificación del resultado:</strong><br>
+La fracción <strong>6x/20</strong> puede simplificarse porque 6 y 20 tienen un factor común.<br><br>
+
+● 6 y 20 son divisibles entre 2:
+<br>6 ÷ 2 = 3
+<br>20 ÷ 2 = 10
+<br><br>
+
+Resultado simplificado:
+<br><strong>3x/10</strong>`,
+
+`<strong>💡 Simplificar antes de multiplicar:</strong><br>
+En algunos ejercicios se puede simplificar antes de realizar la multiplicación para trabajar con números más pequeños.`,
+
+`<strong>Ejemplo:</strong><br>
+● <strong>(4x/3) · (6/2x)</strong><br><br>
+
+Antes de multiplicar:
+<br>● 4x y 2x tienen factor común x
+<br>● 6 y 3 pueden simplificarse entre 3
+<br><br>`,
+
+`Simplificando:
+<br>4x ÷ x = 4
+<br>2x ÷ x = 2
+<br>6 ÷ 3 = 2
+<br>3 ÷ 3 = 1
+<br><br>`,
+
+`La operación queda:
+<br><strong>(4/1) · (2/2)</strong>
+<br><br>
+
+Multiplicando:
+<br>(4 · 2)/(1 · 2) = 8/2 = 4`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Después de multiplicar, revisa siempre si el resultado puede simplificarse.`,
+
+`<strong>Indicación:</strong> resuelve las siguientes multiplicaciones de fracciones algebraicas y simplifica cuando sea posible...`
 ],
 
 "3.5.3": [`

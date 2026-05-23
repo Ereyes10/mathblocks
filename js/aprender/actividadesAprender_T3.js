@@ -1085,6 +1085,291 @@ const actividad_3_5_1_6 = {
   validacionFinal: ["14", "x", "div", "11"]
 };
 
+const actividad_3_5_2_1 = {
+  titulo: "Resuelve la multiplicación de fracciones algebraicas: <strong>(2x/5) · (3/4)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "6",
+      descripcion: "Multiplica los numeradores: 2x · 3 = 6x. Escanea el coeficiente 6."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Ahora escanea x (para completar el término 6x)."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división para formar la fracción."
+    },
+    {
+      tipo: "constructor",
+      valor: "doble(2,0)",
+      descripcion: "Multiplica los denominadores: 5 · 4 = 20. Escanea el bloque constructor doble para generar el 20."
+    }
+  ],
+  validacionFinal: ["6", "x", "div", "20"]
+};
+
+
+const actividad_3_5_2_2 = {
+  titulo: "Multiplica las siguientes fracciones algebraicas: <strong>(3x/2) · (5/6)</strong>",
+  pasos: [
+    {
+      tipo: "constructor",
+      valor: "doble(1,5)",
+      descripcion: "Multiplica los numeradores: 3x · 5 = 15x. Genera el 15 usando el bloque doble."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x para completar el término 15x."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división."
+    },
+    {
+      tipo: "constructor",
+      valor: "doble(1,2)",
+      descripcion: "Multiplica los denominadores: 2 · 6 = 12. Escanea el bloque doble y genera el 12."
+    }
+  ],
+  validacionFinal: ["15", "x", "div", "12"]
+};
+
+const actividad_3_5_2_3 = {
+  titulo: "Resuelve la operación: <strong>(4x/3) · (2/5)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "8",
+      descripcion: "Multiplica los numeradores: 4x · 2 = 8x. Escanea 8."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x para completar el término 8x."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división."
+    },
+    {
+      tipo: "constructor",
+      valor: "doble(1,5)",
+      descripcion: "Multiplica los denominadores: 3 · 5 = 15. Genera el 15."
+    }
+  ],
+  validacionFinal: ["8", "x", "div", "15"]
+};
+
+
+const actividad_3_5_2_4 = {
+  titulo: "Simplifica el siguiente resultado: <strong>6x/20</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "3",
+      descripcion: "6 y 20 tiene a 2 como factor común, primero simplifica el numerador: 6 ÷ 2 = 3. Escanea 3."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "La variable permanece igual. Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división."
+    },
+    {
+      tipo: "constructor",
+      valor: "doble(1,0)",
+      descripcion: "Simplifica el denominador: 20 ÷ 2 = 10. Genera el 10."
+    }
+  ],
+  validacionFinal: ["3", "x", "div", "10"]
+};
+
+
+const actividad_3_5_2_5 = {
+  titulo: "Resuelve la multiplicación: <strong>(2x/4) · (6/3)</strong>",
+  pasos: [
+    {
+      tipo: "constructor",
+      valor: "doble(1,2)",
+      descripcion: "Multiplica los numeradores: 2x · 6 = 12x. Genera el 12."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x para completar el término 12x."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división."
+    },
+    {
+      tipo: "constructor",
+      valor: "doble(1,2)",
+      descripcion: "Multiplica los denominadores: 4 · 3 = 12. Genera el 12."
+    }
+  ],
+  validacionFinal: ["12", "x", "div", "12"]
+};
+
+
+
+
+
+const actividad_3_5_3_1 = {
+  titulo: "Resuelve la división de fracciones algebraicas: <strong>(2x/5) ÷ (3/4)</strong>",
+  pasos: [
+    {
+      tipo: "numero",
+      valor: "8",
+      descripcion: "Multiplica 2 por 4 después de invertir la segunda fracción. Escanea 8."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "La variable x permanece en el numerador. Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división para formar la fracción."
+    },
+    {
+      tipo: "constructor",
+      valor: "doble(1,5)",
+      descripcion: "Multiplica los denominadores: 5 × 3 = 15. Escanea bloque constructor para formar 15."
+    }
+  ],
+  validacionFinal: ["8", "x", "div", "15"]
+};
+
+
+const actividad_3_5_3_2 = {
+  titulo: "Resuelve la operación: <strong>(5x/4) ÷ (2x/3)</strong>",
+  pasos: [
+    {
+      tipo: "constructor",
+      valor: "doble(1,5)",
+      descripcion: "Multiplica 5 por 3 después de invertir la segunda fracción. Escanea bloque constructor para formar 15."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división."
+    },
+    {
+      tipo: "numero",
+      valor: "8",
+      descripcion: "Multiplica 4 por 2. Escanea 8."
+    }
+  ],
+  validacionFinal: ["15", "div", "8"]
+};
+
+
+// ==========================
+// ACTIVIDAD 3
+// ==========================
+
+const actividad_3_5_3_3 = {
+  titulo: "Resuelve la división: <strong>(3x/7) ÷ (2/5)</strong>",
+  pasos: [
+    {
+      tipo: "constructor",
+      valor: "doble(1,5)",
+      descripcion: "Multiplica 3 por 5 después de invertir la segunda fracción. Escanea bloque constructor para formar 15."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "La variable x permanece igual. Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división."
+    },
+    {
+      tipo: "constructor",
+      valor: "doble(1,4)",
+      descripcion: "Multiplica 7 por 2. Escanea 14."
+    }
+  ],
+  validacionFinal: ["15", "x", "div", "14"]
+};
+
+
+// ==========================
+// ACTIVIDAD 4
+// ==========================
+
+const actividad_3_5_3_4 = {
+  titulo: "Resuelve la operación: <strong>(6x/5) ÷ (3/2)</strong>",
+  pasos: [
+    {
+      tipo: "constructor",
+      valor: "doble(1,2)",
+      descripcion: "Multiplica 6 por 2 después de invertir la segunda fracción. Escanea 12."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "La variable x permanece en el numerador. Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división."
+    },
+    {
+      tipo: "constructor",
+      valor: "doble(1,5)",
+      descripcion: "Multiplica 5 por 3. Escanea 15."
+    }
+  ],
+  validacionFinal: ["12", "x", "div", "15"]
+};
+
+
+// ==========================
+// ACTIVIDAD 5
+// ==========================
+
+const actividad_3_5_3_5 = {
+  titulo: "Simplifica el resultado de: <strong>(4x/3) ÷ (2x/5)</strong>",
+  pasos: [
+    {
+      tipo: "constructor",
+      valor: "doble(1,0)",
+      descripcion: "Multiplica 4 por 5 después de invertir la segunda fracción. Escanea 10."
+    },
+    {
+      tipo: "operador",
+      valor: "div",
+      descripcion: "Escanea el operador de división."
+    },
+    {
+      tipo: "numero",
+      valor: "6",
+      descripcion: "Multiplica 3 por 2. Escanea 6."
+    }
+  ],
+  validacionFinal: ["10", "div", "6"]
+};
+
+
+
 
 
 export const ACTIVIDADES_T3 = {
@@ -1188,7 +1473,22 @@ export const ACTIVIDADES_T3 = {
     actividad_3_5_1_4,
     actividad_3_5_1_5,
     actividad_3_5_1_6,
-  ]
+  ],
+    "3.5.2": [
+    actividad_3_5_2_1,
+    actividad_3_5_2_2,
+    actividad_3_5_2_3,
+    actividad_3_5_2_4,
+    actividad_3_5_2_5,
+  ],
+
+    "3.5.3": [
+    actividad_3_5_3_1,
+    actividad_3_5_3_2,
+    actividad_3_5_3_3,
+    actividad_3_5_3_4,
+    actividad_3_5_3_5,
+  ],
 
 
 };

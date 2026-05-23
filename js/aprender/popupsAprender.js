@@ -1727,6 +1727,309 @@ export const POPUP_DATOS = {
   `
 },
 
+"3.5.1.1": {
+  titulo: "¡Excelente!",
+  mensaje: "Sumaste correctamente las fracciones algebraicas.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Numeradores: 2x + 3x = 5x<br>
+    • Denominador: permanece igual (5)<br><br>
+
+    <strong>Resultado:</strong><br>
+    5x/5<br><br>
+
+    <strong>Idea clave:</strong><br>
+    Cuando las fracciones tienen el mismo denominador, solo se suman los numeradores.
+  `
+},
+
+"3.5.1.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Simplificaste correctamente la suma de fracciones algebraicas.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Numeradores: 4x + 6x = 10x<br>
+    • Denominador: permanece igual (7)<br><br>
+
+    <strong>Resultado:</strong><br>
+    10x/7<br><br>
+
+    <strong>Idea clave:</strong><br>
+    El denominador común se conserva durante toda la operación.
+  `
+},
+
+"3.5.1.3": {
+  titulo: "¡Correcto!",
+  mensaje: "Aplicaste correctamente la suma de numeradores semejantes.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Numeradores: 8x + 5x = 13x<br>
+    • Denominador: permanece igual (9)<br><br>
+
+    <strong>Resultado:</strong><br>
+    13x/9<br><br>
+
+    <strong>Idea clave:</strong><br>
+    Solo pueden sumarse términos semejantes dentro del numerador.
+  `
+},
+
+"3.5.1.4": {
+  titulo: "¡Excelente!",
+  mensaje: "Resolviste correctamente la resta de fracciones algebraicas.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Numeradores: 9x − 2x = 7x<br>
+    • Denominador: permanece igual (4)<br><br>
+
+    <strong>Resultado:</strong><br>
+    7x/4<br><br>
+
+    <strong>Idea clave:</strong><br>
+    Cuando los denominadores son iguales, únicamente se restan los numeradores.
+  `
+},
+
+"3.5.1.5": {
+  titulo: "¡Muy bien!",
+  mensaje: "Simplificaste correctamente la operación algebraica.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Numeradores: 12x − 3x = 9x<br>
+    • Denominador: permanece igual (8)<br><br>
+
+    <strong>Resultado:</strong><br>
+    9x/8<br><br>
+
+    <strong>Idea clave:</strong><br>
+    El denominador actúa como una base común para toda la operación.
+  `
+},
+
+"3.5.1.6": {
+  titulo: "¡Excelente!",
+  mensaje: "Resolvista correctamente la resta de fracciones algebraicas.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Numeradores: 20x − 6x = 14x<br>
+    • Denominador: permanece igual (11)<br><br>
+
+    <strong>Resultado:</strong><br>
+    14x/11<br><br>
+
+    <strong>Idea clave:</strong><br>
+    En fracciones algebraicas con el mismo denominador, el denominador nunca cambia.
+  `
+},
+"3.5.2.1": {
+  titulo: "¡Excelente!",
+  mensaje: "Multiplicaste correctamente las fracciones algebraicas.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Numeradores: 2x · 3 = 6x<br>
+    • Denominadores: 5 · 4 = 20<br><br>
+
+    <strong>Resultado:</strong><br>
+    6x/20<br><br>
+
+    <strong>Si simplificamos:</strong><br>
+    6 y 20 tienen como factor común el 2.<br>
+    • 6 ÷ 2 = 3<br>
+    • 20 ÷ 2 = 10<br><br>
+
+    <strong>Resultado simplificado:</strong><br>
+    3x/10
+  `
+},
+"3.5.2.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Resolviste correctamente la multiplicación algebraica.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Numeradores: 3x · 5 = 15x<br>
+    • Denominadores: 2 · 6 = 12<br><br>
+
+    <strong>Resultado:</strong><br>
+    15x/12<br><br>
+
+    <strong>Si simplificamos:</strong><br>
+    15 y 12 tienen como factor común el 3.<br>
+    • 15 ÷ 3 = 5<br>
+    • 12 ÷ 3 = 4<br><br>
+
+    <strong>Resultado simplificado:</strong><br>
+    5x/4
+  `
+},
+"3.5.2.3": {
+  titulo: "¡Correcto!",
+  mensaje: "Aplicaste correctamente la multiplicación de fracciones algebraicas.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Numeradores: 4x · 2 = 8x<br>
+    • Denominadores: 3 · 5 = 15<br><br>
+
+    <strong>Resultado:</strong><br>
+    8x/15<br><br>
+
+    <strong>Observación:</strong><br>
+    La fracción ya está simplificada porque 8 y 15 no tienen factores comunes distintos de 1.
+  `
+},
+"3.5.2.4": {
+  titulo: "¡Excelente!",
+  mensaje: "Simplificaste correctamente la fracción algebraica.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Factor común entre 6 y 20: 2<br>
+    • 6 ÷ 2 = 3<br>
+    • 20 ÷ 2 = 10<br><br>
+
+    <strong>Resultado simplificado:</strong><br>
+    3x/10<br><br>
+
+    <strong>Idea clave:</strong><br>
+    Simplificar una fracción significa dividir numerador y denominador entre el mismo número.
+  `
+},
+"3.5.2.5": {
+  titulo: "¡Muy bien!",
+  mensaje: "Multiplicaste correctamente las fracciones algebraicas.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Numeradores: 2x · 6 = 12x<br>
+    • Denominadores: 4 · 3 = 12<br><br>
+
+    <strong>Resultado:</strong><br>
+    12x/12<br><br>
+
+    <strong>Si simplificamos:</strong><br>
+    12 ÷ 12 = 1<br><br>
+
+    <strong>Resultado simplificado:</strong><br>
+    x<br><br>
+
+    <strong>Idea clave:</strong><br>
+    Cuando numerador y denominador son iguales, la fracción vale 1.
+  `
+},
+
+"3.5.3.1": {
+  titulo: "¡Excelente!",
+  mensaje: "Resolviste correctamente la división de fracciones algebraicas.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • En una división de fracciones, la segunda fracción se invierte.<br>
+    • (2x/5) ÷ (3/4) se transforma en:<br>
+    • (2x/5) · (4/3)<br><br>
+
+    <strong>Ahora multiplicamos:</strong><br>
+    • Numeradores: 2x · 4 = 8x<br>
+    • Denominadores: 5 · 3 = 15<br><br>
+
+    <strong>Resultado:</strong><br>
+    8x/15<br><br>
+
+    <strong>Observación:</strong><br>
+    La fracción ya está simplificada porque 8 y 15 no tienen factores comunes.
+  `
+},
+
+"3.5.3.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Aplicaste correctamente la división de fracciones algebraicas.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Primero invertimos la segunda fracción:<br>
+    • (5x/4) · (3/2x)<br><br>
+
+    <strong>Multiplicamos:</strong><br>
+    • Numeradores: 5x · 3 = 15x<br>
+    • Denominadores: 4 · 2x = 8x<br><br>
+
+    <strong>Resultado:</strong><br>
+    15x/8x<br><br>
+
+    <strong>Si simplificamos:</strong><br>
+    La variable x aparece arriba y abajo, por lo que se cancela.<br><br>
+
+    <strong>Resultado simplificado:</strong><br>
+    15/8
+  `
+},
+
+
+"3.5.3.3": {
+  titulo: "¡Correcto!",
+  mensaje: "Resolviste correctamente la operación algebraica.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Invertimos la segunda fracción:<br>
+    • (3x/7) · (5/2)<br><br>
+
+    <strong>Multiplicamos:</strong><br>
+    • Numeradores: 3x · 5 = 15x<br>
+    • Denominadores: 7 · 2 = 14<br><br>
+
+    <strong>Resultado:</strong><br>
+    15x/14<br><br>
+
+    <strong>Observación:</strong><br>
+    La fracción ya está simplificada.
+  `
+},
+
+"3.5.3.4": {
+  titulo: "¡Excelente!",
+  mensaje: "Aplicaste correctamente la división de fracciones algebraicas.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Invertimos la segunda fracción:<br>
+    • (6x/5) · (2/3)<br><br>
+
+    <strong>Multiplicamos:</strong><br>
+    • Numeradores: 6x · 2 = 12x<br>
+    • Denominadores: 5 · 3 = 15<br><br>
+
+    <strong>Resultado:</strong><br>
+    12x/15<br><br>
+
+    <strong>Si simplificamos:</strong><br>
+    12 y 15 tienen factor común 3.<br>
+    • 12 ÷ 3 = 4<br>
+    • 15 ÷ 3 = 5<br><br>
+
+    <strong>Resultado simplificado:</strong><br>
+    4x/5
+  `
+},
+
+"3.5.3.5": {
+  titulo: "¡Muy bien!",
+  mensaje: "Resolviste correctamente la división y simplificación.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Invertimos la segunda fracción:<br>
+    • (4x/3) · (5/2x)<br><br>
+
+    <strong>Multiplicamos:</strong><br>
+    • Numeradores: 4x · 5 = 20x<br>
+    • Denominadores: 3 · 2x = 6x<br><br>
+
+    <strong>Resultado:</strong><br>
+    20x/6x<br><br>
+
+    <strong>Si simplificamos:</strong><br>
+    • La variable x se cancela.<br>
+    • 20 y 6 tienen factor común 2.<br>
+    • 20 ÷ 2 = 10<br>
+    • 6 ÷ 2 = 3<br><br>
+
+    <strong>Resultado simplificado:</strong><br>
+    10/3
+  `
+},
 
 
 
