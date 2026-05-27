@@ -90,7 +90,7 @@ export const TEMAS_PM2 = [
           "Suma",
           "Resta",
           "Multiplicación",
-          "División"
+         //"División"
         ]
       },
       "Aplicación de las reglas de los exponentes y los signos",
@@ -112,7 +112,7 @@ export const TEMAS_PM2 = [
         ]
       },
       "Trinomio cuadrado perfecto",
-      "Aplicación de operaciones con fracciones"
+      //"Aplicación de operaciones con fracciones"
     ]
   },
   {

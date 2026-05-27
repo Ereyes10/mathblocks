@@ -67,6 +67,7 @@ const ACTIVIDADES_2_1 =  [
     validacion: [
         ["numero", "variable"],
         ["variable"],
+        ["numero"],
         
     ]
 },

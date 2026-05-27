@@ -6,7 +6,7 @@
 const actividad_3_1_1_1 = {
   titulo: "¿Cuál es el resultado de la siguiente multiplicación: <strong>(x³)(x⁴)</strong>?",
   pasos: [
-    { tipo: "variable", valor: "x7", descripcion: "Debemos sumar el valor de los exponentes para encontrar el resultado (2+4), por ello escanea el bloque x⁷." },
+    { tipo: "variable", valor: "x7", descripcion: "Debemos sumar el valor de los exponentes para encontrar el resultado (3+4), por ello escanea el bloque x⁷." },
 
   ],
   validacionFinal: ["x7"]

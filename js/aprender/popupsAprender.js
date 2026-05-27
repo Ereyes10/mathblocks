@@ -2337,6 +2337,1006 @@ export const POPUP_DATOS = {
   `
 },
 
+"4.1.1.1": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la suma de monomios.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Identificamos términos semejantes:<br>
+    • 2x y 5x tienen la misma variable.<br><br>
+
+    <strong>Sumamos coeficientes:</strong><br>
+    • 2 + 5 = 7<br><br>
+
+    <strong>Resultado:</strong><br>
+    • 7x<br><br>
+
+    <strong>Importante:</strong><br>
+    • La variable x permanece igual porque ambos términos son semejantes.
+  `
+},
+
+"4.1.1.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Simplificaste correctamente la suma de términos con exponente.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Identificamos términos semejantes:<br>
+    • 3x² y x² tienen la misma parte literal.<br><br>
+
+    <strong>Sumamos coeficientes:</strong><br>
+    • 3 + 1 = 4<br><br>
+
+    <strong>Resultado:</strong><br>
+    • 4x²<br><br>
+
+    <strong>Importante:</strong><br>
+    • El exponente no cambia porque las variables son semejantes.
+  `
+},
+
+"4.1.1.3": {
+  titulo: "¡Excelente!",
+  mensaje: "Resolviste correctamente la suma de binomios.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Agrupamos términos semejantes:<br>
+    • 2x + 5x = 7x<br>
+    • 3 - 1 = 2<br><br>
+
+    <strong>Resultado:</strong><br>
+    • 7x + 2<br><br>
+
+    <strong>Importante:</strong><br>
+    • Primero se suman los términos con variable.<br>
+    • Después se operan las constantes.
+  `
+},
+
+"4.1.1.4": {
+  titulo: "¡Muy bien!",
+  mensaje: "Simplificaste correctamente la suma de polinomios.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Sumamos los términos con x²:<br>
+    • 4x² + 3x² = 7x²<br><br>
+
+    • Sumamos los términos con x:<br>
+    • 2x + 5x = 7x<br><br>
+
+    <strong>Resultado:</strong><br>
+    • 7x² + 7x<br><br>
+
+    <strong>Importante:</strong><br>
+    • Solo se pueden sumar términos semejantes.<br>
+    • Los términos con distinto exponente no se combinan.
+  `
+},
+
+"4.1.1.5": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la operación.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Sumamos términos semejantes:<br>
+    • 6x + 2x = 8x<br><br>
+
+    • Sumamos constantes:<br>
+    • 4 + 3 = 7<br><br>
+
+    <strong>Resultado:</strong><br>
+    • 8x + 7<br><br>
+
+    <strong>Importante:</strong><br>
+    • Los términos con variable y las constantes se operan por separado.
+  `
+},
+
+"4.1.2.1": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la resta de polinomios.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Cambiamos los signos del segundo paréntesis:<br>
+    • (2x − 3) → (−2x + 3)<br><br>
+
+    <strong>Reescribimos la operación:</strong><br>
+    • 6x + 4 − 2x + 3<br><br>
+
+    <strong>Combinamos términos semejantes:</strong><br>
+    • 6x − 2x = 4x<br>
+    • 4 + 3 = 7<br><br>
+
+    <strong>Resultado:</strong><br>
+    • 4x + 7
+  `
+},
+
+"4.1.2.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Simplificaste correctamente la resta de expresiones algebraicas.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Cambiamos los signos del segundo polinomio:<br>
+    • (3x² + 2) → (−3x² − 2)<br><br>
+
+    <strong>Reescribimos:</strong><br>
+    • 8x² + 5 − 3x² − 2<br><br>
+
+    <strong>Combinamos términos semejantes:</strong><br>
+    • 8x² − 3x² = 5x²<br>
+    • 5 − 2 = 3<br><br>
+
+    <strong>Resultado:</strong><br>
+    • 5x² + 3<br><br>
+
+    <strong>Importante:</strong><br>
+    • Solo los términos con la misma variable y exponente pueden combinarse.
+  `
+},
+
+"4.1.2.3": {
+  titulo: "¡Excelente!",
+  mensaje: "Resolviste correctamente la resta de binomios.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Cambiamos los signos del segundo paréntesis:<br>
+    • (4x + 5) → (−4x − 5)<br><br>
+
+    <strong>Reescribimos:</strong><br>
+    • 7x + 2 − 4x − 5<br><br>
+
+    <strong>Combinamos términos semejantes:</strong><br>
+    • 7x − 4x = 3x<br>
+    • 2 − 5 = −3<br><br>
+
+    <strong>Resultado:</strong><br>
+    • 3x − 3
+  `
+},
+
+"4.1.2.4": {
+  titulo: "¡Muy bien!",
+  mensaje: "Simplificaste correctamente la operación.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Cambiamos los signos del segundo polinomio:<br>
+    • (2x² + x) → (−2x² − x)<br><br>
+
+    <strong>Reescribimos:</strong><br>
+    • 9x² + 6x − 2x² − x<br><br>
+
+    <strong>Combinamos términos semejantes:</strong><br>
+    • 9x² − 2x² = 7x²<br>
+    • 6x − x = 5x<br><br>
+
+    <strong>Resultado:</strong><br>
+    • 7x² + 5x<br><br>
+
+    <strong>Importante:</strong><br>
+    • Los términos con x² y los términos con x se operan por separado.
+  `
+},
+
+"4.1.2.5": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la resta de polinomios.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Cambiamos los signos del segundo paréntesis:<br>
+    • (3x − 4) → (−3x + 4)<br><br>
+
+    <strong>Reescribimos:</strong><br>
+    • 10x + 8 − 3x + 4<br><br>
+
+    <strong>Combinamos términos semejantes:</strong><br>
+    • 10x − 3x = 7x<br>
+    • 8 + 4 = 12<br><br>
+
+    <strong>Resultado:</strong><br>
+    • 7x + 12
+  `
+},
+
+"4.1.3.1": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la multiplicación de binomios.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la propiedad distributiva:<br>
+    • 2x · x = 2x²<br>
+    • 2x · 4 = 8x<br>
+    • 3 · x = 3x<br>
+    • 3 · 4 = 12<br><br>
+
+    <strong>Combinamos términos semejantes:</strong><br>
+    • 8x + 3x = 11x<br><br>
+
+    <strong>Resultado:</strong><br>
+    • 2x² + 11x + 12<br><br>
+
+    <strong>Importante:</strong><br>
+    • Cada término del primer binomio se multiplica por cada término del segundo.
+  `
+},
+
+"4.1.3.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Simplificaste correctamente la multiplicación de polinomios.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la distributiva:<br>
+    • 3x · 2x = 6x²<br>
+    • 3x · 5 = 15x<br>
+    • 2 · 2x = 4x<br>
+    • 2 · 5 = 10<br><br>
+
+    <strong>Combinamos términos semejantes:</strong><br>
+    • 15x + 4x = 19x<br><br>
+
+    <strong>Resultado:</strong><br>
+    • 6x² + 19x + 10
+  `
+},
+
+"4.1.3.3": {
+  titulo: "¡Excelente!",
+  mensaje: "Resolviste correctamente la multiplicación.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Multiplicamos cada término:<br>
+    • x · x = x²<br>
+    • x · 2 = 2x<br>
+    • 6 · x = 6x<br>
+    • 6 · 2 = 12<br><br>
+
+    <strong>Combinamos términos semejantes:</strong><br>
+    • 2x + 6x = 8x<br><br>
+
+    <strong>Resultado:</strong><br>
+    • x² + 8x + 12<br><br>
+
+    <strong>Importante:</strong><br>
+    • Cuando no aparece coeficiente, se entiende que es 1.
+  `
+},
+
+"4.1.3.4": {
+  titulo: "¡Muy bien!",
+  mensaje: "Simplificaste correctamente la operación.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la propiedad distributiva:<br>
+    • 4x · x = 4x²<br>
+    • 4x · 3 = 12x<br>
+    • 1 · x = x<br>
+    • 1 · 3 = 3<br><br>
+
+    <strong>Combinamos términos semejantes:</strong><br>
+    • 12x + x = 13x<br><br>
+
+    <strong>Resultado:</strong><br>
+    • 4x² + 13x + 3
+  `
+},
+
+"4.1.3.5": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la multiplicación de binomios.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Multiplicamos término por término:<br>
+    • 5x · x = 5x²<br>
+    • 5x · 1 = 5x<br>
+    • 2 · x = 2x<br>
+    • 2 · 1 = 2<br><br>
+
+    <strong>Combinamos términos semejantes:</strong><br>
+    • 5x + 2x = 7x<br><br>
+
+    <strong>Resultado:</strong><br>
+    • 5x² + 7x + 2
+  `
+},
+
+"4.2.1": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Desarrollaste correctamente el binomio al cuadrado.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la fórmula:<br>
+    • (a + b)² = a² + 2ab + b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = x<br>
+    • b = 2<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • x² + 2(x)(2) + 2²<br>
+    • x² + 4x + 4<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x² + 4x + 4
+  `
+},
+
+"4.2.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Resolviste correctamente el cuadrado de un binomio con signo negativo.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la fórmula:<br>
+    • (a - b)² = a² - 2ab + b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = x<br>
+    • b = 3<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • x² - 2(x)(3) + 3²<br>
+    • x² - 6x + 9<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x² - 6x + 9
+  `
+},
+
+"4.2.3": {
+  titulo: "¡Excelente!",
+  mensaje: "Desarrollaste correctamente el cubo del binomio.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos el Triángulo de Pascal para potencia 3:<br>
+    • 1, 3, 3, 1<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • (x + 1)³<br>
+    • x³ + 3x² + 3x + 1<br><br>
+
+    <strong>Detalle:</strong><br>
+    • Primer término: x³<br>
+    • Segundo término: 3x²(1)<br>
+    • Tercer término: 3x(1²)<br>
+    • Último término: 1³<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x³ + 3x² + 3x + 1
+  `
+},
+
+"4.2.4": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolvista correctamente el cubo de un binomio con signo negativo.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos el Triángulo de Pascal para potencia 3:<br>
+    • 1, 3, 3, 1<br><br>
+
+    <strong>Los signos alternan:</strong><br>
+    • +, −, +, −<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • (x - 2)³<br>
+    • x³ - 6x² + 12x - 8<br><br>
+
+    <strong>Detalle:</strong><br>
+    • x³<br>
+    • 3(x²)(2) = 6x²<br>
+    • 3(x)(2²) = 12x<br>
+    • 2³ = 8<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x³ - 6x² + 12x - 8
+  `
+},
+
+"4.2.5": {
+  titulo: "¡Impresionante!",
+  mensaje: "Desarrollaste correctamente la cuarta potencia del binomio.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos el Triángulo de Pascal para potencia 4:<br>
+    • 1, 4, 6, 4, 1<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • (x + 2)⁴<br>
+    • x⁴ + 8x³ + 24x² + 32x + 16<br><br>
+
+    <strong>Detalle:</strong><br>
+    • x⁴<br>
+    • 4(x³)(2) = 8x³<br>
+    • 6(x²)(2²) = 24x²<br>
+    • 4(x)(2³) = 32x<br>
+    • 2⁴ = 16<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x⁴ + 8x³ + 24x² + 32x + 16
+  `
+},
+
+"4.3.1.1": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Desarrollaste correctamente el binomio al cuadrado.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la fórmula notable:<br>
+    • (a + b)² = a² + 2ab + b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = x<br>
+    • b = 2<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • x² + 2(x)(2) + 2²<br>
+    • x² + 4x + 4<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x² + 4x + 4
+  `
+},
+
+"4.3.1.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Resolvista correctamente el cuadrado del binomio.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la fórmula:<br>
+    • (a + b)² = a² + 2ab + b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = x<br>
+    • b = 5<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • x² + 2(x)(5) + 5²<br>
+    • x² + 10x + 25<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x² + 10x + 25
+  `
+},
+
+"4.3.1.3": {
+  titulo: "¡Excelente!",
+  mensaje: "Desarrollaste correctamente el binomio al cuadrado con coeficiente.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la fórmula notable:<br>
+    • (a + b)² = a² + 2ab + b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = 2x<br>
+    • b = 3<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • (2x)² + 2(2x)(3) + 3²<br>
+    • 4x² + 12x + 9<br><br>
+
+    <strong>Resultado final:</strong><br>
+    4x² + 12x + 9
+  `
+},
+
+"4.3.1.4": {
+  titulo: "¡Muy bien!",
+  mensaje: "Resolvista correctamente el desarrollo del binomio.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la fórmula:<br>
+    • (a + b)² = a² + 2ab + b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = 3x<br>
+    • b = 1<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • (3x)² + 2(3x)(1) + 1²<br>
+    • 9x² + 6x + 1<br><br>
+
+    <strong>Resultado final:</strong><br>
+    9x² + 6x + 1
+  `
+},
+
+"4.3.1.5": {
+  titulo: "¡Impresionante!",
+  mensaje: "Desarrollaste correctamente el binomio al cuadrado.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la fórmula notable:<br>
+    • (a + b)² = a² + 2ab + b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = 2x<br>
+    • b = 5<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • (2x)² + 2(2x)(5) + 5²<br>
+    • 4x² + 20x + 25<br><br>
+
+    <strong>Resultado final:</strong><br>
+    4x² + 20x + 25
+  `
+},
+
+"4.3.2.1": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente el producto de binomios conjugados.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la fórmula notable:<br>
+    • (a + b)(a - b) = a² - b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = x<br>
+    • b = 2<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • x² - 2²<br>
+    • x² - 4<br><br>
+
+    <strong>Observación:</strong><br>
+    • Los términos centrales se cancelan:<br>
+    • +2x - 2x = 0<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x² - 4
+  `
+},
+
+"4.3.2.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Aplicaste correctamente la diferencia de cuadrados.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Utilizamos la identidad notable:<br>
+    • (a + b)(a - b) = a² - b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = x<br>
+    • b = 5<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • x² - 5²<br>
+    • x² - 25<br><br>
+
+    <strong>Observación:</strong><br>
+    • Los términos centrales desaparecen al sumar y restar:<br>
+    • +5x - 5x = 0<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x² - 25
+  `
+},
+
+"4.3.2.3": {
+  titulo: "¡Excelente!",
+  mensaje: "Resolvista correctamente el producto notable.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la fórmula:<br>
+    • (a + b)(a - b) = a² - b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = 2x<br>
+    • b = 3<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • (2x)² - 3²<br>
+    • 4x² - 9<br><br>
+
+    <strong>Observación:</strong><br>
+    • Los términos del centro se eliminan:<br>
+    • +6x - 6x = 0<br><br>
+
+    <strong>Resultado final:</strong><br>
+    4x² - 9
+  `
+},
+
+"4.3.2.4": {
+  titulo: "¡Muy bien!",
+  mensaje: "Desarrollaste correctamente la diferencia de cuadrados.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos el producto notable:<br>
+    • (a + b)(a - b) = a² - b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = 3x<br>
+    • b = 1<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • (3x)² - 1²<br>
+    • 9x² - 1<br><br>
+
+    <strong>Observación:</strong><br>
+    • Los términos lineales se cancelan automáticamente.<br><br>
+
+    <strong>Resultado final:</strong><br>
+    9x² - 1
+  `
+},
+
+"4.3.2.5": {
+  titulo: "¡Impresionante!",
+  mensaje: "Resolvista correctamente el producto de binomios conjugados.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Aplicamos la identidad notable:<br>
+    • (a + b)(a - b) = a² - b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = 4x<br>
+    • b = 2<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • (4x)² - 2²<br>
+    • 16x² - 4<br><br>
+
+    <strong>Observación:</strong><br>
+    • Los términos centrales se eliminan:<br>
+    • +8x - 8x = 0<br><br>
+
+    <strong>Resultado final:</strong><br>
+    16x² - 4
+  `
+},
+
+"4.3.3.1": {
+  titulo: "¡Excelente!",
+  mensaje: "Desarrollaste correctamente el binomio al cuadrado con signo negativo.",
+  extra: `
+    <strong>Recordemos la fórmula:</strong><br>
+    • (a - b)² = a² - 2ab + b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = x<br>
+    • b = 2<br><br>
+
+    <strong>Desarrollamos:</strong><br>
+    • x² - 2(x)(2) + 2²<br><br>
+
+    <strong>Calculamos:</strong><br>
+    • x² - 4x + 4<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x² - 4x + 4
+  `
+},
+
+"4.3.3.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Resolviste correctamente el binomio al cuadrado.",
+  extra: `
+    <strong>Aplicamos la fórmula:</strong><br>
+    • (a - b)² = a² - 2ab + b²<br><br>
+
+    <strong>Sustituimos valores:</strong><br>
+    • a = x<br>
+    • b = 4<br><br>
+
+    <strong>Desarrollamos:</strong><br>
+    • x² - 2(x)(4) + 4²<br><br>
+
+    <strong>Calculamos:</strong><br>
+    • x² - 8x + 16<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x² - 8x + 16
+  `
+},
+
+"4.3.3.3": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Desarrollaste correctamente el binomio al cuadrado.",
+  extra: `
+    <strong>Usamos la fórmula:</strong><br>
+    • (a - b)² = a² - 2ab + b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = 2x<br>
+    • b = 3<br><br>
+
+    <strong>Desarrollamos:</strong><br>
+    • (2x)² - 2(2x)(3) + 3²<br><br>
+
+    <strong>Calculamos:</strong><br>
+    • 4x² - 12x + 9<br><br>
+
+    <strong>Resultado final:</strong><br>
+    4x² - 12x + 9
+  `
+},
+
+"4.3.3.4": {
+  titulo: "¡Correcto!",
+  mensaje: "Resolvistе correctamente el producto notable.",
+  extra: `
+    <strong>Recordemos:</strong><br>
+    • (a - b)² = a² - 2ab + b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = 3x<br>
+    • b = 2<br><br>
+
+    <strong>Desarrollamos:</strong><br>
+    • (3x)² - 2(3x)(2) + 2²<br><br>
+
+    <strong>Calculamos:</strong><br>
+    • 9x² - 12x + 4<br><br>
+
+    <strong>Resultado final:</strong><br>
+    9x² - 12x + 4
+  `
+},
+
+"4.3.3.5": {
+  titulo: "¡Excelente!",
+  mensaje: "Desarrollaste correctamente el binomio al cuadrado.",
+  extra: `
+    <strong>Aplicamos la fórmula:</strong><br>
+    • (a - b)² = a² - 2ab + b²<br><br>
+
+    <strong>Sustituimos:</strong><br>
+    • a = 2x<br>
+    • b = 5<br><br>
+
+    <strong>Desarrollamos:</strong><br>
+    • (2x)² - 2(2x)(5) + 5²<br><br>
+
+    <strong>Calculamos:</strong><br>
+    • 4x² - 20x + 25<br><br>
+
+    <strong>Resultado final:</strong><br>
+    4x² - 20x + 25
+  `
+},
+
+"4.3.4.1": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Desarrollaste correctamente el cubo del binomio.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    (x + 2)³<br><br>
+
+    <strong>Aplicamos la fórmula:</strong><br>
+    (a + b)³ = a³ + 3a²b + 3ab² + b³<br><br>
+
+    <strong>Sustituyendo:</strong><br>
+    • a = x<br>
+    • b = 2<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • x³<br>
+    • 3(x²)(2) = 6x²<br>
+    • 3(x)(2²) = 12x<br>
+    • 2³ = 8<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x³ + 6x² + 12x + 8
+  `
+},
+
+"4.3.4.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Resolviste correctamente el cubo de un binomio con signo negativo.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    (x - 2)³<br><br>
+
+    <strong>Fórmula:</strong><br>
+    (a - b)³ = a³ - 3a²b + 3ab² - b³<br><br>
+
+    <strong>Sustituyendo:</strong><br>
+    • a = x<br>
+    • b = 2<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • x³<br>
+    • -3(x²)(2) = -6x²<br>
+    • 3(x)(2²) = 12x<br>
+    • -2³ = -8<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x³ - 6x² + 12x - 8
+  `
+},
+
+"4.3.4.3": {
+  titulo: "¡Excelente!",
+  mensaje: "Aplicaste correctamente el cubo de un binomio.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    (2x + 1)³<br><br>
+
+    <strong>Usamos:</strong><br>
+    (a + b)³ = a³ + 3a²b + 3ab² + b³<br><br>
+
+    <strong>Sustituyendo:</strong><br>
+    • a = 2x<br>
+    • b = 1<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • (2x)³ = 8x³<br>
+    • 3(2x)²(1) = 12x²<br>
+    • 3(2x)(1²) = 6x<br>
+    • 1³ = 1<br><br>
+
+    <strong>Resultado final:</strong><br>
+    8x³ + 12x² + 6x + 1
+  `
+},
+
+"4.3.4.4": {
+  titulo: "¡Perfecto!",
+  mensaje: "Desarrollaste correctamente el cubo del binomio.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    (x + 3)³<br><br>
+
+    <strong>Aplicamos la fórmula:</strong><br>
+    (a + b)³ = a³ + 3a²b + 3ab² + b³<br><br>
+
+    <strong>Sustituyendo:</strong><br>
+    • a = x<br>
+    • b = 3<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • x³<br>
+    • 3(x²)(3) = 9x²<br>
+    • 3(x)(3²) = 27x<br>
+    • 3³ = 27<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x³ + 9x² + 27x + 27
+  `
+},
+
+"4.3.4.5": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente el cubo de un binomio con signo negativo.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    (2x - 2)³<br><br>
+
+    <strong>Usamos la fórmula:</strong><br>
+    (a - b)³ = a³ - 3a²b + 3ab² - b³<br><br>
+
+    <strong>Sustituyendo:</strong><br>
+    • a = 2x<br>
+    • b = 2<br><br>
+
+    <strong>Desarrollo:</strong><br>
+    • (2x)³ = 8x³<br>
+    • -3(2x)²(2) = -24x²<br>
+    • 3(2x)(2²) = 24x<br>
+    • -2³ = -8<br><br>
+
+    <strong>Resultado final:</strong><br>
+    8x³ - 24x² + 24x - 8
+  `
+},
+
+
+
+
+"4.4.1.1": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Factorizaste correctamente la expresión usando factor común.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Identificamos el factor común:<br>
+    • 6 divide a 6x y también a 12.<br><br>
+
+    <strong>Dividimos cada término:</strong><br>
+    • 6x ÷ 6 = x<br>
+    • 12 ÷ 6 = 2<br><br>
+
+    <strong>Resultado factorizado:</strong><br>
+    • 6(x + 2)<br><br>
+
+    <strong>Comprobación:</strong><br>
+    • 6 · x = 6x<br>
+    • 6 · 2 = 12<br><br>
+
+    <strong>Importante:</strong><br>
+    • Factorizar consiste en extraer el elemento común de todos los términos.
+  `
+},
+
+"4.4.1.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Aplicaste correctamente la factorización por factor común.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Identificamos el factor común:<br>
+    • El número 4 divide ambos coeficientes.<br>
+    • La variable común es x.<br><br>
+
+    <strong>Factor común:</strong><br>
+    • 4x<br><br>
+
+    <strong>Dividimos cada término:</strong><br>
+    • 8x² ÷ 4x = 2x<br>
+    • 4x ÷ 4x = 1<br><br>
+
+    <strong>Resultado factorizado:</strong><br>
+    • 4x(2x + 1)<br><br>
+
+    <strong>Comprobación:</strong><br>
+    • 4x · 2x = 8x²<br>
+    • 4x · 1 = 4x
+  `
+},
+
+"4.4.1.3": {
+  titulo: "¡Excelente!",
+  mensaje: "Factorizaste correctamente la expresión.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Identificamos el factor común:<br>
+    • El número 3 está presente en ambos términos.<br><br>
+
+    <strong>Dividimos cada término:</strong><br>
+    • 9x ÷ 3 = 3x<br>
+    • 3 ÷ 3 = 1<br><br>
+
+    <strong>Resultado factorizado:</strong><br>
+    • 3(3x + 1)<br><br>
+
+    <strong>Comprobación:</strong><br>
+    • 3 · 3x = 9x<br>
+    • 3 · 1 = 3
+  `
+},
+
+"4.4.1.4": {
+  titulo: "¡Muy bien!",
+  mensaje: "Simplificaste correctamente usando factor común.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Identificamos el factor común:<br>
+    • 6 divide ambos coeficientes.<br>
+    • La variable común es x.<br><br>
+
+    <strong>Factor común:</strong><br>
+    • 6x<br><br>
+
+    <strong>Dividimos cada término:</strong><br>
+    • 12x² ÷ 6x = 2x<br>
+    • 6x ÷ 6x = 1<br><br>
+
+    <strong>Resultado factorizado:</strong><br>
+    • 6x(2x + 1)<br><br>
+
+    <strong>Comprobación:</strong><br>
+    • 6x · 2x = 12x²<br>
+    • 6x · 1 = 6x
+  `
+},
+
+"4.4.1.5": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Factorizaste correctamente la expresión algebraica.",
+  extra: `
+    <strong>Pasos clave:</strong><br>
+    • Identificamos el factor común:<br>
+    • El número 5 divide a 15x y a 20.<br><br>
+
+    <strong>Dividimos cada término:</strong><br>
+    • 15x ÷ 5 = 3x<br>
+    • 20 ÷ 5 = 4<br><br>
+
+    <strong>Resultado factorizado:</strong><br>
+    • 5(3x + 4)<br><br>
+
+    <strong>Comprobación:</strong><br>
+    • 5 · 3x = 15x<br>
+    • 5 · 4 = 20
+  `
+},
+
 
 
 

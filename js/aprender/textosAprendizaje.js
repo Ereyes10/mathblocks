@@ -619,6 +619,602 @@ por <em>todos</em> los términos del segundo.`,
 ],
 
 
+"4.1.1": [`
+
+<strong>📌 ¿Qué es un polinomio?</strong><br>
+Es una expresión formada por la suma o resta de monomios.<br><br>
+
+<strong>Ejemplo:</strong><br>
+● 3x² + 2x − 5`,
+  
+`<strong>➕ Suma de polinomios</strong><br>
+Para sumar polinomios se combinan los <strong>términos semejantes</strong>, es decir, los que tienen la misma variable y el mismo exponente.`,
+
+
+
+`<strong>📌 Recuerda:</strong><br>
+Solo se pueden sumar términos que sean semejantes.<br><br>
+
+<strong>Ejemplo:</strong><br>
+● 2x + 5x = 7x
+<br>● 3x² + x² = 4x²`,
+
+`<strong>Ejemplo completo:</strong><br>
+● (2x + 3) + (5x − 1)<br><br>
+
+Ordena los términos semejantes:
+<br>2x + 5x + 3 − 1
+<br><br>
+
+Suma los términos:
+<br>7x + 2`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Los coeficientes se suman, pero la variable y el exponente permanecen iguales.`,
+
+`<strong>Indicación:</strong> realiza las siguientes sumas de polinomios identificando correctamente los términos semejantes...`
+],
+
+
+"4.1.2": [`
+<strong>➖ Resta de polinomios</strong><br>
+Restar polinomios consiste en cambiar los signos del segundo polinomio y después combinar los términos semejantes.`,
+
+`<strong>📌 Regla importante:</strong><br>
+Cuando un paréntesis tiene signo negativo enfrente, todos los signos dentro del paréntesis cambian.`,
+
+`<strong>Ejemplo:</strong><br>
+● (6x + 4) − (2x − 3)<br><br>
+
+Cambia los signos del segundo polinomio:
+<br>6x + 4 − 2x + 3
+<br><br>
+
+Agrupa términos semejantes:
+<br>(6x − 2x) + (4 + 3)
+<br><br>
+
+Resultado:
+<br><strong>4x + 7</strong>`,
+
+`<strong>⚠️ Error común:</strong><br>
+Olvidar cambiar todos los signos del segundo polinomio.`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Después de cambiar los signos, la resta se convierte en una suma de términos semejantes.`,
+
+`<strong>Indicación:</strong> resuelve las siguientes restas de polinomios aplicando correctamente la ley de los signos...`
+],
+
+
+"4.1.3": [`
+<strong>✖️ Multiplicación de polinomios</strong><br>
+Para multiplicar polinomios, cada término de un polinomio debe multiplicarse por cada término del otro.`,
+
+`<strong>📌 Recuerda:</strong><br>
+Al multiplicar:
+<br>● Se multiplican coeficientes.
+<br>● Las variables con la misma base suman exponentes.`,
+
+`<strong>Ejemplo:</strong><br>
+● (2x)(3x²)<br><br>
+
+Multiplica coeficientes:
+<br>2 · 3 = 6
+<br><br>
+
+Suma exponentes:
+<br>x · x² = x³
+<br><br>
+
+Resultado:
+<br><strong>6x³</strong>`,
+
+`<strong>Ejemplo con binomios:</strong><br>
+● (x + 2)(x + 3)<br><br>
+
+Multiplica cada término:
+<br>x(x) + x(3) + 2(x) + 2(3)
+<br><br>
+
+Resultado:
+<br>x² + 3x + 2x + 6
+<br><br>
+
+Simplifica términos semejantes:
+<br><strong>x² + 5x + 6</strong>`,
+
+`<strong>🔑 Idea clave:</strong><br>
+En la multiplicación de polinomios es importante no olvidar ningún producto parcial.`,
+
+`<strong>Indicación:</strong> realiza las siguientes multiplicaciones de polinomios y simplifica términos semejantes...`
+],
+
+
+"4.2": [`
+<strong>⚡ Aplicación de las reglas de los exponentes y los signos</strong><br>
+Las potencias de binomios siguen un patrón que ayuda a desarrollar expresiones algebraicas de manera ordenada.`,
+
+`<strong>📌 Observa los desarrollos:</strong><br>
+● (a ± b) = a ± b
+<br>● (a ± b)² = a² ± 2ab + b²
+<br>● (a ± b)³ = a³ ± 3a²b + 3ab² ± b³`,
+
+`<strong>📌 Los coeficientes siguen un patrón:</strong><br>
+Los números:
+<br>1
+<br>1 2 1
+<br>1 3 3 1
+<br>1 4 6 4 1
+<br>1 5 10 10 5 1
+<br><br>
+provienen del <strong>Triángulo de Pascal</strong> y ayudan a construir cada desarrollo.`,
+
+`<strong>📌 Comportamiento de los exponentes:</strong><br>
+En cada término:
+<br>● El exponente de "a" disminuye.
+<br>● El exponente de "b" aumenta.
+<br>● La suma de los exponentes siempre es igual a la potencia del binomio.`,
+
+`(a + b)⁴ = a⁴ + 4a³b + 6a²b² + 4ab³ + b⁴<br>
+<strong>Observa:</strong><br>
+● Los coeficientes son: 1, 4, 6, 4 y 1.
+<br>● Los exponentes de "a" bajan de 4 hasta 0.
+<br>● Los exponentes de "b" suben de 0 hasta 4.`,
+
+`<strong>📌 Regla de los signos:</strong><br>
+Cuando el binomio es positivo:
+<br>● Todos los términos son positivos.
+<br><br>
+
+Cuando el binomio tiene signo negativo:
+<br>● Los signos se alternan en el desarrollo. <br>
+<br>(a - b)⁵ = a⁵ - 5a⁴b + 10a³b² - 10a²b³ + 5ab⁴ - b⁵`,
+
+
+`<strong>💡 Idea importante:</strong><br>
+Los coeficientes se obtienen del Triángulo de Pascal y los signos dependen del signo del binomio original.`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Reconocer el patrón de coeficientes, exponentes y signos permite desarrollar potencias de binomios con mayor rapidez.`,
+
+`<strong>Indicación:</strong> desarrolla las siguientes potencias aplicando correctamente exponentes, coeficientes y signos...`
+],
+
+
+
+"4.3.1": [`
+<strong> Cuadrado de la suma de dos cantidades:</strong><br>
+ (a + b)²<br>
+El cuadrado de un binomio se obtiene multiplicando el binomio por sí mismo:<br><br>
+<strong>(a + b)² = </strong>a² + 2ab + b²
+`,
+,
+
+`<strong>📌 Regla:</strong><br>
+● Se eleva al cuadrado el primer término.
+<br>● Se multiplica el doble del primero por el segundo.
+<br>● Se eleva al cuadrado el segundo término.`,
+
+`<strong>Ejemplo:</strong><br>
+● (x + 3)²<br>
+
+Primer término al cuadrado:
+<br>x²
+<br>
+
+Doble producto del primero por el segundo:
+<br>2(x)(3) = 6x
+<br>
+
+Segundo término al cuadrado:
+<br>3² = 9
+<br>
+
+Resultado:
+<br><strong>x² + 6x + 9</strong>`,
+
+`<strong>🔑 Idea clave:</strong><br>
+El término de en medio siempre es el doble producto de ambos términos.`,
+
+`<strong>Indicación:</strong> desarrolla los siguientes cuadrados de binomios aplicando la fórmula correspondiente...`
+],
+
+
+"4.3.2": [`
+<strong> Producto de la suma por la diferencia de dos cantidades:</strong><br>
+(a + b)(a − b)<br>
+Cuando se multiplica un binomio por su conjugado, el resultado es una diferencia de cuadrados:<br><br>
+<strong>(a + b)(a − b) = </strong> a²-b²`,
+
+`<strong>📌 Observa:</strong><br>
+Los términos centrales se eliminan porque tienen signos opuestos.`,
+
+`<strong>Ejemplo:</strong><br>
+● (x + 5)(x − 5)<br><br>
+
+Multiplica términos:
+<br>x² − 5x + 5x − 25
+<br><br>
+
+Los términos −5x y +5x se cancelan.
+<br><br>
+
+Resultado:
+<br><strong>x² − 25</strong>`,
+
+`<strong>💡 Idea importante:</strong><br>
+Este producto siempre genera una resta entre cuadrados perfectos.`,
+
+`<strong>🔑 Idea clave:</strong><br>
+La expresión final tiene solo dos términos: el cuadrado del primero menos el cuadrado del segundo.`,
+
+`<strong>Indicación:</strong> resuelve los siguientes productos de binomios conjugados...`
+],
+
+
+"4.3.3": [`
+<strong>Cuadrado de la diferencia de dos cantidades</strong><br>
+(a - b)²<br>
+El cuadrado de una diferencia se obtiene multiplicando el binomio por sí mismo: <br><br>
+<strong>(a - b)² = </strong>a² - 2ab + b²`,
+
+`<strong>📌 Regla:</strong><br>
+● Se eleva al cuadrado el primer término.
+<br>● Se resta el doble producto de ambos términos.
+<br>● Se suma el cuadrado del segundo término.`,
+
+`<strong>Ejemplo:</strong><br>
+● (x − 4)²<br>
+
+Primer término al cuadrado:
+<br>x²
+<br>
+
+Doble producto:
+<br>−2(x)(4) = −8x
+<br>
+
+Segundo término al cuadrado:
+<br>4² = 16
+<br>
+
+Resultado:
+<br><strong>x² − 8x + 16</strong>`,
+
+`<strong>⚠️ Error común:</strong><br>
+Olvidar que el término central es negativo.`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Aunque el binomio tenga resta, el último término siempre es positivo porque está elevado al cuadrado.`,
+
+`<strong>Indicación:</strong> desarrolla los siguientes cuadrados de diferencias aplicando correctamente los signos...`
+],
+
+
+"4.3.4": [`
+<strong>Cubo de un binomio</strong><br>
+(a + b)³
+El cubo de un binomio se obtiene multiplicando el binomio tres veces por sí mismo:<br><br>
+
+<strong>(a + b)³ = </strong>a³ + 3a²b + 3ab² + b³`,
+
+`<strong>📌 Observa:</strong><br>
+Los coeficientes 1, 3, 3 y 1 provienen del Triángulo de Pascal.`,
+
+`<strong>Ejemplo:</strong><br>
+● (x + 2)³<br>
+
+Primer término:
+<br>x³
+<br>
+
+Segundo término:
+<br>3(x²)(2) = 6x²
+<br>
+
+Tercer término:
+<br>3(x)(2²) = 12x
+<br>
+
+Último término:
+<br>2³ = 8
+<br>
+
+Resultado:
+<br><strong>x³ + 6x² + 12x + 8</strong>`,
+
+`<strong>💡 Idea importante:</strong><br>
+Cuando el binomio tiene signo negativo, los signos del desarrollo se alternan.`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Los exponentes de un término disminuyen mientras los del otro aumentan.`,
+
+`<strong>Indicación:</strong> desarrolla los siguientes cubos de binomios aplicando correctamente coeficientes, exponentes y signos...`
+],
+
+
+"4.4.1": [`
+<strong>🧩 Factor común</strong><br>
+La factorización por factor común consiste en identificar el elemento que se repite en todos los términos de una expresión.`,
+
+`<strong>📌 ¿Qué puede ser factor común?</strong><br>
+● Un número
+<br>● Una variable
+<br>● Una combinación de números y variables`,
+
+`<strong>📌 Procedimiento:</strong><br>
+1. Identifica el factor común.
+<br>2. Divide cada término entre ese factor.
+<br>3. Escribe el resultado como una multiplicación.`,
+
+`<strong>Ejemplo:</strong><br>
+● 6x + 12<br>
+
+El factor común es 6.
+<br>
+
+Divide cada término:
+<br>6x ÷ 6 = x
+<br>12 ÷ 6 = 2
+<br><br>
+
+Resultado:
+<br><strong>6(x + 2)</strong>`,
+
+`<strong>Otro ejemplo:</strong><br>
+● 8x² + 4x<br><br>
+
+El factor común es 4x.
+<br><br>
+
+Resultado:
+<br><strong>4x(2x + 1)</strong>`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Factorizar es escribir una suma o resta como el producto de factores.`,
+
+`<strong>Indicación:</strong> factoriza las siguientes expresiones utilizando factor común...`
+],
+
+
+"4.4.2": [`
+<strong>🧩 Diferencia de cuadrados</strong><br>
+Una diferencia de cuadrados aparece cuando se restan dos cuadrados perfectos:<br>
+(a - b)² <br><br>`,
+
+`<strong>📌 Pasos para factorizar</strong> <br>
+<strong>1) Verificar los requisitos:</strong> El binomio debe ser una resta y ambos términos deben tener raíz cuadrada exacta.<br>
+<strong>2) Extraer raíces:</strong> Saca la raíz cuadrada de ambos términos. Nota: Para las letras con exponente, simplemente se divide el exponente entre 2.<br>
+<strong>3) Escribir el resultado:</strong> Abre dos pares de paréntesis. Coloca la suma de las raíces en uno y la resta de las mismas en el otro.`,
+
+`<strong>Ejemplo:</strong><br>
+● x² − 25<br><br>
+
+Observa:
+<br>x² = (x)²
+<br>25 = (5)²
+<br><br>
+
+Aplicando la fórmula:
+<br><strong>(x + 5)(x − 5)</strong>`,
+
+`<strong>Otro ejemplo:</strong><br>
+● 9x² − 16<br><br>
+
+● 9x² = (3x)²
+<br>● 16 = (4)²
+<br><br>
+
+Resultado:
+<br><strong>(3x + 4)(3x − 4)</strong>`,
+
+`<strong>⚠️ Error común:</strong><br>
+Intentar aplicar esta fórmula cuando existe suma en lugar de resta.`,
+
+`<strong>🔑 Idea clave:</strong><br>
+La diferencia de cuadrados siempre se factoriza como el producto de dos binomios conjugados.`,
+
+`<strong>Indicación:</strong> factoriza las siguientes diferencias de cuadrados...`
+],
+
+
+"4.4.3": [`
+<strong>🧩 Trinomio de la forma </strong><br>
+ x² + bx + c<br>
+Este tipo de trinomio se factoriza buscando dos números que al multiplicarse den el término independiente y al sumarse den el coeficiente del término central.`,
+
+`<strong>Forma general:</strong><br>
+● x² + bx + c <br>
+<strong>📌 Procedimiento:</strong><br>
+1. Busca dos números que multiplicados den "c".
+<br>2. Esos mismos números deben sumar "b".
+<br>3. Escribe dos binomios:<br>
+<strong>x² + bx + c =</strong> (x + m)(x + n)`,
+
+`<strong>Ejemplo:</strong><br>
+● x² + 5x + 6<br><br>
+
+Busca dos números:
+<br>● 2 · 3 = 6
+<br>● 2 + 3 = 5
+<br><br>
+
+Resultado:
+<br><strong>(x + 2)(x + 3)</strong>`,
+
+`<strong>Otro ejemplo:</strong><br>
+● x² − 7x + 10<br><br>
+
+Busca dos números:
+<br>● (−5)(−2) = 10
+<br>● (−5) + (−2) = −7
+<br><br>
+
+Resultado:
+<br><strong>(x − 5)(x − 2)</strong>`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Los números elegidos deben cumplir al mismo tiempo la multiplicación y la suma.`,
+
+`<strong>Indicación:</strong> factoriza los siguientes trinomios de la forma x² + bx + c...`
+],
+
+
+"4.5": [`
+<strong>📐 Trinomio cuadrado perfecto</strong><br>
+Un trinomio cuadrado perfecto es el resultado de desarrollar el cuadrado de un binomio.`,
+
+`<strong>📌 Forma general:</strong><br><br>
+a² + 2ab + b² = (a + b)² <br><br>
+a² - 2ab + b² = (a - b)²`,
+
+`<strong>📌 ¿Cómo identificar un trinomio cuadrado perfecto?</strong><br>
+● El primer término debe ser un cuadrado perfecto.
+<br>● El último término también debe ser un cuadrado perfecto.
+<br>● El término central debe ser el doble producto de las raíces de los extremos.`,
+
+`<strong>Ejemplo:</strong><br>
+● x² + 6x + 9<br>
+
+Observa:
+<br>● x² = (x)²
+<br>● 9 = (3)²
+<br>● 6x = 2(x)(3)
+<br><br>
+
+Resultado:
+<br><strong>(x + 3)²</strong>`,
+
+`<strong>Ejemplo con signo negativo:</strong><br>
+● x² − 10x + 25<br>
+
+Observa:
+<br>● x² = (x)²
+<br>● 25 = (5)²
+<br>● −10x = −2(x)(5)
+<br><br>
+
+Resultado:
+<br><strong>(x − 5)²</strong>`,
+
+`<strong>⚠️ Error común:</strong><br>
+Pensar que cualquier trinomio puede factorizarse como trinomio cuadrado perfecto.`,
+
+`<strong>💡 Idea importante:</strong><br>
+Antes de factorizar, verifica que el término central sea exactamente el doble producto de las raíces.`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Un trinomio cuadrado perfecto siempre puede expresarse como el cuadrado de un binomio.`,
+
+`<strong>Indicación:</strong> identifica y factoriza los siguientes trinomios cuadrados perfectos...`
+],
+
+
+"4.6": [`
+<strong>➗ Aplicaciones de operaciones con fracciones</strong><br>
+Las fracciones algebraicas se operan de manera similar a las fracciones numéricas, aplicando reglas de signos, exponentes y simplificación.`,
+
+`<strong>📌 Fracción algebraica</strong><br>
+Es una expresión que tiene variables o polinomios en el numerador, en el denominador o en ambos.`,
+
+`<strong>Ejemplo:</strong><br>
+● (3x/5)
+<br>● (x + 2)/(x − 1)`,
+
+`<strong>➕ Suma y resta de fracciones algebraicas</strong><br>
+Para sumar o restar fracciones es necesario que tengan el mismo denominador.`,
+
+`<strong>Ejemplo:</strong><br>
+● (2x/5) + (3x/5)<br><br>
+
+Como los denominadores son iguales:
+<br>(2x + 3x)/5
+<br><br>
+
+Resultado:
+<br><strong>5x/5</strong>`,
+
+`<strong>🔍 Simplificación:</strong><br>
+La fracción puede simplificarse:
+<br>5x ÷ 5 = x
+<br><br>
+
+Resultado simplificado:
+<br><strong>x</strong>`,
+
+`<strong>✖️ Multiplicación de fracciones algebraicas</strong><br>
+Se multiplica numerador con numerador y denominador con denominador.`,
+
+`\frac{a}{b}\cdot\frac{c}{d}=\frac{ac}{bd}`,
+
+`<strong>Ejemplo:</strong><br>
+● (2x/3) · (6/4)<br><br>
+
+Multiplica numeradores:
+<br>2x · 6 = 12x
+<br><br>
+
+Multiplica denominadores:
+<br>3 · 4 = 12
+<br><br>
+
+Resultado:
+<br><strong>12x/12</strong>`,
+
+`<strong>🔍 Simplificación:</strong><br>
+12x ÷ 12 = x
+<br><br>
+
+Resultado simplificado:
+<br><strong>x</strong>`,
+
+`<strong>💡 Simplificación antes de multiplicar:</strong><br>
+En algunos ejercicios se puede simplificar antes de realizar la operación.`,
+
+`<strong>Ejemplo:</strong><br>
+● (4x/3) · (6/(2x))<br><br>
+
+Simplifica:
+<br>● 6 y 3 entre 3
+<br>● 4x y 2x entre x
+<br><br>
+
+La operación queda:
+<br>(4/1) · (2/2)
+<br><br>
+
+Resultado:
+<br><strong>4</strong>`,
+
+`<strong>➗ División de fracciones algebraicas</strong><br>
+Dividir una fracción entre otra equivale a multiplicar por el recíproco.`,
+
+`\frac{a}{b}\div\frac{c}{d}=\frac{a}{b}\cdot\frac{d}{c}`,
+
+`<strong>Ejemplo:</strong><br>
+● (x/2) ÷ (3/4)<br><br>
+
+Convierte la división en multiplicación:
+<br>(x/2) · (4/3)
+<br><br>
+
+Multiplica:
+<br>4x/6
+<br><br>
+
+Simplifica:
+<br>2x/3`,
+
+`<strong>⚠️ Error común:</strong><br>
+Olvidar cambiar la segunda fracción por su recíproco al dividir.`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Después de cada operación, revisa siempre si el resultado puede simplificarse.`,
+
+`<strong>Indicación:</strong> resuelve las siguientes operaciones con fracciones algebraicas y simplifica cuando sea posible...`
+],
+
 
 
 };
