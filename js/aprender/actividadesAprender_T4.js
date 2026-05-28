@@ -1594,14 +1594,6 @@ const actividad_4_3_4_5 = {
   validacionFinal: ["8", "x3", "minus", "24", "x2", "plus", "24", "x", "minus", "8"]
 };
 
-
-
-
-
-
-
-
-
 const actividad_4_4_1_1 = {
   titulo: "Factoriza la expresión: <strong>6x + 12</strong>",
   pasos: [
@@ -1817,6 +1809,777 @@ const actividad_4_4_1_5 = {
   validacionFinal: ["5", "parIzq", "3", "x", "plus", "4", "parDer"]
 };
 
+const actividad_4_4_2_1 = {
+  titulo: "Factoriza la expresión: <strong>x² − 9</strong>",
+  pasos: [
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el primer paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Raíz cuadrada de x² es x. Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Primer binomio con suma. Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "3",
+      descripcion: "Raíz cuadrada de 9 es 3. Escanea 3."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el primer paréntesis."
+    },
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el segundo paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea nuevamente x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "Segundo binomio con resta. Escanea resta."
+    },
+    {
+      tipo: "numero",
+      valor: "3",
+      descripcion: "Escanea 3."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el segundo paréntesis."
+    }
+  ],
+  validacionFinal: ["parIzq", "x", "plus", "3", "parDer", "parIzq", "x", "minus", "3", "parDer"]
+};
+
+const actividad_4_4_2_2 = {
+  titulo: "Factoriza la expresión: <strong>x² − 25</strong>",
+  pasos: [
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el primer paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Raíz cuadrada de x² es x. Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Primer binomio con suma. Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "5",
+      descripcion: "Raíz cuadrada de 25 es 5. Escanea 5."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el primer paréntesis."
+    },
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el segundo paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea nuevamente x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "Segundo binomio con resta. Escanea resta."
+    },
+    {
+      tipo: "numero",
+      valor: "5",
+      descripcion: "Escanea 5."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el segundo paréntesis."
+    }
+  ],
+  validacionFinal: ["parIzq", "x", "plus", "5", "parDer", "parIzq", "x", "minus", "5", "parDer"]
+};
+
+const actividad_4_4_2_3 = {
+  titulo: "Factoriza la expresión: <strong>4x² − 16</strong>",
+  pasos: [
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el primer paréntesis."
+    },
+    {
+      tipo: "numero",
+      valor: "2",
+      descripcion: "Raíz cuadrada de 4x² es 2x. Escanea 2."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Primer binomio con suma. Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "4",
+      descripcion: "Raíz cuadrada de 16 es 4. Escanea 4."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el primer paréntesis."
+    },
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el segundo paréntesis."
+    },
+    {
+      tipo: "numero",
+      valor: "2",
+      descripcion: "Escanea nuevamente 2."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "Segundo binomio con resta. Escanea resta."
+    },
+    {
+      tipo: "numero",
+      valor: "4",
+      descripcion: "Escanea 4."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el segundo paréntesis."
+    }
+  ],
+  validacionFinal: ["parIzq", "2", "x", "plus", "4", "parDer", "parIzq", "2", "x", "minus", "4", "parDer"]
+};
+
+const actividad_4_4_2_4 = {
+  titulo: "Factoriza la expresión: <strong>9x² − 1</strong>",
+  pasos: [
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el primer paréntesis."
+    },
+    {
+      tipo: "numero",
+      valor: "3",
+      descripcion: "Raíz cuadrada de 9x² es 3x. Escanea 3."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Primer binomio con suma. Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "1",
+      descripcion: "Raíz cuadrada de 1 es 1. Escanea 1."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el primer paréntesis."
+    },
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el segundo paréntesis."
+    },
+    {
+      tipo: "numero",
+      valor: "3",
+      descripcion: "Escanea nuevamente 3."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "Segundo binomio con resta. Escanea resta."
+    },
+    {
+      tipo: "numero",
+      valor: "1",
+      descripcion: "Escanea 1."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el segundo paréntesis."
+    }
+  ],
+  validacionFinal: ["parIzq", "3", "x", "plus", "1", "parDer", "parIzq", "3", "x", "minus", "1", "parDer"]
+};
+
+const actividad_4_4_2_5 = {
+  titulo: "Factoriza la expresión: <strong>16x² − 25</strong>",
+  pasos: [
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el primer paréntesis."
+    },
+    {
+      tipo: "numero",
+      valor: "4",
+      descripcion: "Raíz cuadrada de 16x² es 4x. Escanea 4."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Primer binomio con suma. Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "5",
+      descripcion: "Raíz cuadrada de 25 es 5. Escanea 5."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el primer paréntesis."
+    },
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el segundo paréntesis."
+    },
+    {
+      tipo: "numero",
+      valor: "4",
+      descripcion: "Escanea nuevamente 4."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "Segundo binomio con resta. Escanea resta."
+    },
+    {
+      tipo: "numero",
+      valor: "5",
+      descripcion: "Escanea 5."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el segundo paréntesis."
+    }
+  ],
+  validacionFinal: ["parIzq", "4", "x", "plus", "5", "parDer", "parIzq", "4", "x", "minus", "5", "parDer"]
+};
+
+const actividad_4_4_3_1 = {
+  titulo: "Factoriza el trinomio: <strong>x² + 5x + 6</strong>",
+  pasos: [
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el primer paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Todo binomio inicia con x. Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "El signo es positivo. Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "2",
+      descripcion: "Un número que cumple es 2. Escanea 2."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el primer paréntesis."
+    },
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el segundo paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea nuevamente x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "3",
+      descripcion: "El segundo número es 3. Escanea 3."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el segundo paréntesis."
+    }
+  ],
+  validacionFinal: ["parIzq", "x", "plus", "2", "parDer", "parIzq", "x", "plus", "3", "parDer"]
+};
+
+const actividad_4_4_3_2 = {
+  titulo: "Factoriza el trinomio: <strong>x² + 7x + 12</strong>",
+  pasos: [
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el primer paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Todo binomio inicia con x. Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "El signo es positivo. Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "3",
+      descripcion: "Un número que cumple es 3. Escanea 3."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el primer paréntesis."
+    },
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el segundo paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea nuevamente x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "4",
+      descripcion: "El segundo número es 4. Escanea 4."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el segundo paréntesis."
+    }
+  ],
+  validacionFinal: ["parIzq", "x", "plus", "3", "parDer", "parIzq", "x", "plus", "4", "parDer"]
+};
+
+const actividad_4_4_3_3 = {
+  titulo: "Factoriza el trinomio: <strong>x² - 7x + 10</strong>",
+  pasos: [
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el primer paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Todo binomio inicia con x. Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "El signo es negativo. Escanea resta."
+    },
+    {
+      tipo: "numero",
+      valor: "5",
+      descripcion: "Uno de los números es 5. Escanea 5."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el primer paréntesis."
+    },
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el segundo paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea nuevamente x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "Escanea resta."
+    },
+    {
+      tipo: "numero",
+      valor: "2",
+      descripcion: "El segundo número es 2. Escanea 2."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el segundo paréntesis."
+    }
+  ],
+  validacionFinal: ["parIzq", "x", "minus", "5", "parDer", "parIzq", "x", "minus", "2", "parDer"]
+};
+
+const actividad_4_4_3_4 = {
+  titulo: "Factoriza el trinomio: <strong>x² + 9x + 20</strong>",
+  pasos: [
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el primer paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Todo binomio inicia con x. Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "El signo es positivo. Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "4",
+      descripcion: "Uno de los números es 4. Escanea 4."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el primer paréntesis."
+    },
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el segundo paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea nuevamente x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "5",
+      descripcion: "El segundo número es 5. Escanea 5."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el segundo paréntesis."
+    }
+  ],
+  validacionFinal: ["parIzq", "x", "plus", "4", "parDer", "parIzq", "x", "plus", "5", "parDer"]
+};
+
+const actividad_4_4_3_5 = {
+  titulo: "Factoriza el trinomio: <strong>x² - 9x + 20</strong>",
+  pasos: [
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el primer paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Todo binomio inicia con x. Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "El signo es negativo. Escanea resta."
+    },
+    {
+      tipo: "numero",
+      valor: "4",
+      descripcion: "Uno de los números es 4. Escanea 4."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el primer paréntesis."
+    },
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el segundo paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea nuevamente x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "Escanea resta."
+    },
+    {
+      tipo: "numero",
+      valor: "5",
+      descripcion: "El segundo número es 5. Escanea 5."
+    },
+    {
+      tipo: "operador",
+      valor: "parDer",
+      descripcion: "Cierra el segundo paréntesis."
+    }
+  ],
+  validacionFinal: ["parIzq", "x", "minus", "4", "parDer", "parIzq", "x", "minus", "5", "parDer"]
+};
+
+const actividad_4_5_1 = {
+  titulo: "Factoriza el trinomio cuadrado perfecto: <strong>x² + 6x + 9</strong>",
+  pasos: [
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "La raíz cuadrada de x² es x. Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "El término central es positivo. Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "3",
+      descripcion: "La raíz cuadrada de 9 es 3. Escanea 3."
+    },
+    {
+      tipo: "constructor",
+      valor: "exp(),2)",
+      descripcion: "Usa el bloque constructor para formar )² así indicamos que el binomio esta elevado al cuadrado"
+    }
+
+  ],
+  validacionFinal: ["parIzq", "x", "plus", "3", ")2",]
+};
+
+const actividad_4_5_2 = {
+  titulo: "Factoriza el trinomio cuadrado perfecto: <strong>x² - 10x + 25</strong>",
+  pasos: [
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "La raíz cuadrada de x² es x. Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "El término central es negativo. Escanea resta."
+    },
+    {
+      tipo: "numero",
+      valor: "5",
+      descripcion: "La raíz cuadrada de 25 es 5. Escanea 5."
+    },
+    {
+      tipo: "constructor",
+      valor: "exp(),2)",
+      descripcion: "Usa el bloque constructor para formar )² así indicamos que el binomio esta elevado al cuadrado."
+    }
+  ],
+  validacionFinal: ["parIzq", "x", "minus", "5", ")2"]
+};
+
+const actividad_4_5_3 = {
+  titulo: "Factoriza el trinomio cuadrado perfecto: <strong>4x² + 12x + 9</strong>",
+  pasos: [
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el paréntesis."
+    },
+    {
+      tipo: "numero",
+      valor: "2",
+      descripcion: "La raíz cuadrada de 4x² es 2x. Escanea 2."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "El término central es positivo. Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "3",
+      descripcion: "La raíz cuadrada de 9 es 3. Escanea 3."
+    },
+    {
+      tipo: "constructor",
+      valor: "exp(),2)",
+      descripcion: "Usa el bloque constructor para formar )² así indicamos que el binomio esta elevado al cuadrado"
+    }
+
+  ],
+  validacionFinal: ["parIzq", "2", "x", "plus", "3",")2"]
+};
+
+const actividad_4_5_4 = {
+  titulo: "Factoriza el trinomio cuadrado perfecto: <strong>9x² - 24x + 16</strong>",
+  pasos: [
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el paréntesis."
+    },
+    {
+      tipo: "numero",
+      valor: "3",
+      descripcion: "La raíz cuadrada de 9x² es 3x. Escanea 3."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "minus",
+      descripcion: "El término central es negativo. Escanea resta."
+    },
+    {
+      tipo: "numero",
+      valor: "4",
+      descripcion: "La raíz cuadrada de 16 es 4. Escanea 4."
+    },
+    {
+      tipo: "constructor",
+      valor: "exp(),2)",
+      descripcion: "Usa el bloque constructor para formar )² así indicamos que el binomio esta elevado al cuadrado"
+    }
+  ],
+  validacionFinal: ["parIzq", "3", "x", "minus", "4", ")2"]
+};
+
+const actividad_4_5_5 = {
+  titulo: "Factoriza el trinomio cuadrado perfecto: <strong>x² + 14x + 49</strong>",
+  pasos: [
+    {
+      tipo: "operador",
+      valor: "parIzq",
+      descripcion: "Abre el paréntesis."
+    },
+    {
+      tipo: "variable",
+      valor: "x",
+      descripcion: "La raíz cuadrada de x² es x. Escanea x."
+    },
+    {
+      tipo: "operador",
+      valor: "plus",
+      descripcion: "El término central es positivo. Escanea suma."
+    },
+    {
+      tipo: "numero",
+      valor: "7",
+      descripcion: "La raíz cuadrada de 49 es 7. Escanea 7."
+    },
+    {
+      tipo: "constructor",
+      valor: "exp(),2)",
+      descripcion: "Usa el bloque constructor para formar )² así indicamos que el binomio esta elevado al cuadrado"
+    }
+  ],
+  validacionFinal: ["parIzq", "x", "plus", "7", ")2"]
+};
 
 
 
@@ -1882,15 +2645,33 @@ export const ACTIVIDADES_T4 = {
     actividad_4_3_4_4,   
     actividad_4_3_4_5,   
   ],
-
-
-
     "4.4.1": [
     actividad_4_4_1_1,  
     actividad_4_4_1_2, 
     actividad_4_4_1_3, 
     actividad_4_4_1_4, 
     actividad_4_4_1_5, 
+  ],
+    "4.4.2": [
+    actividad_4_4_2_1,  
+    actividad_4_4_2_2, 
+    actividad_4_4_2_3, 
+    actividad_4_4_2_4, 
+    actividad_4_4_2_5, 
+  ],
+    "4.4.3": [
+    actividad_4_4_3_1,  
+    actividad_4_4_3_2, 
+    actividad_4_4_3_3, 
+    actividad_4_4_3_4, 
+    actividad_4_4_3_5, 
+  ],
+    "4.5": [
+    actividad_4_5_1,  
+    actividad_4_5_2,
+    actividad_4_5_3,
+    actividad_4_5_4,
+    actividad_4_5_5,
   ],
 
 };

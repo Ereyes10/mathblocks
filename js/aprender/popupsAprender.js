@@ -3093,134 +3093,6 @@ export const POPUP_DATOS = {
   `
 },
 
-"4.3.4.1": {
-  titulo: "¡Excelente trabajo!",
-  mensaje: "Desarrollaste correctamente el cubo del binomio.",
-  extra: `
-    <strong>Expresión:</strong><br>
-    (x + 2)³<br><br>
-
-    <strong>Aplicamos la fórmula:</strong><br>
-    (a + b)³ = a³ + 3a²b + 3ab² + b³<br><br>
-
-    <strong>Sustituyendo:</strong><br>
-    • a = x<br>
-    • b = 2<br><br>
-
-    <strong>Desarrollo:</strong><br>
-    • x³<br>
-    • 3(x²)(2) = 6x²<br>
-    • 3(x)(2²) = 12x<br>
-    • 2³ = 8<br><br>
-
-    <strong>Resultado final:</strong><br>
-    x³ + 6x² + 12x + 8
-  `
-},
-
-"4.3.4.2": {
-  titulo: "¡Muy bien!",
-  mensaje: "Resolviste correctamente el cubo de un binomio con signo negativo.",
-  extra: `
-    <strong>Expresión:</strong><br>
-    (x - 2)³<br><br>
-
-    <strong>Fórmula:</strong><br>
-    (a - b)³ = a³ - 3a²b + 3ab² - b³<br><br>
-
-    <strong>Sustituyendo:</strong><br>
-    • a = x<br>
-    • b = 2<br><br>
-
-    <strong>Desarrollo:</strong><br>
-    • x³<br>
-    • -3(x²)(2) = -6x²<br>
-    • 3(x)(2²) = 12x<br>
-    • -2³ = -8<br><br>
-
-    <strong>Resultado final:</strong><br>
-    x³ - 6x² + 12x - 8
-  `
-},
-
-"4.3.4.3": {
-  titulo: "¡Excelente!",
-  mensaje: "Aplicaste correctamente el cubo de un binomio.",
-  extra: `
-    <strong>Expresión:</strong><br>
-    (2x + 1)³<br><br>
-
-    <strong>Usamos:</strong><br>
-    (a + b)³ = a³ + 3a²b + 3ab² + b³<br><br>
-
-    <strong>Sustituyendo:</strong><br>
-    • a = 2x<br>
-    • b = 1<br><br>
-
-    <strong>Desarrollo:</strong><br>
-    • (2x)³ = 8x³<br>
-    • 3(2x)²(1) = 12x²<br>
-    • 3(2x)(1²) = 6x<br>
-    • 1³ = 1<br><br>
-
-    <strong>Resultado final:</strong><br>
-    8x³ + 12x² + 6x + 1
-  `
-},
-
-"4.3.4.4": {
-  titulo: "¡Perfecto!",
-  mensaje: "Desarrollaste correctamente el cubo del binomio.",
-  extra: `
-    <strong>Expresión:</strong><br>
-    (x + 3)³<br><br>
-
-    <strong>Aplicamos la fórmula:</strong><br>
-    (a + b)³ = a³ + 3a²b + 3ab² + b³<br><br>
-
-    <strong>Sustituyendo:</strong><br>
-    • a = x<br>
-    • b = 3<br><br>
-
-    <strong>Desarrollo:</strong><br>
-    • x³<br>
-    • 3(x²)(3) = 9x²<br>
-    • 3(x)(3²) = 27x<br>
-    • 3³ = 27<br><br>
-
-    <strong>Resultado final:</strong><br>
-    x³ + 9x² + 27x + 27
-  `
-},
-
-"4.3.4.5": {
-  titulo: "¡Excelente trabajo!",
-  mensaje: "Resolviste correctamente el cubo de un binomio con signo negativo.",
-  extra: `
-    <strong>Expresión:</strong><br>
-    (2x - 2)³<br><br>
-
-    <strong>Usamos la fórmula:</strong><br>
-    (a - b)³ = a³ - 3a²b + 3ab² - b³<br><br>
-
-    <strong>Sustituyendo:</strong><br>
-    • a = 2x<br>
-    • b = 2<br><br>
-
-    <strong>Desarrollo:</strong><br>
-    • (2x)³ = 8x³<br>
-    • -3(2x)²(2) = -24x²<br>
-    • 3(2x)(2²) = 24x<br>
-    • -2³ = -8<br><br>
-
-    <strong>Resultado final:</strong><br>
-    8x³ - 24x² + 24x - 8
-  `
-},
-
-
-
-
 "4.4.1.1": {
   titulo: "¡Excelente trabajo!",
   mensaje: "Factorizaste correctamente la expresión usando factor común.",
@@ -3334,6 +3206,361 @@ export const POPUP_DATOS = {
     <strong>Comprobación:</strong><br>
     • 5 · 3x = 15x<br>
     • 5 · 4 = 20
+  `
+},
+
+"4.4.2.1": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Factorizaste correctamente una diferencia de cuadrados.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    x² − 9<br><br>
+
+    <strong>Identificamos:</strong><br>
+    • x² es un cuadrado perfecto.<br>
+    • 9 = 3² también es un cuadrado perfecto.<br><br>
+
+    <strong>Aplicamos la fórmula:</strong><br>
+    a² − b² = (a + b)(a − b)<br><br>
+
+    <strong>Sustituyendo:</strong><br>
+    • a = x<br>
+    • b = 3<br><br>
+
+    <strong>Resultado final:</strong><br>
+    (x + 3)(x − 3)
+  `
+},
+
+"4.4.2.2": {
+  titulo: "¡Muy bien!",
+  mensaje: "Resolviste correctamente la factorización por diferencia de cuadrados.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    x² − 25<br><br>
+
+    <strong>Observamos:</strong><br>
+    • x² = (x)²<br>
+    • 25 = (5)²<br><br>
+
+    <strong>Usamos la fórmula:</strong><br>
+    a² − b² = (a + b)(a − b)<br><br>
+
+    <strong>Sustituyendo:</strong><br>
+    • a = x<br>
+    • b = 5<br><br>
+
+    <strong>Resultado final:</strong><br>
+    (x + 5)(x − 5)
+  `
+},
+
+"4.4.2.3": {
+  titulo: "¡Excelente!",
+  mensaje: "Factorizaste correctamente la expresión algebraica.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    4x² − 16<br><br>
+
+    <strong>Identificamos cuadrados perfectos:</strong><br>
+    • 4x² = (2x)²<br>
+    • 16 = 4²<br><br>
+
+    <strong>Aplicamos:</strong><br>
+    a² − b² = (a + b)(a − b)<br><br>
+
+    <strong>Sustituyendo:</strong><br>
+    • a = 2x<br>
+    • b = 4<br><br>
+
+    <strong>Resultado final:</strong><br>
+    (2x + 4)(2x − 4)
+  `
+},
+
+"4.4.2.4": {
+  titulo: "¡Perfecto!",
+  mensaje: "Aplicaste correctamente la diferencia de cuadrados.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    9x² − 1<br><br>
+
+    <strong>Reconocemos:</strong><br>
+    • 9x² = (3x)²<br>
+    • 1 = 1²<br><br>
+
+    <strong>Usamos la fórmula:</strong><br>
+    a² − b² = (a + b)(a − b)<br><br>
+
+    <strong>Sustituyendo:</strong><br>
+    • a = 3x<br>
+    • b = 1<br><br>
+
+    <strong>Resultado final:</strong><br>
+    (3x + 1)(3x − 1)
+  `
+},
+
+"4.4.2.5": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la factorización por diferencia de cuadrados.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    16x² − 25<br><br>
+
+    <strong>Identificamos los cuadrados perfectos:</strong><br>
+    • 16x² = (4x)²<br>
+    • 25 = 5²<br><br>
+
+    <strong>Aplicamos la fórmula:</strong><br>
+    a² − b² = (a + b)(a − b)<br><br>
+
+    <strong>Sustituyendo:</strong><br>
+    • a = 4x<br>
+    • b = 5<br><br>
+
+    <strong>Resultado final:</strong><br>
+    (4x + 5)(4x − 5)
+  `
+},
+
+"4.4.3.1": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la factorización del trinomio.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    x² + 5x + 6<br><br>
+
+    <strong>Buscamos dos números que:</strong><br>
+    • Multiplicados den 6<br>
+    • Sumados den 5<br><br>
+
+    <strong>Los números correctos son:</strong><br>
+    • 2 y 3<br><br>
+
+    <strong>Construimos los binomios:</strong><br>
+    • (x + 2)(x + 3)<br><br>
+
+    <strong>Resultado final:</strong><br>
+    (x + 2)(x + 3)
+  `
+},
+
+"4.4.3.2": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la factorización del trinomio.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    x² + 7x + 12<br><br>
+
+    <strong>Buscamos dos números que:</strong><br>
+    • Multiplicados den 12<br>
+    • Sumados den 7<br><br>
+
+    <strong>Los números correctos son:</strong><br>
+    • 3 y 4<br><br>
+
+    <strong>Construimos los binomios:</strong><br>
+    • (x + 3)(x + 4)<br><br>
+
+    <strong>Resultado final:</strong><br>
+    (x + 3)(x + 4)
+  `
+},
+
+"4.4.3.3": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la factorización del trinomio.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    x² − 7x + 10<br><br>
+
+    <strong>Buscamos dos números que:</strong><br>
+    • Multiplicados den 10<br>
+    • Sumados den −7<br><br>
+
+    <strong>Los números correctos son:</strong><br>
+    • −5 y −2<br><br>
+
+    <strong>Construimos los binomios:</strong><br>
+    • (x − 5)(x − 2)<br><br>
+
+    <strong>Resultado final:</strong><br>
+    (x − 5)(x − 2)
+  `
+},
+
+"4.4.3.4": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la factorización del trinomio.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    x² + 9x + 20<br><br>
+
+    <strong>Buscamos dos números que:</strong><br>
+    • Multiplicados den 20<br>
+    • Sumados den 9<br><br>
+
+    <strong>Los números correctos son:</strong><br>
+    • 4 y 5<br><br>
+
+    <strong>Construimos los binomios:</strong><br>
+    • (x + 4)(x + 5)<br><br>
+
+    <strong>Resultado final:</strong><br>
+    (x + 4)(x + 5)
+  `
+},
+
+"4.4.3.5": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la factorización del trinomio.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    x² − 9x + 20<br><br>
+
+    <strong>Buscamos dos números que:</strong><br>
+    • Multiplicados den 20<br>
+    • Sumados den −9<br><br>
+
+    <strong>Los números correctos son:</strong><br>
+    • −4 y −5<br><br>
+
+    <strong>Construimos los binomios:</strong><br>
+    • (x − 4)(x − 5)<br><br>
+
+    <strong>Resultado final:</strong><br>
+    (x − 4)(x − 5)
+  `
+},
+
+"4.5.1": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente el trinomio cuadrado perfecto.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    x² + 6x + 9<br><br>
+
+    <strong>Identificamos las raíces cuadradas:</strong><br>
+    • √x² = x<br>
+    • √9 = 3<br><br>
+
+    <strong>Verificamos el término central:</strong><br>
+    • 2(x)(3) = 6x<br><br>
+
+    <strong>Aplicamos la fórmula:</strong><br>
+    a² + 2ab + b² = (a + b)²<br><br>
+
+    <strong>Sustituyendo:</strong><br>
+    • a = x<br>
+    • b = 3<br><br>
+
+    <strong>Resultado final:</strong><br>
+    (x + 3)²
+  `
+},
+
+"4.5.2": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente el trinomio cuadrado perfecto.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    x² − 10x + 25<br><br>
+
+    <strong>Identificamos las raíces cuadradas:</strong><br>
+    • √x² = x<br>
+    • √25 = 5<br><br>
+
+    <strong>Verificamos el término central:</strong><br>
+    • 2(x)(5) = 10x<br><br>
+
+    <strong>Aplicamos la fórmula:</strong><br>
+    a² − 2ab + b² = (a − b)²<br><br>
+
+    <strong>Sustituyendo:</strong><br>
+    • a = x<br>
+    • b = 5<br><br>
+
+    <strong>Resultado final:</strong><br>
+    (x − 5)²
+  `
+},
+
+"4.5.3": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente el trinomio cuadrado perfecto.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    4x² + 12x + 9<br><br>
+
+    <strong>Identificamos las raíces cuadradas:</strong><br>
+    • √4x² = 2x<br>
+    • √9 = 3<br><br>
+
+    <strong>Verificamos el término central:</strong><br>
+    • 2(2x)(3) = 12x<br><br>
+
+    <strong>Aplicamos la fórmula:</strong><br>
+    a² + 2ab + b² = (a + b)²<br><br>
+
+    <strong>Sustituyendo:</strong><br>
+    • a = 2x<br>
+    • b = 3<br><br>
+
+    <strong>Resultado final:</strong><br>
+    (2x + 3)²
+  `
+},
+
+"4.5.4": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente el trinomio cuadrado perfecto.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    9x² − 24x + 16<br><br>
+
+    <strong>Identificamos las raíces cuadradas:</strong><br>
+    • √9x² = 3x<br>
+    • √16 = 4<br><br>
+
+    <strong>Verificamos el término central:</strong><br>
+    • 2(3x)(4) = 24x<br><br>
+
+    <strong>Aplicamos la fórmula:</strong><br>
+    a² − 2ab + b² = (a − b)²<br><br>
+
+    <strong>Sustituyendo:</strong><br>
+    • a = 3x<br>
+    • b = 4<br><br>
+
+    <strong>Resultado final:</strong><br>
+    (3x − 4)²
+  `
+},
+
+"4.5.5": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente el trinomio cuadrado perfecto.",
+  extra: `
+    <strong>Expresión:</strong><br>
+    x² + 14x + 49<br><br>
+
+    <strong>Identificamos las raíces cuadradas:</strong><br>
+    • √x² = x<br>
+    • √49 = 7<br><br>
+
+    <strong>Verificamos el término central:</strong><br>
+    • 2(x)(7) = 14x<br><br>
+
+    <strong>Aplicamos la fórmula:</strong><br>
+    a² + 2ab + b² = (a + b)²<br><br>
+
+    <strong>Sustituyendo:</strong><br>
+    • a = x<br>
+    • b = 7<br><br>
+
+    <strong>Resultado final:</strong><br>
+    (x + 7)²
   `
 },
 

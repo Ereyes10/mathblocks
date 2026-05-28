@@ -981,7 +981,7 @@ Factorizar es escribir una suma o resta como el producto de factores.`,
 "4.4.2": [`
 <strong>🧩 Diferencia de cuadrados</strong><br>
 Una diferencia de cuadrados aparece cuando se restan dos cuadrados perfectos:<br>
-(a - b)² <br><br>`,
+a² - b² <br><br>`,
 
 `<strong>📌 Pasos para factorizar</strong> <br>
 <strong>1) Verificar los requisitos:</strong> El binomio debe ser una resta y ambos términos deben tener raíz cuadrada exacta.<br>
@@ -1063,9 +1063,9 @@ Los números elegidos deben cumplir al mismo tiempo la multiplicación y la suma
 
 "4.5": [`
 <strong>📐 Trinomio cuadrado perfecto</strong><br>
-Un trinomio cuadrado perfecto es el resultado de desarrollar el cuadrado de un binomio.`,
+Un trinomio cuadrado perfecto es el resultado de desarrollar el cuadrado de un binomio.<br><br>
 
-`<strong>📌 Forma general:</strong><br><br>
+<strong>📌 Forma general:</strong><br><br>
 a² + 2ab + b² = (a + b)² <br><br>
 a² - 2ab + b² = (a - b)²`,
 
@@ -1074,38 +1074,56 @@ a² - 2ab + b² = (a - b)²`,
 <br>● El último término también debe ser un cuadrado perfecto.
 <br>● El término central debe ser el doble producto de las raíces de los extremos.`,
 
-`<strong>Ejemplo:</strong><br>
-● x² + 6x + 9<br>
+`<strong>📌 Pasos para factorizar un trinomio cuadrado perfecto:</strong><br>
+1. Obtén la raíz cuadrada del primer término.
+<br>2. Obtén la raíz cuadrada del último término.
+<br>3. Verifica que el término central sea el doble producto de ambas raíces.
+<br>4. Escribe el binomio y elévalo al cuadrado.`,
 
-Observa:
-<br>● x² = (x)²
-<br>● 9 = (3)²
-<br>● 6x = 2(x)(3)
+`<strong>Ejemplo:</strong><br>
+● x² + 6x + 9<br><br>
+
+<strong>Paso 1:</strong> raíz cuadrada del primer término:
+<br>√x² = x
 <br><br>
 
-Resultado:
+<strong>Paso 2:</strong> raíz cuadrada del último término:
+<br>√9 = 3
+<br><br>
+
+<strong>Paso 3:</strong> verifica el doble producto:
+<br>2(x)(3) = 6x
+<br><br>
+
+<strong>Paso 4:</strong> escribe el binomio:
 <br><strong>(x + 3)²</strong>`,
 
 `<strong>Ejemplo con signo negativo:</strong><br>
-● x² − 10x + 25<br>
+● x² − 10x + 25<br><br>
 
-Observa:
-<br>● x² = (x)²
-<br>● 25 = (5)²
-<br>● −10x = −2(x)(5)
+<strong>Paso 1:</strong> raíz cuadrada del primer término:
+<br>√x² = x
 <br><br>
 
-Resultado:
+<strong>Paso 2:</strong> raíz cuadrada del último término:
+<br>√25 = 5
+<br><br>
+
+<strong>Paso 3:</strong> verifica el doble producto:
+<br>−2(x)(5) = −10x
+<br><br>
+
+<strong>Paso 4:</strong> escribe el binomio al cuadrado:
 <br><strong>(x − 5)²</strong>`,
 
 `<strong>⚠️ Error común:</strong><br>
 Pensar que cualquier trinomio puede factorizarse como trinomio cuadrado perfecto.`,
 
 `<strong>💡 Idea importante:</strong><br>
-Antes de factorizar, verifica que el término central sea exactamente el doble producto de las raíces.`,
+El signo del término central determina el signo que llevará el binomio.`,
 
 `<strong>🔑 Idea clave:</strong><br>
-Un trinomio cuadrado perfecto siempre puede expresarse como el cuadrado de un binomio.`,
+Si las raíces cuadradas de los extremos cumplen el doble producto del término central, entonces el trinomio es cuadrado perfecto.`,
 
 `<strong>Indicación:</strong> identifica y factoriza los siguientes trinomios cuadrados perfectos...`
 ],
