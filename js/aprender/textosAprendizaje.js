@@ -1095,7 +1095,7 @@ a² - 2ab + b² = (a - b)²`,
 <br>2(x)(3) = 6x
 <br><br>
 
-<strong>Paso 4:</strong> escribe el binomio:
+<strong>Paso 4:</strong> escribe el binomio al cuadrado:
 <br><strong>(x + 3)²</strong>`,
 
 `<strong>Ejemplo con signo negativo:</strong><br>
@@ -1231,6 +1231,352 @@ Olvidar cambiar la segunda fracción por su recíproco al dividir.`,
 Después de cada operación, revisa siempre si el resultado puede simplificarse.`,
 
 `<strong>Indicación:</strong> resuelve las siguientes operaciones con fracciones algebraicas y simplifica cuando sea posible...`
+],
+
+
+"5.1": [`
+<strong>💰 Presupuesto personal con expresiones algebraicas</strong><br>
+El presupuesto personal permite organizar ingresos y gastos para tomar decisiones responsables sobre el uso del dinero.`,
+
+`<strong>📌 Expresiones algebraicas en un presupuesto</strong><br>
+Las expresiones algebraicas ayudan a representar gastos, ingresos y ahorros mediante variables.`,
+
+`<strong>Ejemplo:</strong><br>
+Si una persona paga:
+<br>● renta fija de R pesos
+<br>● transporte de T pesos
+<br>● alimentación de A pesos
+<br><br>
+
+El gasto total puede representarse como:
+<br><strong>G = R + T + A</strong>`,
+
+`<strong>📌 Ahorro mensual</strong><br>
+El ahorro se obtiene restando los gastos al ingreso total.`,
+
+`<strong>Ejemplo:</strong><br>
+Si una persona gana $80,
+gasta $20 en transporte,
+$30 en comida y $10 en internet:`,
+
+`<strong>Cálculo de gastos:</strong><br>
+20 + 30 + 10 = 60`,
+
+`<strong>Cálculo del ahorro:</strong><br>
+80 − 60 = 20`,
+
+`<strong>Resultado:</strong><br>
+La persona ahorra <strong>$20</strong>.`,
+
+`<strong>📌 Uso de expresiones algebraicas</strong><br>
+Las expresiones permiten representar situaciones reales y analizar cómo cambian los gastos o el ahorro.`,
+
+`<strong>Ejemplo:</strong><br>
+Si x representa el gasto en alimentación y una persona gasta el doble en entretenimiento, el gasto total puede expresarse como:
+<br><strong>x + 2x</strong>`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Las expresiones algebraicas ayudan a organizar y analizar información financiera de manera sencilla.`,
+
+`<strong>Indicación:</strong> representa y resuelve las siguientes situaciones utilizando expresiones algebraicas...`
+],
+
+
+"5.2": [`
+<strong>⚖️ Ajuste de proporciones en recetas</strong><br>
+Las proporciones permiten aumentar o reducir cantidades manteniendo la misma relación entre los ingredientes.`,
+
+`<strong>📌 Ajuste proporcional</strong><br>
+Cuando cambia el número de personas, las cantidades de ingredientes también deben cambiar proporcionalmente.`,
+
+`<strong>📌 Fórmula de ajuste proporcional:</strong><br><br>
+Nueva cantidad = (Cantidad original × Porciones deseadas) ÷ Porciones originales`,
+
+
+`<strong>Ejemplo:</strong><br>
+Una receta para 4 personas utiliza 2 huevos.
+<br><br>
+
+¿Cuántos huevos se necesitan para 6 personas?`,
+
+`<strong>Planteamiento:</strong><br>
+Nueva cantidad = (2 · 6) ÷ 4<br>
+Nueva cantidad = 12 ÷ 4 = 3`,
+
+`<strong>Resultado:</strong><br>
+Se necesitan <strong>3 huevos</strong>.`,
+
+`<strong>📌 Duplicar una receta</strong><br>
+Si se desea preparar el doble de porciones, las cantidades también se duplican.`,
+
+`<strong>Ejemplo:</strong><br>
+Si una receta utiliza 2 tazas de leche:
+<br><br>
+
+2 × 2 = 4`,
+
+`<strong>Resultado:</strong><br>
+Se necesitan <strong>4 tazas de leche</strong>.`,
+
+`<strong>📌 Reducir una receta</strong><br>
+Si se preparan menos porciones, las cantidades se reducen proporcionalmente.`,
+
+`<strong>Ejemplo:</strong><br>
+Si una receta utiliza 200 g de harina para 4 personas,
+¿cuánta harina se necesita para 2 personas?`,
+
+`<strong>Cálculo:</strong><br>
+(200 · 2) ÷ 4 =<br><br>
+400 ÷ 4 = 100`,
+
+`<strong>Resultado:</strong><br>
+Se necesitan <strong>100 g de harina</strong>.`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Las proporciones permiten ajustar cantidades sin cambiar la relación entre los ingredientes.`,
+
+`<strong>Indicación:</strong> resuelve los siguientes problemas utilizando ajuste proporcional...`
+],
+
+
+"5.3": [`
+<strong>🏷️ Cálculo de precios con porcentajes y descuentos</strong><br>
+Los porcentajes y descuentos se utilizan en compras, promociones y situaciones cotidianas relacionadas con el dinero.`,
+
+`<strong>📌 Precio con descuento</strong><br>
+Cuando un producto tiene descuento, el precio final disminuye según el porcentaje aplicado.`,
+
+`<strong>📌 Fórmula del precio con descuento:</strong><br><br>
+
+Pd = Po (1 − r/100)
+<br><br>
+
+Donde:
+<br>● Pd = precio con descuento
+<br>● Po = precio original
+<br>● r = porcentaje de descuento`,
+
+`<strong>Ejemplo:</strong><br>
+Un artículo cuesta $50 y tiene 20% de descuento.`,
+
+`<strong>Paso 1:</strong> sustituye en la fórmula:
+<br>Pd = 50(1 − 20/100)`,
+
+`<strong>Paso 2:</strong> convierte el porcentaje:
+<br>20/100 = 0.20`,
+
+`<strong>Paso 3:</strong> realiza la resta:
+<br>1 − 0.20 = 0.80`,
+
+`<strong>Paso 4:</strong> multiplica:
+<br>50 × 0.80 = 40`,
+
+`<strong>Resultado:</strong><br>
+El precio final es <strong>$40</strong>.`,
+
+`<strong>📌 Descuentos sucesivos</strong><br>
+Algunas promociones aplican un segundo descuento sobre el precio ya rebajado.`,
+
+`<strong>📌 Fórmula para dos descuentos:</strong><br><br>
+
+Pa = Po (1 − r1/100)(1 − r2/100)
+<br><br>
+
+Donde:
+<br>● Pa = precio final
+<br>● r1 = primer descuento
+<br>● r2 = segundo descuento`,
+
+`<strong>Ejemplo:</strong><br>
+Una playera cuesta $80 y tiene:
+<br>● 25% de descuento
+<br>● después otro 10% adicional`,
+
+`<strong>Paso 1:</strong> aplica el primer descuento:
+<br>80(1 − 25/100)
+<br>80(0.75)
+<br>= 60`,
+
+`<strong>Paso 2:</strong> aplica el segundo descuento:
+<br>60(1 − 10/100)
+<br>60(0.90)
+<br>= 54`,
+
+`<strong>Resultado:</strong><br>
+El precio final es <strong>$54</strong>.`,
+
+`<strong>💡 Idea importante:</strong><br>
+El segundo descuento no se aplica al precio original, sino al precio ya rebajado.`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Las expresiones algebraicas ayudan a representar descuentos y calcular precios finales de manera ordenada.`,
+
+`<strong>Indicación:</strong> calcula los siguientes precios finales aplicando porcentajes y descuentos...`
+],
+
+
+"6.1": [`
+<strong>⚖️ Concepto de igualdad e identidad algebraica</strong><br>
+Una igualdad indica que dos expresiones tienen el mismo valor.`,
+
+`<strong>📌 Igualdad algebraica</strong><br>
+Se representa con el signo igual (=).`,
+
+`<strong>Ejemplo:</strong><br>
+● 4 + 2 = 6
+<br>● x + 3 = 7`,
+
+`<strong>📌 Identidad algebraica</strong><br>
+Es una igualdad que se cumple para cualquier valor de la variable.`,
+
+`<strong>Ejemplo:</strong><br>
+● (a + b)² = a² + 2ab + b²`,
+
+`<strong>📌 Diferencia entre igualdad e identidad</strong><br>
+● Una igualdad puede cumplirse solo para algunos valores.
+<br>● Una identidad siempre es verdadera.`,
+
+`<strong>Ejemplo:</strong><br>
+● x + 2 = 5 solo se cumple cuando x = 3.
+<br>● a + 0 = a se cumple para cualquier valor.`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Las identidades representan relaciones que siempre son verdaderas.`,
+
+`<strong>Indicación:</strong> identifica cuáles expresiones son igualdades y cuáles son identidades...`
+],
+
+
+"6.2.1": [`
+<strong>📐 Propiedades de la igualdad</strong><br>
+Las propiedades de la igualdad permiten realizar operaciones sin cambiar el valor de una igualdad.`,
+
+`<strong>📌 Propiedad aditiva</strong><br>
+Si se suma o resta la misma cantidad en ambos lados, la igualdad se mantiene.<br>
+<strong>a = b</strong> ⇒ a + <strong>c</strong> = b + <strong>c</strong><br><br>
+Se lee: <br>
+“Si <strong>a = b</strong>, entonces a + <strong>c</strong> = b + <strong>c</strong>”`,
+
+`<strong>Ejemplo:</strong><br>
+Si:
+<br>x − 2 = 5
+<br>
+
+Suma 2 en ambos lados:
+<br>x − 2 <strong>+ 2</strong> = 5 <strong>+ 2</strong>
+<br><br>
+
+Resultado:
+<br>x = 7`,
+`<strong>📌 Uso de las propiedades</strong><br>
+Estas propiedades ayudan a despejar incógnitas y resolver ecuaciones.`,
+
+`<strong>⚠️ Error común:</strong><br>
+Realizar una operación solo en un lado de la igualdad.`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Toda operación realizada en un lado debe hacerse también en el otro.`,
+
+],
+
+"6.2.2": [`
+<strong>📌 Propiedad multiplicativa</strong><br>
+Si ambos lados de una igualdad se multiplican o dividen por el mismo número distinto de cero, la igualdad se conserva:<br>
+a = b ⇒ a<strong>c</strong> = b<strong>c</strong><br>
+donde:<br>
+a y b son cantidades iguales.<br> 
+<strong>c</strong> es el número o variable por el que se multiplican ambos lados.`,
+
+`<strong>Ejemplo:</strong><br>
+Si:
+<br>x/2 = 4
+<br><br>
+
+Multiplica ambos lados por 2:
+<br>x = 8`,
+
+`<strong>📌 Uso de las propiedades</strong><br>
+Estas propiedades ayudan a despejar incógnitas y resolver ecuaciones.`,
+
+`<strong>⚠️ Error común:</strong><br>
+Realizar una operación solo en un lado de la igualdad.`,
+
+`<strong>🔑 Idea clave:</strong><br>
+Toda operación realizada en un lado debe hacerse también en el otro.`,
+
+`<strong>Indicación:</strong> aplica las propiedades de la igualdad para resolver las siguientes expresiones...`
+],
+
+
+
+"6.3": [`
+<strong>🔢 Relaciones de igualdad en números reales</strong><br>
+Una igualdad matemática indica que dos cantidades o expresiones tienen el mismo valor.`,
+
+`<strong>📌 Números reales</strong><br>
+Los números reales incluyen:
+<br>● números enteros
+<br>● números decimales
+<br>● fracciones
+<br>● raíces`,
+
+`<strong>📌 Ejemplos de igualdad:</strong><br>
+● 3 + 2 = 5<br><br>
+● √25 = 5<br><br>
+●3.5 + 2.5= 6`,
+
+
+`<strong>📌 ¿Para qué sirven las igualdades?</strong><br>
+Las igualdades permiten:
+<br>● comparar cantidades
+<br>● resolver problemas
+<br>● representar situaciones reales
+<br>● construir ecuaciones`,
+
+`<strong>📌 Ecuación</strong><br>
+Una ecuación es una igualdad donde aparece una incógnita o variable.<br><br>
+<strong>Ejemplos:</strong><br>
+● x + 10 = 20<br><br>
+● y = 5x − 2`,
+
+`<strong>📌 Variable e incógnita</strong><br>
+Las letras que aparecen en una ecuación representan valores desconocidos y reciben el nombre de variables o incógnitas.`,
+
+`<strong>📌 Ecuaciones lineales</strong><br>
+Las ecuaciones lineales son aquellas donde la variable tiene exponente 1.<br><br>
+<strong>Ejemplos:</strong><br>
+● x + 4 = 9<br><br>
+● 2x = 10`,
+
+`<strong>📌 Ecuaciones lineales con una incógnita</strong><br>
+Son ecuaciones donde aparece una sola variable.<br><br>
+<strong>Ejemplo:</strong><br>
+● x − 3 = 7`,
+
+`<strong>📌 Pasos para resolver ecuaciones lineales enteras:</strong><br>
+1. Realiza las operaciones indicadas, si las hay.
+<br>2. Reúne las variables en un lado y los números en el otro.
+<br>3. Reduce términos semejantes.
+<br>4. Despeja la incógnita.`,
+
+`<strong>Ejemplo, resuleve la ecuación:</strong><br>
+● x + 5 = 12<br><br>
+<strong>Paso 1:</strong> resta 5 en ambos lados:
+<br>x + 5 − 5 = 12 − 5<br>
+<strong>Paso 2:</strong> simplifica:
+<br>x = 7`,
+
+`<strong>Resultado:</strong><br>
+La solución es:
+<br><strong>x = 7</strong>`,
+
+`<strong>⚠️ Error común:</strong><br>
+Realizar operaciones solo en un lado de la ecuación.`,
+
+`<strong>🔑 Idea clave:</strong><br>
+En una ecuación, cualquier operación realizada en un miembro debe hacerse también en el otro para conservar la igualdad.`,
+
+`<strong>Indicación:</strong> resuelve las siguientes ecuaciones lineales aplicando las propiedades de la igualdad...`
 ],
 
 

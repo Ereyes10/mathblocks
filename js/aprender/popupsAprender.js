@@ -3564,6 +3564,783 @@ export const POPUP_DATOS = {
   `
 },
 
+"5.1.1": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Representaste correctamente el gasto total.",
+  extra: `
+    <strong>Situación:</strong><br>
+    • Renta = x<br>
+    • Transporte = 20<br>
+    • Comida = 15<br><br>
+
+    <strong>Sumamos todos los gastos:</strong><br>
+    x + 20 + 15<br><br>
+
+    <strong>Interpretación:</strong><br>
+    • x representa un gasto variable<br>
+    • 20 y 15 representan gastos fijos<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x + 20 + 15
+  `
+},
+
+"5.1.2": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Calculaste correctamente el ahorro.",
+  extra: `
+    <strong>Situación:</strong><br>
+    • Ingreso = 90<br>
+    • Gastos = 30 + 40<br><br>
+
+    <strong>Primero sumamos los gastos:</strong><br>
+    30 + 40 = 70<br><br>
+
+    <strong>Calculamos el ahorro:</strong><br>
+    90 − 70<br><br>
+
+    <strong>Resultado final:</strong><br>
+    90 − 70
+  `
+},
+
+"5.1.3": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Representaste correctamente el gasto total.",
+  extra: `
+    <strong>Situación:</strong><br>
+    • Alimentación = x<br>
+    • Entretenimiento = 2x<br><br>
+
+    <strong>Sumamos ambos gastos:</strong><br>
+    x + 2x<br><br>
+
+    <strong>Interpretación:</strong><br>
+    • x representa el gasto de alimentación<br>
+    • 2x representa el doble de ese gasto<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x + 2x
+  `
+},
+
+"5.1.4": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Calculaste correctamente el ahorro.",
+  extra: `
+    <strong>Situación:</strong><br>
+    • Ingreso = 80<br>
+    • Gastos = 20 + 30 + 10<br><br>
+
+    <strong>Primero sumamos los gastos:</strong><br>
+    20 + 30 + 10 = 60<br><br>
+
+    <strong>Calculamos el ahorro:</strong><br>
+    80 − 60<br><br>
+
+    <strong>Resultado final:</strong><br>
+    80 − 60
+  `
+},
+
+"5.1.5": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Representaste correctamente el gasto total.",
+  extra: `
+    <strong>Situación:</strong><br>
+    • Internet = 10<br>
+    • Transporte = x<br>
+    • Comida = x<br><br>
+
+    <strong>Sumamos todos los gastos:</strong><br>
+    10 + x + x<br><br>
+
+    <strong>Interpretación:</strong><br>
+    • 10 es un gasto fijo<br>
+    • x y x representan gastos variables iguales<br><br>
+
+    <strong>Resultado final:</strong><br>
+    10 + x + x
+  `
+},
+
+"5.2.1": {
+titulo: "¡Muy bien!",
+mensaje: "Resolviste correctamente la proporción para calcular la nueva cantidad.",
+extra: `
+Situación:
+2 huevos alcanzan para 4 personas y ahora necesitamos para 6 personas.
+
+<strong>Usamos proporcionalidad:</strong><br>
+Nueva cantidad = (cantidad original × nuevas personas) ÷ personas originales<br><br>
+
+<strong>Sustituyendo:</strong><br>
+• Cantidad original = 2<br>
+• Nuevas personas = 6<br>
+• Personas originales = 4<br><br>
+
+<strong>Operación:</strong><br>
+(2 × 6) ÷ 4<br>
+= 12 ÷ 4<br>
+= 3<br><br>
+
+<strong>Resultado final:</strong><br>
+Se necesitan 3 huevos.
+
+`
+},
+
+"5.2.2": {
+titulo: "¡Excelente trabajo!",
+mensaje: "Duplicaste correctamente la receta.",
+extra: `
+Situación:
+La receta utiliza 3 tazas de leche.
+
+<strong>Duplicar significa:</strong><br>
+Multiplicar la cantidad por 2.<br><br>
+
+<strong>Operación:</strong><br>
+3 × 2 = 6<br><br>
+
+<strong>Resultado final:</strong><br>
+Ahora se necesitan 6 tazas de leche.
+
+`
+},
+
+"5.2.3": {
+titulo: "¡Muy bien!",
+mensaje: "Aplicaste correctamente la proporcionalidad en la receta.",
+extra: `
+Situación:
+20 g de harina son para 5 personas y ahora se cocinará para 10 personas.
+
+<strong>Usamos proporcionalidad:</strong><br>
+Nueva cantidad = (cantidad original × nuevas personas) ÷ personas originales<br><br>
+
+<strong>Sustituyendo:</strong><br>
+• Cantidad original = 20<br>
+• Nuevas personas = 10<br>
+• Personas originales = 5<br><br>
+
+<strong>Operación:</strong><br>
+(20 × 10) ÷ 5<br>
+= 200 ÷ 5<br>
+= 40<br><br>
+
+<strong>Resultado final:</strong><br>
+Se necesitan 40 g de harina.
+
+`
+},
+
+"5.2.4": {
+titulo: "¡Excelente!",
+mensaje: "Reduciste correctamente la receta usando proporcionalidad.",
+extra: `
+Situación:
+80 g de azúcar son para 4 personas y ahora se cocinará para 2 personas.
+
+<strong>Usamos proporcionalidad:</strong><br>
+Nueva cantidad = (cantidad original × nuevas personas) ÷ personas originales<br><br>
+
+<strong>Sustituyendo:</strong><br>
+• Cantidad original = 80<br>
+• Nuevas personas = 2<br>
+• Personas originales = 4<br><br>
+
+<strong>Operación:</strong><br>
+(80 × 2) ÷ 4<br>
+= 160 ÷ 4<br>
+= 40<br><br>
+
+<strong>Resultado final:</strong><br>
+Se necesitan 40 g de azúcar.
+
+`
+},
+
+"5.2.5": {
+titulo: "¡Muy bien!",
+mensaje: "Calculaste correctamente la nueva cantidad de agua.",
+extra: `
+Situación:
+5 vasos de agua alcanzan para 5 personas y ahora se necesitan para 15 personas.
+
+<strong>Usamos proporcionalidad:</strong><br>
+Nueva cantidad = (cantidad original × nuevas personas) ÷ personas originales<br><br>
+
+<strong>Sustituyendo:</strong><br>
+• Cantidad original = 5<br>
+• Nuevas personas = 15<br>
+• Personas originales = 5<br><br>
+
+<strong>Operación:</strong><br>
+(5 × 15) ÷ 5<br>
+= 75 ÷ 5<br>
+= 15<br><br>
+
+<strong>Resultado final:</strong><br>
+Se necesitan 15 vasos de agua.
+
+`
+},
+
+"5.3.1": {
+titulo: "¡Excelente trabajo!",
+mensaje: "Calculaste correctamente el precio final con descuento.",
+extra: `
+Situación:
+Un producto cuesta $50 y tiene 20% de descuento.
+
+<strong>Paso 1: Calculamos el descuento</strong><br>
+50 × 20 ÷ 100 = 10<br><br>
+
+<strong>Paso 2: Restamos el descuento al precio original</strong><br>
+50 − 10 = 40<br><br>
+
+<strong>Resultado final:</strong><br>
+El precio final es $40.
+
+`
+},
+
+"5.3.2": {
+titulo: "¡Muy bien!",
+mensaje: "Aplicaste correctamente el descuento al precio original.",
+extra: `
+Situación:
+Un producto cuesta $80 y tiene 25% de descuento.
+
+<strong>Paso 1: Calculamos el descuento</strong><br>
+80 × 25 ÷ 100 = 20<br><br>
+
+<strong>Paso 2: Restamos el descuento al precio original</strong><br>
+80 − 20 = 60<br><br>
+
+<strong>Resultado final:</strong><br>
+El precio final es $60.
+
+`
+},
+
+"5.3.3": {
+titulo: "¡Excelente!",
+mensaje: "Resolviste correctamente el cálculo del descuento.",
+extra: `
+Situación:
+Un producto cuesta $60 y tiene 10% de descuento.
+
+<strong>Paso 1: Calculamos el descuento</strong><br>
+60 × 10 ÷ 100 = 6<br><br>
+
+<strong>Paso 2: Restamos el descuento al precio original</strong><br>
+60 − 6 = 54<br><br>
+
+<strong>Resultado final:</strong><br>
+El precio final es $54.
+
+`
+},
+
+"5.3.4": {
+titulo: "¡Muy bien!",
+mensaje: "Calculaste correctamente el precio final con el descuento aplicado.",
+extra: `
+Situación:
+Un producto cuesta $40 y tiene 50% de descuento.
+
+<strong>Paso 1: Calculamos el descuento</strong><br>
+40 × 50 ÷ 100 = 20<br><br>
+
+<strong>Paso 2: Restamos el descuento al precio original</strong><br>
+40 − 20 = 20<br><br>
+
+<strong>Resultado final:</strong><br>
+El precio final es $20.
+
+`
+},
+
+"5.3.5": {
+titulo: "¡Excelente trabajo!",
+mensaje: "Aplicaste correctamente el porcentaje de descuento.",
+extra: `
+Situación:
+Un producto cuesta $90 y tiene 30% de descuento.
+
+<strong>Paso 1: Calculamos el descuento</strong><br>
+90 × 30 ÷ 100 = 27<br><br>
+
+<strong>Paso 2: Restamos el descuento al precio original</strong><br>
+90 − 27 = 63<br><br>
+
+<strong>Resultado final:</strong><br>
+El precio final es $63.
+
+`
+},
+
+"6.1.1": {
+titulo: "¡Excelente!",
+mensaje: "Encontraste correctamente el valor que completa la igualdad.",
+extra: `
+Expresión:
+4 + _ = 6
+
+<strong>Buscamos el número faltante:</strong><br>
+Necesitamos saber qué número sumado a 4 da como resultado 6.<br><br>
+
+<strong>Operación:</strong><br>
+6 − 4 = 2<br><br>
+
+<strong>Comprobación:</strong><br>
+4 + 2 = 6<br><br>
+
+<strong>Resultado final:</strong><br>
+El número faltante es 2.
+
+`
+},
+
+"6.1.2": {
+titulo: "¡Muy bien!",
+mensaje: "Resolviste correctamente la igualdad.",
+extra: `
+Expresión:
+7 − _ = 3
+
+<strong>Buscamos el número faltante:</strong><br>
+Necesitamos encontrar qué número se resta a 7 para obtener 3.<br><br>
+
+<strong>Operación:</strong><br>
+7 − 3 = 4<br><br>
+
+<strong>Comprobación:</strong><br>
+7 − 4 = 3<br><br>
+
+<strong>Resultado final:</strong><br>
+El número faltante es 4.
+
+`
+},
+
+"6.1.3": {
+titulo: "¡Excelente trabajo!",
+mensaje: "Encontraste correctamente el valor desconocido.",
+extra: `
+Expresión:
+_ + 5 = 9
+
+<strong>Buscamos el número faltante:</strong><br>
+Necesitamos saber qué número sumado a 5 da como resultado 9.<br><br>
+
+<strong>Operación:</strong><br>
+9 − 5 = 4<br><br>
+
+<strong>Comprobación:</strong><br>
+4 + 5 = 9<br><br>
+
+<strong>Resultado final:</strong><br>
+El número faltante es 4.
+
+`
+},
+
+"6.1.4": {
+titulo: "¡Muy bien!",
+mensaje: "Completaste correctamente la igualdad multiplicativa.",
+extra: `
+Expresión:
+3 × _ = 12
+
+<strong>Buscamos el número faltante:</strong><br>
+Necesitamos encontrar qué número multiplicado por 3 da 12.<br><br>
+
+<strong>Operación:</strong><br>
+12 ÷ 3 = 4<br><br>
+
+<strong>Comprobación:</strong><br>
+3 × 4 = 12<br><br>
+
+<strong>Resultado final:</strong><br>
+El número faltante es 4.
+
+`
+},
+
+"6.1.5": {
+titulo: "¡Excelente!",
+mensaje: "Resolviste correctamente la igualdad de división.",
+extra: `
+Expresión:
+15 ÷ _ = 5
+
+<strong>Buscamos el número faltante:</strong><br>
+Necesitamos encontrar qué número divide a 15 para obtener 5.<br><br>
+
+<strong>Operación:</strong><br>
+15 ÷ 5 = 3<br><br>
+
+<strong>Comprobación:</strong><br>
+15 ÷ 3 = 5<br><br>
+
+<strong>Resultado final:</strong><br>
+El número faltante es 3.
+
+`
+},
+
+"6.2.1.1": {
+titulo: "¡Excelente trabajo!",
+mensaje: "Identificaste correctamente el número necesario para despejar la variable.",
+extra: `
+Ecuación:
+x − 4 = 9
+
+<strong>Objetivo:</strong><br>
+Queremos dejar sola la variable x.<br><br>
+
+<strong>Observamos:</strong><br>
+El número 4 está restando.<br>
+Para eliminarlo usamos la operación contraria: sumar 4.<br><br>
+
+<strong>Aplicamos en ambos lados:</strong><br>
+x − 4 + 4 = 9 + 4<br><br>
+
+<strong>Resultado:</strong><br>
+x = 13
+
+`
+},
+
+"6.2.1.2": {
+titulo: "¡Muy bien!",
+mensaje: "Aplicaste correctamente la operación inversa para despejar x.",
+extra: `
+Ecuación:
+x + 6 = 11
+
+<strong>Objetivo:</strong><br>
+Queremos dejar sola la variable x.<br><br>
+
+<strong>Observamos:</strong><br>
+El número 6 está sumando.<br>
+Para eliminarlo usamos la operación contraria: restar 6.<br><br>
+
+<strong>Aplicamos en ambos lados:</strong><br>
+x + 6 − 6 = 11 − 6<br><br>
+
+<strong>Resultado:</strong><br>
+x = 5
+
+`
+},
+
+"6.2.1.3": {
+titulo: "¡Excelente!",
+mensaje: "Despejaste correctamente la ecuación usando la operación inversa.",
+extra: `
+Ecuación:
+x − 8 = 3
+
+<strong>Objetivo:</strong><br>
+Queremos dejar sola la variable x.<br><br>
+
+<strong>Observamos:</strong><br>
+El número 8 está restando.<br>
+Para cancelarlo debemos sumar 8.<br><br>
+
+<strong>Aplicamos en ambos lados:</strong><br>
+x − 8 + 8 = 3 + 8<br><br>
+
+<strong>Resultado:</strong><br>
+x = 11
+
+`
+},
+
+"6.2.1.4": {
+titulo: "¡Muy bien!",
+mensaje: "Reconociste correctamente la operación necesaria para despejar x.",
+extra: `
+Ecuación:
+x + 5 = 14
+
+<strong>Objetivo:</strong><br>
+Queremos dejar sola la variable x.<br><br>
+
+<strong>Observamos:</strong><br>
+El número 5 está sumando.<br>
+Para eliminarlo usamos la operación contraria: restar 5.<br><br>
+
+<strong>Aplicamos en ambos lados:</strong><br>
+x + 5 − 5 = 14 − 5<br><br>
+
+<strong>Resultado:</strong><br>
+x = 9
+
+`
+},
+
+"6.2.1.5": {
+titulo: "¡Excelente trabajo!",
+mensaje: "Aplicaste correctamente el principio de igualdad para despejar la variable.",
+extra: `
+Ecuación:
+x − 7 = 10
+
+<strong>Objetivo:</strong><br>
+Queremos dejar sola la variable x.<br><br>
+
+<strong>Observamos:</strong><br>
+El número 7 está restando.<br>
+Para eliminarlo debemos sumar 7.<br><br>
+
+<strong>Aplicamos en ambos lados:</strong><br>
+x − 7 + 7 = 10 + 7<br><br>
+
+<strong>Resultado:</strong><br>
+x = 17
+
+`
+},
+
+"6.2.2.1": {
+titulo: "¡Excelente trabajo!",
+mensaje: "Aplicaste correctamente la operación inversa para despejar la variable.",
+extra: `
+Ecuación:
+x ÷ 2 = 5
+
+<strong>Objetivo:</strong><br>
+Queremos dejar sola la variable x.<br><br>
+
+<strong>Observamos:</strong><br>
+x está dividida entre 2.<br>
+Para eliminar la división usamos la operación contraria: multiplicar por 2.<br><br>
+
+<strong>Aplicamos en ambos lados:</strong><br>
+(x ÷ 2) × 2 = 5 × 2<br><br>
+
+<strong>Resultado:</strong><br>
+x = 10
+
+`
+},
+
+"6.2.2.2": {
+titulo: "¡Muy bien!",
+mensaje: "Reconociste correctamente cómo eliminar la división.",
+extra: `
+Ecuación:
+x ÷ 4 = 3
+
+<strong>Objetivo:</strong><br>
+Queremos despejar la variable x.<br><br>
+
+<strong>Observamos:</strong><br>
+x está dividida entre 4.<br>
+Para cancelarlo debemos multiplicar ambos lados por 4.<br><br>
+
+<strong>Aplicamos en ambos lados:</strong><br>
+(x ÷ 4) × 4 = 3 × 4<br><br>
+
+<strong>Resultado:</strong><br>
+x = 12
+
+`
+},
+
+"6.2.2.3": {
+titulo: "¡Excelente!",
+mensaje: "Usaste correctamente la división para despejar x.",
+extra: `
+Ecuación:
+5x = 20
+
+<strong>Objetivo:</strong><br>
+Queremos dejar sola la variable x.<br><br>
+
+<strong>Observamos:</strong><br>
+El número 5 está multiplicando a x.<br>
+Para eliminarlo usamos la operación contraria: dividir entre 5.<br><br>
+
+<strong>Aplicamos en ambos lados:</strong><br>
+5x ÷ 5 = 20 ÷ 5<br><br>
+
+<strong>Resultado:</strong><br>
+x = 4
+
+`
+},
+
+"6.2.2.4": {
+titulo: "¡Muy bien!",
+mensaje: "Aplicaste correctamente el principio de igualdad.",
+extra: `
+Ecuación:
+8x = 40
+
+<strong>Objetivo:</strong><br>
+Queremos despejar la variable x.<br><br>
+
+<strong>Observamos:</strong><br>
+El 8 está multiplicando a x.<br>
+Para cancelarlo dividimos ambos lados entre 8.<br><br>
+
+<strong>Aplicamos en ambos lados:</strong><br>
+8x ÷ 8 = 40 ÷ 8<br><br>
+
+<strong>Resultado:</strong><br>
+x = 5
+
+`
+},
+
+"6.2.2.5": {
+titulo: "¡Excelente trabajo!",
+mensaje: "Despejaste correctamente la ecuación usando multiplicación.",
+extra: `
+Ecuación:
+x ÷ 5 = 6
+
+<strong>Objetivo:</strong><br>
+Queremos dejar sola la variable x.<br><br>
+
+<strong>Observamos:</strong><br>
+x está dividida entre 5.<br>
+Para eliminar la división multiplicamos ambos lados por 5.<br><br>
+
+<strong>Aplicamos en ambos lados:</strong><br>
+(x ÷ 5) × 5 = 6 × 5<br><br>
+
+<strong>Resultado:</strong><br>
+x = 30
+
+`
+},
+"6.3.1": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la ecuación x + 4 = 10.",
+  extra: `
+    <strong>Ecuación:</strong><br>
+    x + 4 = 10<br><br>
+
+    <strong>Objetivo:</strong><br>
+    Despejar la variable x.<br><br>
+
+    <strong>Eliminamos el +4:</strong><br>
+    Restamos 4 en ambos lados de la igualdad:<br><br>
+
+    x + 4 − 4 = 10 − 4<br><br>
+
+    <strong>Simplificamos:</strong><br>
+    • +4 − 4 se cancela<br>
+    • 10 − 4 = 6<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x = 6
+  `
+},
+
+"6.3.2": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la ecuación x − 3 = 8.",
+  extra: `
+    <strong>Ecuación:</strong><br>
+    x − 3 = 8<br><br>
+
+    <strong>Objetivo:</strong><br>
+    Despejar la variable x.<br><br>
+
+    <strong>Eliminamos el −3:</strong><br>
+    Sumamos 3 en ambos lados de la igualdad:<br><br>
+
+    x − 3 + 3 = 8 + 3<br><br>
+
+    <strong>Simplificamos:</strong><br>
+    • −3 + 3 se cancela<br>
+    • 8 + 3 = 11<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x = 11
+  `
+},
+
+"6.3.3": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la ecuación x + 6 = 14.",
+  extra: `
+    <strong>Ecuación:</strong><br>
+    x + 6 = 14<br><br>
+
+    <strong>Objetivo:</strong><br>
+    Despejar la variable x.<br><br>
+
+    <strong>Eliminamos el +6:</strong><br>
+    Restamos 6 en ambos lados de la igualdad:<br><br>
+
+    x + 6 − 6 = 14 − 6<br><br>
+
+    <strong>Simplificamos:</strong><br>
+    • +6 − 6 se cancela<br>
+    • 14 − 6 = 8<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x = 8
+  `
+},
+
+"6.3.4": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la ecuación x − 5 = 9.",
+  extra: `
+    <strong>Ecuación:</strong><br>
+    x − 5 = 9<br><br>
+
+    <strong>Objetivo:</strong><br>
+    Despejar la variable x.<br><br>
+
+    <strong>Eliminamos el −5:</strong><br>
+    Sumamos 5 en ambos lados de la igualdad:<br><br>
+
+    x − 5 + 5 = 9 + 5<br><br>
+
+    <strong>Simplificamos:</strong><br>
+    • −5 + 5 se cancela<br>
+    • 9 + 5 = 14<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x = 14
+  `
+},
+
+"6.3.5": {
+  titulo: "¡Excelente trabajo!",
+  mensaje: "Resolviste correctamente la ecuación x + 8 = 13.",
+  extra: `
+    <strong>Ecuación:</strong><br>
+    x + 8 = 13<br><br>
+
+    <strong>Objetivo:</strong><br>
+    Despejar la variable x.<br><br>
+
+    <strong>Eliminamos el +8:</strong><br>
+    Restamos 8 en ambos lados de la igualdad:<br><br>
+
+    x + 8 − 8 = 13 − 8<br><br>
+
+    <strong>Simplificamos:</strong><br>
+    • +8 − 8 se cancela<br>
+    • 13 − 8 = 5<br><br>
+
+    <strong>Resultado final:</strong><br>
+    x = 5
+  `
+},
+
 
 
 

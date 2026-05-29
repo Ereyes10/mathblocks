@@ -129,7 +129,14 @@ export const TEMAS_PM2 = [
     titulo: "Igualdades, Identidad y Ecuaciones",
     subtemas: [
       "Concepto de igualdad e identidad algebraica",
-      "Propiedades de la igualdad",
+      
+            {
+        titulo: "Propiedades de la igualdad",
+        subsubtemas: [
+          "Propiedad aditiva",
+          "Propiedad multiplicativa",
+        ]
+      },
       "Relaciones de igualdad entre números reales"
     ]
   }
