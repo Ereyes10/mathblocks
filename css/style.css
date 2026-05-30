@@ -829,7 +829,7 @@ main,
 
 /* Para asegurar que cada símbolo tenga buen espacio */
 #expr-probar span {
-  padding: 0 6px;
+  padding: 0 1px;
   font-size: 2rem;
 }
 
@@ -886,15 +886,15 @@ main,
 }
 
 .tarjeta-numero {
-  box-shadow: 0 3px 8px rgba(106, 27, 154, 0.3);
+  box-shadow: 0 3px 8px rgba(13, 71, 161, 0.3);
 }
 
 .tarjeta-operador {
-  box-shadow: 0 3px 8px rgba(198, 40, 40, 0.3);
+  box-shadow: 0 3px 8px rgba(255, 111, 0, 0.3);
 }
 
 .tarjeta-constructor {
-  box-shadow: 0 3px 8px rgba(26, 127, 74, 0.3)
+  box-shadow: 0 3px 8px rgba(251, 192, 45, 0.3);
 }
 
 /* Ocultar barra de desplazamiento */

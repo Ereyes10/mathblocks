@@ -409,20 +409,7 @@ function showView(view) {
   window.scrollTo(0, 0);
 }
 
-document.getElementById("btn-header-back").addEventListener("click", () => {
 
-    if (viewActividad.classList.contains("active")) {
-        showView(viewSubtemas);
-        return;
-    }
-
-    if (viewSubtemas.classList.contains("active")) {
-        showView(viewTemas);
-        return;
-    }
-
-    window.location.href = "index.html";
-});
 
 
 
