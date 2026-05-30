@@ -131,10 +131,10 @@ const ACTIVIDADES_4_1_3 =  [
     ]
 }
 ]
-const ACTIVIDADES_4_2_1 =  [
+const ACTIVIDADES_4_2 =  [
 {
 
-    id: "4.2.1.1",
+    id: "4.2.1",
     enunciado: "Desarrolla el siguiente binomio usando el triángulo de Pascal: (x + 2)²",
     pista: "Para potencia 2 utiliza los coeficientes: 1, 2, 1",
     validacion: [
@@ -142,7 +142,7 @@ const ACTIVIDADES_4_2_1 =  [
     ]
 },
 {
-    id: "4.2.1.2",
+    id: "4.2.2",
     enunciado: "Expande el siguiente binomio: (a - 3)³",
     pista: "Para potencia 3 utiliza los coeficientes: 1, 3, 3, 1 y cuida los signos",
     validacion: [
@@ -150,7 +150,7 @@ const ACTIVIDADES_4_2_1 =  [
     ]
 },
 {
-    id: "4.2.1.3",
+    id: "4.2.3",
     enunciado: "Resuelve el desarrollo de: (y + 1)⁴",
     pista: "Utiliza la fila 1, 4, 6, 4, 1 del triángulo de Pascal",
     validacion: [
@@ -158,7 +158,7 @@ const ACTIVIDADES_4_2_1 =  [
     ]
 },
 {
-    id: "4.2.1.4",
+    id: "4.2.4",
     enunciado: "Desarrolla correctamente: (b - 2)⁵",
     pista: "Recuerda alternar signos negativos en el desarrollo",
     validacion: [
@@ -166,7 +166,7 @@ const ACTIVIDADES_4_2_1 =  [
     ]
 },
 {
-    id: "4.2.1.5",
+    id: "4.2.5",
     enunciado: "Expande el siguiente binomio utilizando Pascal: (2z + 1)³",
     pista: "Eleva cada término según su posición y usa los coeficientes 1, 3, 3, 1",
     validacion: [
@@ -356,18 +356,210 @@ const ACTIVIDADES_4_3_4 =  [
     enunciado: "Resuelve el siguiente producto notable: (b + 5)³",
     pista: "El término independiente es el cubo del segundo término",
     validacion: [
-        ["exp(b,3)","plus","doble(1,5)","exp(b,2)","plus","doble(7,5)","b","plus","125"]
+        ["exp(b,3)","plus","doble(1,5)","exp(b,2)","plus","doble(7,5)","b","plus","25"]
     ]
 }
 
 ]
+
+const ACTIVIDADES_4_4_1 =  [
+{
+    id: "4.4.1.1",
+    enunciado: "Factoriza la siguiente expresión por factor común: 6x² + 12x",
+    pista: "Busca el máximo común divisor y la menor potencia común",
+    validacion: [
+        ["6","x","parIzq","x","plus","2","parDer"], ["6","x","mul","x","plus","2"] 
+    ]
+},
+{
+    id: "4.4.1.2",
+    enunciado: "Obtén el factor común de: 8a³ - 4a²",
+    pista: "Extrae el mayor número y la menor potencia de la variable",
+    validacion: [
+        ["4","exp(a,2)","parIzq", "2","a","minus","1","parDer"],["4","exp(a,2)","mul", "2","a","minus","1"]
+    ]
+},
+{
+    id: "4.4.1.3",
+    enunciado: "Factoriza correctamente: 15y² + 20y",
+    pista: "Todos los términos tienen un factor numérico y literal en común",
+    validacion: [
+        ["5","y","parIzq","3","y","plus","4","parDer"], ["5","y","mul","3","y","plus","4"] 
+    ]
+},
+{
+    id: "4.4.1.4",
+    enunciado: "Descompón en factores: 18b³ - 27b²",
+    pista: "Busca el MCD de 18 y 27 y la menor potencia de b",
+    validacion: [
+        ["9","exp(b,2)","parIzq","2","b","minus","3","parDer"],  ["9","exp(b,2)","mul","2","b","minus","3"]
+    ]
+},
+{
+    id: "4.4.1.5",
+    enunciado: "Factoriza la expresión: 14z⁴ + 21z²",
+    pista: "Extrae el factor común numérico y literal",
+    validacion: [
+        ["7","exp(z,2)","parIzq","2","exp(z,2)","plus","3","parDer"], ["7","exp(z,2)","mul","2","exp(z,2)","plus","3"]
+    ]
+}
+]
+
+const ACTIVIDADES_4_4_2 =  [
+    {
+    id: "4.4.2.1",
+    enunciado: "Factoriza la siguiente diferencia de cuadrados: x² - 25",
+    pista: "Identifica si ambos términos son cuadrados perfectos",
+    validacion: [
+        ["parIzq","x","plus","5","parDer","parIzq","x","minus","5","parDer"], ["x","plus","5","mul","x","minus","5"]
+    ]
+},
+{
+    id: "4.4.2.2",
+    enunciado: "Descompón en factores: a² - 49",
+    pista: "Aplica la fórmula: a² - b² = (a+b)(a-b)",
+    validacion: [
+        ["parIzq","a","plus","7","parDer","parIzq","a","minus","7","parDer"]
+    ]
+},
+{
+    id: "4.4.2.3",
+    enunciado: "Factoriza correctamente: y² - 16",
+    pista: "Busca la raíz cuadrada de cada término",
+    validacion: [
+        ["parIzq","y","plus","4","parDer","parIzq","y","minus","4","parDer"]
+        
+    ]
+},
+{
+    id: "4.4.2.4",
+    enunciado: "Obtén la factorización de: b² - 81",
+    pista: "81 es un cuadrado perfecto",
+    validacion: [
+
+        ["parIzq","b","plus","9","parDer","parIzq","b","minus","9","parDer"]
+    ]
+},
+{
+    id: "4.4.2.5",
+    enunciado: "Factoriza la expresión: z² - 100",
+    pista: "Ambos términos pueden escribirse como cuadrados",
+    validacion: [
+       
+        ["parIzq","z","plus","doble(1,0)","parDer","parIzq","z","minus","doble(1,0)","parDer"]
+    ]
+}
+]
+
+const ACTIVIDADES_4_4_3 =  [
+{
+    id: "4.4.3.1",
+    enunciado: "Factoriza el siguiente trinomio: x² + 7x + 12",
+    pista: "Busca dos números que multiplicados den 12 y sumados den 7",
+    validacion: [
+    
+         ["parIzq","x","plus","3","parDer","parIzq","x","plus","4","parDer"]
+    ]
+},
+{
+    id: "4.4.3.2",
+    enunciado: "Descompón en factores: a² + 9a + 20",
+    pista: "Encuentra dos números cuyo producto sea 20 y cuya suma sea 9",
+    validacion: [
+        
+         ["parIzq","a","plus","4","parDer","parIzq","a","plus","5","parDer"]
+    ]
+},
+{
+    id: "4.4.3.3",
+    enunciado: "Factoriza correctamente: y² + 11y + 24",
+    pista: "Busca dos números que al multiplicarse den 24 y al sumarse den 11",
+    validacion: [
+      
+         ["parIzq","y","plus","3","parDer","parIzq","y","plus","8","parDer"]
+    ]
+},
+{
+    id: "4.4.3.4",
+    enunciado: "Obtén la factorización de: b² + 13b + 42",
+    pista: "Encuentra los dos números que generan el término independiente y el término central",
+    validacion: [
+        
+         ["parIzq","b","plus","6","parDer","parIzq","b","plus","7","parDer"]
+    ]
+},
+{
+    id: "4.4.3.5",
+    enunciado: "Factoriza la expresión: z² + 15z + 56",
+    pista: "Busca dos números que multiplicados den 56 y sumados den 15",
+    validacion: [
+
+         ["parIzq","z","plus","7","parDer","parIzq","z","plus","8","parDer"]
+    ]
+}
+]
+
+const ACTIVIDADES_4_5 =  [
+{
+    id: "4.5.1",
+    enunciado: "Factoriza el trinomio cuadrado perfecto: x² + 10x + 25",
+    pista: "Verifica si el primer y último término son cuadrados perfectos",
+    validacion: [
+      
+         ["parIzq","x","plus","5","exp(parDer,2)","parIzq","x","plus","5","exp(parDer,2)"]
+    ]
+},
+{
+    id: "4.5.2",
+    enunciado: "Factoriza el siguiente trinomio cuadrado perfecto: a² + 12a + 36",
+    pista: "El término central debe ser el doble producto de las raíces cuadradas de los extremos",
+    validacion: [
+       
+        ["parIzq","a","plus","6","exp(parDer,2)","parIzq","a","plus","6","exp(parDer,2)"]
+    ]
+},
+{
+    id: "4.5.3",
+    enunciado: "Descompón en factores: y² + 14y + 49",
+    pista: "Identifica la raíz cuadrada del primer y último término",
+    validacion: [
+        
+        ["parIzq","y","plus","7","exp(parDer,2)","parIzq","y","plus","7","exp(parDer,2)"]
+    ]
+},
+{
+    id: "4.5.4",
+    enunciado: "Factoriza correctamente: b² + 16b + 64",
+    pista: "Comprueba que el término central sea el doble producto",
+    validacion: [
+        
+        ["parIzq","b","plus","8","exp(parDer,2)","parIzq","b","plus","8","exp(parDer,2)"]
+    ]
+},
+{
+    id: "4.5.5",
+    enunciado: "Obtén la factorización de: z² + 18z + 81",
+    pista: "Busca dos términos iguales cuyo cuadrado produzca el último término",
+    validacion: [
+      
+        ["parIzq","z","plus","9","exp(parDer,2)","parIzq","z","plus","9","exp(parDer,2)"]
+    ]
+}
+]
+
+
+
 export const ACTIVIDADES_T4 = {
   "4.1.1": ACTIVIDADES_4_1_1,
   "4.1.2": ACTIVIDADES_4_1_2,
   "4.1.3": ACTIVIDADES_4_1_3,
-  "4.2.1": ACTIVIDADES_4_2_1,
+  "4.2": ACTIVIDADES_4_2,
   "4.3.1": ACTIVIDADES_4_3_1,
   "4.3.2": ACTIVIDADES_4_3_2,
   "4.3.3": ACTIVIDADES_4_3_3,
   "4.3.4": ACTIVIDADES_4_3_4,
+  "4.4.1": ACTIVIDADES_4_4_1,
+  "4.4.2": ACTIVIDADES_4_4_2,
+  "4.4.3": ACTIVIDADES_4_4_3,
+  "4.5": ACTIVIDADES_4_5,
 };

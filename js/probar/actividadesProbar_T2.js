@@ -58,7 +58,7 @@ const ACTIVIDADES_2_1 =  [
 // Clasificación de expresiones algebraicas
 // ==========================================================
 
-    const ACTIVIDADES_2_2 =  [
+const ACTIVIDADES_2_2 =  [
 
 {
     id: "2.2.1",
@@ -138,7 +138,7 @@ const ACTIVIDADES_2_1 =  [
 
 {
     id: "2.3.1",
-    enunciado: "Del siguiente monomio escanea el elemento que pertenece al coeficiente: -5xy˄2”.",
+    enunciado: "Del siguiente monomio escanea el elemento que pertenece al coeficiente: -5xy²”.",
     pista: "¿Facil no? intentalo",
     validacion: [
 
@@ -241,6 +241,8 @@ const ACTIVIDADES_2_4 =  [
     ]
 },
 ];
+
+
 export const ACTIVIDADES_T2 = {
   "2.1": ACTIVIDADES_2_1,
   "2.2": ACTIVIDADES_2_2,

@@ -755,14 +755,9 @@ const actividad_4_3_1_1 = {
   titulo: "Desarrolla el binomio al cuadrado: <strong>(x + 2)²</strong>",
   pasos: [
     {
-      tipo: "numero",
-      valor: "1",
-      descripcion: "Eleva el primer término al cuadrado: x². Escanea 1."
-    },
-    {
       tipo: "variable",
       valor: "x2",
-      descripcion: "Escanea x²."
+      descripcion: "Eleva el primer término al cuadrado: x². Escanea x²."
     },
     {
       tipo: "operador",
@@ -777,7 +772,7 @@ const actividad_4_3_1_1 = {
     {
       tipo: "variable",
       valor: "x",
-      descripcion: "Escanea x."
+      descripcion: "Escanea x para completar el termino 4x."
     },
     {
       tipo: "operador",
@@ -790,21 +785,16 @@ const actividad_4_3_1_1 = {
       descripcion: "Eleva el segundo término al cuadrado: 2² = 4. Escanea 4."
     }
   ],
-  validacionFinal: ["1", "x2", "plus", "4", "x", "plus", "4"]
+  validacionFinal: ["x2", "plus", "4", "x", "plus", "4"]
 };
 
 const actividad_4_3_1_2 = {
   titulo: "Desarrolla el binomio al cuadrado: <strong>(x + 5)²</strong>",
   pasos: [
     {
-      tipo: "numero",
-      valor: "1",
-      descripcion: "Eleva el primer término al cuadrado: x². Escanea 1."
-    },
-    {
       tipo: "variable",
       valor: "x2",
-      descripcion: "Escanea x²."
+      descripcion: "Eleva el primer término al cuadrado: x². Escanea x²."
     },
     {
       tipo: "operador",
@@ -832,7 +822,7 @@ const actividad_4_3_1_2 = {
       descripcion: "Eleva el segundo término al cuadrado: 5² = 25. Escanea 25."
     }
   ],
-  validacionFinal: ["1", "x2", "plus", "10", "x", "plus", "25"]
+  validacionFinal: ["x2", "plus", "10", "x", "plus", "25"]
 };
 
 const actividad_4_3_1_3 = {
@@ -966,14 +956,9 @@ const actividad_4_3_2_1 = {
   titulo: "Resuelve el producto notable: <strong>(x + 2)(x − 2)</strong>",
   pasos: [
     {
-      tipo: "numero",
-      valor: "1",
-      descripcion: "Eleva el primer término al cuadrado: x². Escanea 1."
-    },
-    {
       tipo: "variable",
       valor: "x2",
-      descripcion: "Escanea x²."
+      descripcion: "Eleva el primer término al cuadrado: x². Escanea x²."
     },
     {
       tipo: "operador",
@@ -986,21 +971,16 @@ const actividad_4_3_2_1 = {
       descripcion: "Eleva el segundo término al cuadrado: 2² = 4. Escanea 4."
     }
   ],
-  validacionFinal: ["1", "x2", "minus", "4"]
+  validacionFinal: ["x2", "minus", "4"]
 };
 
 const actividad_4_3_2_2 = {
   titulo: "Resuelve el producto notable: <strong>(x + 5)(x − 5)</strong>",
   pasos: [
     {
-      tipo: "numero",
-      valor: "1",
-      descripcion: "Eleva el primer término al cuadrado: x². Escanea 1."
-    },
-    {
       tipo: "variable",
       valor: "x2",
-      descripcion: "Escanea x²."
+      descripcion: "Eleva el primer término al cuadrado: x². Escanea x²."
     },
     {
       tipo: "operador",
@@ -1013,7 +993,7 @@ const actividad_4_3_2_2 = {
       descripcion: "Eleva el segundo término al cuadrado: 5² = 25. Escanea 25."
     }
   ],
-  validacionFinal: ["1", "x2", "minus", "25"]
+  validacionFinal: ["x2", "minus", "25"]
 };
 
 const actividad_4_3_2_3 = {
@@ -1102,14 +1082,9 @@ const actividad_4_3_3_1 = {
   titulo: "Desarrolla el binomio al cuadrado: <strong>(x - 2)²</strong>",
   pasos: [
     {
-      tipo: "numero",
-      valor: "1",
-      descripcion: "Eleva el primer término al cuadrado: x². Escanea 1."
-    },
-    {
       tipo: "variable",
       valor: "x2",
-      descripcion: "Escanea x²."
+      descripcion: "Eleva el primer término al cuadrado: x². Escanea x²."
     },
     {
       tipo: "operador",
@@ -1137,21 +1112,16 @@ const actividad_4_3_3_1 = {
       descripcion: "Eleva el segundo término al cuadrado: 2² = 4. Escanea 4."
     }
   ],
-  validacionFinal: ["1", "x2", "minus", "4", "x", "plus", "4"]
+  validacionFinal: ["x2", "minus", "4", "x", "plus", "4"]
 };
 
 const actividad_4_3_3_2 = {
   titulo: "Desarrolla el binomio al cuadrado: <strong>(x - 4)²</strong>",
   pasos: [
     {
-      tipo: "numero",
-      valor: "1",
-      descripcion: "Eleva el primer término al cuadrado: x². Escanea 1."
-    },
-    {
       tipo: "variable",
       valor: "x2",
-      descripcion: "Escanea x²."
+      descripcion: "Eleva el primer término al cuadrado: x². Escanea x²."
     },
     {
       tipo: "operador",
@@ -1179,7 +1149,7 @@ const actividad_4_3_3_2 = {
       descripcion: "Eleva el segundo término al cuadrado: 4² = 16."
     }
   ],
-  validacionFinal: ["1", "x2", "minus", "8", "x", "plus", "16"]
+  validacionFinal: ["x2", "minus", "8", "x", "plus", "16"]
 };
 
 const actividad_4_3_3_3 = {
@@ -1313,14 +1283,9 @@ const actividad_4_3_4_1 = {
   titulo: "Desarrolla el cubo del binomio: <strong>(x + 2)³</strong>",
   pasos: [
     {
-      tipo: "numero",
-      valor: "1",
-      descripcion: "Primer término: x³. Escanea 1."
-    },
-    {
       tipo: "variable",
       valor: "x3",
-      descripcion: "Escanea x³."
+      descripcion: "Eleva el primer término al cuadrado: x³. Escanea x³."
     },
     {
       tipo: "operador",
@@ -1363,21 +1328,16 @@ const actividad_4_3_4_1 = {
       descripcion: "Último término: 2³ = 8. Escanea 8."
     }
   ],
-  validacionFinal: ["1", "x3", "plus", "6", "x2", "plus", "12", "x", "plus", "8"]
+  validacionFinal: ["x3", "plus", "6", "x2", "plus", "12", "x", "plus", "8"]
 };
 
 const actividad_4_3_4_2 = {
   titulo: "Desarrolla el cubo del binomio: <strong>(x - 2)³</strong>",
   pasos: [
     {
-      tipo: "numero",
-      valor: "1",
-      descripcion: "Primer término: x³. Escanea 1."
-    },
-    {
       tipo: "variable",
       valor: "x3",
-      descripcion: "Escanea x³."
+      descripcion: "Eleva el primer término al cuadrado: x³. Escanea x³."
     },
     {
       tipo: "operador",
@@ -1420,7 +1380,7 @@ const actividad_4_3_4_2 = {
       descripcion: "Último término: 2³ = 8. Escanea 8."
     }
   ],
-  validacionFinal: ["1", "x3", "minus", "6", "x2", "plus", "12", "x", "minus", "8"]
+  validacionFinal: ["x3", "minus", "6", "x2", "plus", "12", "x", "minus", "8"]
 };
 
 const actividad_4_3_4_3 = {
@@ -1484,14 +1444,9 @@ const actividad_4_3_4_4 = {
   titulo: "Desarrolla el cubo del binomio: <strong>(x + 3)³</strong>",
   pasos: [
     {
-      tipo: "numero",
-      valor: "1",
-      descripcion: "Primer término: x³. Escanea 1."
-    },
-    {
       tipo: "variable",
       valor: "x3",
-      descripcion: "Escanea x³."
+      descripcion: "Eleva el primer término al cuadrado: x³. Escanea x³."
     },
     {
       tipo: "operador",
@@ -1534,7 +1489,7 @@ const actividad_4_3_4_4 = {
       descripcion: "Último término: 3³ = 27."
     }
   ],
-  validacionFinal: ["1", "x3", "plus", "9", "x2", "plus", "27", "x", "plus", "27"]
+  validacionFinal: ["x3", "plus", "9", "x2", "plus", "27", "x", "plus", "27"]
 };
 
 const actividad_4_3_4_5 = {

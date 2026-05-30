@@ -84,25 +84,11 @@
     </nav>
 
     <script>
-    if ("serviceWorker" in navigator) {
-
-        window.addEventListener("load", async () => {
-
-            try {
-                const registro = await navigator.serviceWorker.register("/service-worker.js");
-
-                console.log("✅ Service Worker registrado");
-                console.log(registro);
-
-            } catch (error) {
-
-                console.error("❌ Error registrando Service Worker:", error);
-
-            }
-
-        });
-
-    }
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("/service-worker.js");
+            });
+        }
     </script>
 
     <script>
