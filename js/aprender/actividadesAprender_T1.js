@@ -7,7 +7,7 @@
 const actividad_1_1_1 = {
   titulo: "Convierte el siguiente texto: <strong>“La suma de dos números desconocidos”</strong>, en expresión” matemática ",
   pasos: [
-    { tipo: "variable", descripcion: "Escanea un bloque 📦 de variable (Ejemplo: a)." },
+    { tipo: "variable", descripcion: "Escanea un bloque de variable (Ejemplo: a)." },
     { tipo: "operador", valor: "plus", descripcion: "Escanea el operador suma (+)." },
     { tipo: "variable", descripcion: "Escanea otra variable para completar la expresión (Ejemplo: b)." }
   ],

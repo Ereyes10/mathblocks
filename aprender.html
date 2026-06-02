@@ -15,6 +15,7 @@
 <body>
   <audio id="sound-scan" src="sounds/scan.wav" preload="auto"></audio>
   <audio id="sound-success" src="sounds/success.wav" preload="auto"></audio>
+  <audio id="sound-error" src="sounds/error.mp3" preload="auto"></audio>
   
 <header class="app-header">
     <button class="btn-back-header" id="btn-header-back">
@@ -816,8 +817,9 @@ export function manejarEscaneo(info) {
   // 4. Si NO coincide → mensaje de error y salimos
   if (!coincide) {
     // Mostrar popup sin modificar las instrucciones
+    playSound("sound-error");
     popupError.style.display = "flex";
-    playSound("sound-scan");
+    //playSound("sound-scan");
     return;
     
   }

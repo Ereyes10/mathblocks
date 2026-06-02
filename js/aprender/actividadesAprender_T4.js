@@ -757,73 +757,79 @@ const actividad_4_3_1_1 = {
     {
       tipo: "variable",
       valor: "x2",
-      descripcion: "Eleva el primer término al cuadrado: x². Escanea x²."
+      descripcion: "Se eleva el primer término al cuadrado porque la fórmula del cuadrado de un binomio inicia con el cuadrado del primer término: Escanea x²."
     },
     {
       tipo: "operador",
       valor: "plus",
-      descripcion: "Escanea suma."
+      descripcion: "El segundo término del desarrollo es positivo porque se trata de un cuadrado de una suma. Escanea suma."
     },
     {
       tipo: "numero",
       valor: "4",
-      descripcion: "Doble producto: 2(x)(2) = 4x. Escanea 4."
+      descripcion: "Ahora calcula el doble producto de ambos términos. Aplicando 2(x)(2), el coeficiente obtenido es 4. Escanea 4."
     },
     {
       tipo: "variable",
       valor: "x",
-      descripcion: "Escanea x para completar el termino 4x."
+      descripcion: "El término central conserva la variable x porque proviene de multiplicar x por 2. Escanea x para completar 4x."
     },
     {
       tipo: "operador",
       valor: "plus",
-      descripcion: "Escanea nuevamente suma."
+      descripcion: "El último término también es positivo porque corresponde al cuadrado del segundo término. Escanea suma."
     },
     {
       tipo: "numero",
       valor: "4",
-      descripcion: "Eleva el segundo término al cuadrado: 2² = 4. Escanea 4."
+      descripcion: "Se eleva el segundo término al cuadrado siguiendo la fórmula del binomio al cuadrado: 2² = 4. Escanea 4."
     }
   ],
   validacionFinal: ["x2", "plus", "4", "x", "plus", "4"]
 };
 
 const actividad_4_3_1_2 = {
-  titulo: "Desarrolla el binomio al cuadrado: <strong>(x + 5)²</strong>",
+  titulo: "Desarrolla el binomio al cuadrado: <strong>(3x + 1)²</strong>",
   pasos: [
+    {
+      tipo: "numero",
+      valor: "9",
+      descripcion: "La fórmula inicia elevando el primer término al cuadrado. Como (3x)² = 9x², escanea 9."
+    },
     {
       tipo: "variable",
       valor: "x2",
-      descripcion: "Eleva el primer término al cuadrado: x². Escanea x²."
+      descripcion: "La variable también se eleva al cuadrado porque forma parte del primer término. Escanea x² para completar 9x²."
     },
     {
       tipo: "operador",
       valor: "plus",
-      descripcion: "Escanea suma."
+      descripcion: "El término central es positivo porque se trata del cuadrado de una suma. Escanea suma."
     },
     {
-      tipo: "constructor",
-      valor: "doble(1,0)",
-      descripcion: "Doble producto: 2(x)(5) = 10x. Escanea 10."
+      tipo: "numero",
+      valor: "6",
+      descripcion: "Ahora calcula el doble producto de ambos términos. Aplicando 2(3x)(1), se obtiene 6x. Escanea 6."
     },
     {
       tipo: "variable",
       valor: "x",
-      descripcion: "Escanea x."
+      descripcion: "La variable x permanece en el término central porque proviene de multiplicar 3x por 1. Escanea x para completar 6x."
     },
     {
       tipo: "operador",
       valor: "plus",
-      descripcion: "Escanea nuevamente suma."
+      descripcion: "El último término es positivo porque corresponde al cuadrado del segundo término. Escanea suma."
     },
     {
-      tipo: "constructor",
-      valor: "doble(2,5)",
-      descripcion: "Eleva el segundo término al cuadrado: 5² = 25. Escanea 25."
+      tipo: "numero",
+      valor: "1",
+      descripcion: "Para finalizar, eleva el segundo término al cuadrado. Como 1² = 1, escanea 1."
     }
   ],
-  validacionFinal: ["x2", "plus", "10", "x", "plus", "25"]
+  validacionFinal: ["9", "x2", "plus", "6", "x", "plus", "1"]
 };
+
 
 const actividad_4_3_1_3 = {
   titulo: "Desarrolla el binomio al cuadrado: <strong>(2x + 3)²</strong>",
@@ -831,82 +837,77 @@ const actividad_4_3_1_3 = {
     {
       tipo: "numero",
       valor: "4",
-      descripcion: "Eleva el primer término al cuadrado: (2x)² = 4x². Escanea 4."
+      descripcion: "El primer término del desarrollo es el cuadrado de 2x. Al elevar (2x)², se obtiene 4x² porque 2² = 4. Escanea 4."
     },
     {
       tipo: "variable",
       valor: "x2",
-      descripcion: "Escanea x²."
+      descripcion: "La variable también se eleva al cuadrado porque forma parte del primer término. Escanea x² para completar 4x²."
     },
     {
       tipo: "operador",
       valor: "plus",
-      descripcion: "Escanea suma."
+      descripcion: "El término central es positivo porque estamos desarrollando el cuadrado de una suma. Escanea suma."
     },
     {
       tipo: "constructor",
       valor: "doble(1,2)",
-      descripcion: "Doble producto: 2(2x)(3) = 12x. Escanea 12."
+      descripcion: "Ahora aplica la parte 2ab de la fórmula. Al calcular 2(2x)(3), se obtiene 12x. Escanea 12."
     },
     {
       tipo: "variable",
       valor: "x",
-      descripcion: "Escanea x."
+      descripcion: "El término central conserva la variable x porque proviene de multiplicar 2x por 3. Escanea x para completar 12x."
     },
     {
       tipo: "operador",
       valor: "plus",
-      descripcion: "Escanea nuevamente suma."
+      descripcion: "El último término es positivo porque corresponde al cuadrado del segundo término. Escanea suma."
     },
     {
       tipo: "numero",
       valor: "9",
-      descripcion: "Eleva el segundo término al cuadrado: 3² = 9. Escanea 9."
+      descripcion: "Para completar el desarrollo, eleva el segundo término al cuadrado. Como 3² = 9, escanea 9."
     }
   ],
   validacionFinal: ["4", "x2", "plus", "12", "x", "plus", "9"]
 };
 
 const actividad_4_3_1_4 = {
-  titulo: "Desarrolla el binomio al cuadrado: <strong>(3x + 1)²</strong>",
+  titulo: "Desarrolla el binomio al cuadrado: <strong>(x + 5)²</strong>",
   pasos: [
-    {
-      tipo: "numero",
-      valor: "9",
-      descripcion: "Eleva el primer término al cuadrado: (3x)² = 9x². Escanea 9."
-    },
     {
       tipo: "variable",
       valor: "x2",
-      descripcion: "Escanea x²."
+      descripcion: "Se eleva el primer término al cuadrado porque la fórmula del cuadrado de un binomio inicia con el cuadrado del primer término: Escanea x²."
     },
     {
       tipo: "operador",
       valor: "plus",
-      descripcion: "Escanea suma."
+      descripcion: "El segundo término del desarrollo es positivo porque se trata del cuadrado de una suma. Escanea suma."
     },
     {
-      tipo: "numero",
-      valor: "6",
-      descripcion: "Doble producto: 2(3x)(1) = 6x. Escanea 6."
+      tipo: "constructor",
+      valor: "doble(1,0)",
+      descripcion: "Ahora calcula el doble producto de ambos términos. Aplicando 2(x)(5), se obtiene 10x. Escanea 10."
     },
     {
       tipo: "variable",
       valor: "x",
-      descripcion: "Escanea x."
+      descripcion: "La variable x se conserva en el término central porque proviene de multiplicar x por 5. Escanea x para completar 10x."
     },
     {
       tipo: "operador",
       valor: "plus",
-      descripcion: "Escanea nuevamente suma."
+      descripcion: "El último término también es positivo porque corresponde al cuadrado del segundo término. Escanea suma."
     },
     {
-      tipo: "numero",
-      valor: "1",
-      descripcion: "Eleva el segundo término al cuadrado: 1² = 1. Escanea 1."
+      tipo: "constructor",
+      valor: "doble(2,5)",
+      descripcion: "Se eleva el segundo término al cuadrado siguiendo la fórmula del binomio al cuadrado. Como 5² = 25, escanea 25."
     }
   ],
-  validacionFinal: ["9", "x2", "plus", "6", "x", "plus", "1"]
+  validacionFinal: ["x2", "plus", "10", "x", "plus", "25"]
 };
 
 const actividad_4_3_1_5 = {
@@ -915,37 +916,37 @@ const actividad_4_3_1_5 = {
     {
       tipo: "numero",
       valor: "4",
-      descripcion: "Eleva el primer término al cuadrado: (2x)² = 4x². Escanea 4."
+      descripcion: "La fórmula del cuadrado de un binomio comienza elevando el primer término al cuadrado. Como (2x)² = 4x² porque 2² = 4, escanea 4."
     },
     {
       tipo: "variable",
       valor: "x2",
-      descripcion: "Escanea x²."
+      descripcion: "La variable también se eleva al cuadrado porque forma parte del primer término del binomio. Escanea x² para completar 4x²."
     },
     {
       tipo: "operador",
       valor: "plus",
-      descripcion: "Escanea suma."
+      descripcion: "El segundo término del desarrollo es positivo porque estamos desarrollando el cuadrado de una suma. Escanea suma."
     },
     {
       tipo: "constructor",
       valor: "doble(2,0)",
-      descripcion: "Doble producto: 2(2x)(5) = 20x. Escanea 20."
+      descripcion: "Ahora aplica el término central de la fórmula, que corresponde al doble producto de ambos términos: 2(2x)(5) = 20x. Escanea 20."
     },
     {
       tipo: "variable",
       valor: "x",
-      descripcion: "Escanea x."
+      descripcion: "La variable x permanece en el término central porque proviene de multiplicar 2x por 5. Escanea x para completar 20x."
     },
     {
       tipo: "operador",
       valor: "plus",
-      descripcion: "Escanea nuevamente suma."
+      descripcion: "El último término también es positivo porque corresponde al cuadrado del segundo término del binomio. Escanea suma."
     },
     {
       tipo: "constructor",
       valor: "doble(2,5)",
-      descripcion: "Eleva el segundo término al cuadrado: 5² = 25. Escanea 25."
+      descripcion: "Para finalizar el desarrollo, eleva el segundo término al cuadrado. Como 5² = 25, escanea 25."
     }
   ],
   validacionFinal: ["4", "x2", "plus", "20", "x", "plus", "25"]

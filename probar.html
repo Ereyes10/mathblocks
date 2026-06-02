@@ -15,6 +15,10 @@
 </head>
 
 <body>
+
+  <audio id="sound-success" src="sounds/success.wav" preload="auto"></audio>
+  <audio id="sound-scan" src="sounds/scan.wav" preload="auto"></audio>
+  <audio id="sound-error" src="sounds/error.mp3" preload="auto"></audio>
     <!-- ===========================
           ENCABEZADO
     ==============================-->
@@ -129,6 +133,19 @@
     import { TEMAS_PM2 } from "./js/temas_pm2.js";
     import { ACTIVIDADES_PROBAR } from "./js/actividadesProbar.js";
     import { iniciarLecturaNFC } from "./js/nfc.js";
+
+
+  function playSound(id) {
+    const audio = document.getElementById(id);
+
+    if (!audio) return;
+
+    audio.currentTime = 0;
+
+    audio.play().catch(() => {
+      // evita errores de autoplay
+    });
+  }
 
 
     // ========================
@@ -496,6 +513,7 @@ function actualizarTabsProbar(claveFinal) {
     // LECTURA NFC
     // ========================
     function procesarLectura(info) {
+      playSound("sound-scan");
 
       // Si estás usando la clase empty-text, la quitamos
       exprBox.classList.remove("empty-text");
@@ -561,6 +579,8 @@ function actualizarTabsProbar(claveFinal) {
 
       if (correcto) {
 
+        playSound("sound-success");
+
         asistenteContenido.textContent = "¡Correcto! Muy bien.";
         asistenteContenido.style.color = "#0a7f28";
 
@@ -579,6 +599,7 @@ function actualizarTabsProbar(claveFinal) {
       }
 
       // Incorrecto
+      playSound("sound-error");
       asistenteContenido.textContent =
         "La expresión no coincide. Presiona 'Nuevo intento' para volver a intentar.";
       asistenteContenido.style.color = "#b30000";
